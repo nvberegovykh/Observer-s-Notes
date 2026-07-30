@@ -1,0 +1,2 @@
+Upload README.md, Observers_Notes.pdf, and the complete assets folder to the same GitHub repository directory.
+GitHub will render README.md automatically, and its PDF link will work without editing.
