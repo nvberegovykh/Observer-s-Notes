@@ -2366,6 +2366,7 @@ model. The following works supply important scientific and philosophical
 ground; they do not prove the complete framework.*
 
 | Ashby, W. Ross. An Introduction to Cybernetics. Chapman & Hall, 1956.                                                                 | Aubin, Jean-Pierre. Viability Theory. Birkhäuser, 1991; reprint 2009.                                                             |
+|---------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | Varela, Francisco G., Humberto R. Maturana, and Ricardo Uribe. “Autopoiesis: The Organization of Living Systems.” BioSystems 5, 1974. | Montévil, Maël, and Matteo Mossio. “Biological Organisation as Closure of Constraints.” Journal of Theoretical Biology 372, 2015. |
 | Maynard Smith, John, and Eörs Szathmáry. The Major Transitions in Evolution. Oxford University Press, 1995.                           | Laland, Kevin N., et al. “The Extended Evolutionary Synthesis.” Proceedings of the Royal Society B 282, 2015.                     |
 | Prigogine, Ilya. “Time, Structure and Fluctuations.” Nobel Lecture, 1977.                                                             | von Foerster, Heinz. Observing Systems. Intersystems Publications, 1984.                                                          |
