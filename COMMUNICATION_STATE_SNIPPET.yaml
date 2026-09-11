@@ -1,0 +1,21 @@
+communication:
+  parties_or_agents: []
+  channel_status: "open|limited|refused|unsafe|closed|not_applicable"
+  shared_projection: ""
+  shared_ground: []
+  unresolved_interpretations: []
+  hard_conditions_by_side: []
+  meaningful_choices_by_side: []
+  refusal_respected: null
+  constructive_overlap_status: "SUPPORTED_NONEMPTY|SUPPORTED_EMPTY|UNRESOLVED|NOT_MODELED"
+  constructive_overlap_description: ""
+  coexistence_paths: []
+  safe_separation_paths: []
+  communication_risk_or_cost: ""
+  communication_can_change_decision: null
+  common_ground_verified: null
+  keep_channel_open_condition: ""
+  close_or_limit_channel_condition: ""
+  threat_relations: []
+  # Threat is recorded as relation/action/consequence, not an inherent moral essence.
+
