@@ -4,6 +4,7 @@ status: "working operational template"
 
 # Reusable external state for human- or AI-assisted research.
 # Use universal technical terms here. Storytelling references belong in the volume text.
+# This is not a request for private chain-of-thought; record only auditable state.
 
 meta:
   run_id: ""
@@ -33,7 +34,6 @@ localization:
 variable_registry:
   # status: OBSERVED|DERIVED|CANDIDATE|LOCAL|RECURRENT|DOMAIN|CORE|DORMANT|REJECTED
   variables: []
-  # Example:
   # - id: "x_recovery_independence"
   #   name: "recovery-path independence"
   #   status: "CANDIDATE"
@@ -78,16 +78,16 @@ evidence:
   #   disturbance: ""
   #   freshness: "current|possibly_stale|stale"
 
-relations:
-  elements: []
-  dependencies: []
-  external_influences: []
+dependencies:
+  nodes: []
+  relations: []
+  external_conditions: []
   common_cause_groups: []
   containing_systems_with_material_externalities: []
 
 preservation:
   mode: "PRESERVE|RESCUE|NOT_APPLICABLE"
-  hard_dimensions: []
+  hard_conditions: []
   # - id: "M_V"
   #   name: "viability margin"
   #   lower: null
@@ -100,11 +100,9 @@ preservation:
   recovery_path_independence: []
   irreversible_consequences: []
   non_action_baseline: ""
-  result: "PASS|FAIL|UNRESOLVED|RESCUE_REQUIRED|NOT_APPLICABLE"
+  gate: "PASS|FAIL|UNRESOLVED|RESCUE_REQUIRED|NOT_APPLICABLE"
 
 projections:
-  # Each axis may contain a range/support, occupancy/distribution,
-  # confidence, unresolved frontier, provenance, and relevant boundaries.
   axes: []
   # - id: "P1"
   #   name: ""
@@ -114,22 +112,61 @@ projections:
   #   unresolved_frontier: ""
   #   provenance: []
   #   hard_boundary: null
-  #   rare_consequential_tail: false
+  #   tail_flag: false
   #   scenario_generator: ""
   #   sampling_rule: ""
   #   horizon: ""
 
 interestingness:
-  # Keep the estimated property separate from confidence and unresolved frontier.
   elements: []
   # - id: "x1"
-  #   future_breadth: null
-  #   distribution_evenness: null
-  #   leverage: null
-  #   estimated_interestingness: null
+  #   breadth_B: null
+  #   evenness_E: null
+  #   leverage_L: null
+  #   supported_diversity_DF: null
+  #   local_interestingness_I: null
+  #   unresolved_frontier: ""
   #   confidence: null
-  #   unresolved_frontier: null
-  #   rare_consequential_tail: false
+  #   catastrophic_tail: false
+
+refinement:
+  regions: []
+  # - id: "R1"
+  #   unresolved_width: null
+  #   decision_sensitivity: null
+  #   refinement_cost_or_disturbance: null
+  #   priority: null
+  #   expected_decision_effect: ""
+
+processing_control:
+  active_branch: ""
+  parked_branches: []
+  low_probability_branches: []
+  current_load: "low|moderate|high|unknown"
+  urgency: ""
+  delay_cost: ""
+  expected_information_value_of_waiting: ""
+  reference_state_preserved: false
+  pause_reason: ""
+  resume_condition: ""
+  branch_pruning_reason: ""
+  # Do not prune solely because probability is low when the branch remains possible
+  # and could materially change consequence, explanation, or information value.
+
+external_guidance:
+  sources: []
+  # - id: "G1"
+  #   source_type: "instrument|dataset|rule|checklist|simulator|human|ai|other"
+  #   claim_supported: ""
+  #   scope: ""
+  #   independence: ""
+  #   calibration_or_reliability: ""
+  #   freshness: ""
+  #   authority: ""
+  #   responsibility: ""
+  #   conflicts_with_current_model: ""
+  responsible_role: ""
+  authority_owner: ""
 
 contradictions:
   items: []
@@ -142,7 +179,7 @@ contradictions:
   #   candidate_resolutions: []
   #   decision_impact: ""
 
-assumption_register:
+assumption_ledger:
   items: []
   # - id: "A1"
   #   statement: ""
@@ -163,7 +200,7 @@ residuals:
   #   action: "investigate|accept_noise|reframe_boundary|refine_model"
 
 candidate_steps:
-  # step_type: observe|retrieve|simulate|test|intervene|wait_external
+  # step_type: observe|retrieve|simulate|test|intervene|pause|seek_guidance|wait_external
   options: []
   # - id: "S1"
   #   step_type: "test"
@@ -177,20 +214,23 @@ candidate_steps:
 next_step:
   selected_id: ""
   reason: ""
-  preservation_check_completed: false
+  preservation_gate_checked: false
   expected_state_change: ""
   stop_or_redirect_condition: ""
 
-record:
+logbook:
   changes_from_previous_model: []
   new_evidence_ids: []
   variables_promoted: []
   variables_demoted: []
+  branches_parked: []
+  branches_reopened: []
   projections_changed: []
   contradictions_added_or_resolved: []
+  guidance_used: []
   realized_outcome: ""
   decision_changed: null
-  reason_for_stop_or_repeat: ""
+  reason_for_stop_pause_or_repeat: ""
 
 terminal_state:
   # SUPPORTED|DECISION_ROBUST|PRESERVATION_BLOCK|RESCUE_REQUIRED|EXTERNAL_WAIT|
@@ -200,7 +240,7 @@ terminal_state:
 
 validation_checks:
   claim_strength_matches_evidence: false
-  observed_inferred_projected_decision_layers_separated: false
+  observation_model_projection_decision_layers_separated: false
   hard_constraints_preserved_in_compression: false
   rare_consequential_tails_preserved: false
   recovery_path_independence_checked: false
@@ -208,5 +248,9 @@ validation_checks:
   hidden_variables_have_promotion_status: false
   stale_evidence_reviewed: false
   causal_language_justified_or_labeled_as_sensitivity: false
-  loop_has_new_evidence_or_state_change: false
+  low_probability_branches_not_pruned_without_reason: false
+  pause_state_is_recoverable: false
+  external_guidance_independence_checked: false
+  guidance_authority_responsibility_separated: false
+  loop_has_new_evidence_state_change_or_bounded_wait_reason: false
   explicit_terminal_condition_present: false

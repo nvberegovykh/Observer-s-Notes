@@ -1,55 +1,77 @@
 # COMPASS Quick Card — Observer's Notes Vol. 1.2
 
-Use this as the short execution surface. The full reasoning, examples, operational models, edge cases, and references are in `VOL_1.2_COMPASS.md`.
-
-The card uses universal technical terms. The ocean expedition belongs to the explanatory story, not to the procedure.
+Use this only as the short execution surface. The full rationale, equations, edge cases, references, and storytelling continuity are in `VOL_1.2_COMPASS.md`.
 
 ## One cycle
 
-1. **Define the question** — state the claim, uncertainty, or decision and the strength of answer required.
-2. **Localize the system** — state boundary, scale, observation interval, horizon, assumptions, and value premise where relevant.
-3. **Record evidence** — separate observed, constrained, modeled, inferred, assumed, and unresolved information; keep provenance and freshness.
-4. **Identify hard boundaries** — state viability limits, required reserves, irreversible consequences, and rare catastrophic branches.
-5. **Identify recovery conditions** — record viable recovery states and test whether recovery depends on the same failure path it is supposed to survive.
-6. **Map dependencies** — trace constitutive relations, external conditions, delays, substitutes, and common-cause failures.
-7. **Register candidate variables** — do not add a hidden variable to the reusable model merely because one application suggests it.
-8. **Project relevant futures** — report ranges or distributions at the resolution justified by evidence; keep uncertainty and unresolved frontier separate.
-9. **Select the consequential uncertainty** — prioritize leverage, boundary proximity, disagreement, tail risk, and decision-sensitive unknowns.
-10. **Choose one bounded next step** — observation, retrieval, simulation, test, or intervention that can materially change the model or decision.
-11. **Run the preservation check** — distinguish strict preservation from rescue / least-loss conditions; include non-action when the system is already failing.
-12. **Execute only the justified step** — do not execute a whole imagined sequence because its first assumptions looked plausible.
-13. **Measure again** — compare the realized state with the projected range and record residuals.
-14. **Update and simplify** — preserve hard constraints, contradictions, provenance, recovery state, rare consequential branches, and validated variables while removing irrelevant detail.
-15. **Stop explicitly** — finish in a named terminal state rather than an open reasoning loop.
+1. **Set the question** — exact claim, uncertainty, or decision + required strength.
+2. **Localize** — system, boundary, scale, interval, horizon, assumptions, value premise.
+3. **Record evidence** — observed != inferred != projected; keep provenance, uncertainty, freshness, and method independence.
+4. **Map hard conditions** — viability boundaries, reserves, irreversible consequences, containing-system effects.
+5. **Map recovery** — independent recovery paths, access, authority, irreplaceable state, recovery-time margin.
+6. **Trace dependencies** — lower-level requirements, external conditions, common-cause failure groups.
+7. **Register hidden variables** — every application-exposed variable gets a status; story alone never promotes one.
+8. **Project relevant futures** — supported ranges/regions + occupancy + confidence + unresolved frontier + consequential tails.
+9. **Find the consequential region** — leverage, boundary proximity, disagreement, tail risk, or decision-sensitive uncertainty.
+10. **Control tempo** — continue, probe a lower-probability branch, pause with state preserved, or seek external guidance.
+11. **Check patience value** — compare expected information/option value of waiting with cost of delay; do not use an arbitrary probability threshold to delete branches.
+12. **Review guidance** — scope, independence, calibration, authority, responsibility.
+13. **Choose one bounded step** — smallest evidence-producing action likely to change the model or decision.
+14. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.
+15. **Execute one justified step** — do not execute the whole imagined route.
+16. **Compare realization with projection** — record residuals and contradictions.
+17. **Update and compress** — retain hard constraints, rare branches, provenance, parked alternatives, recovery state, and variable history.
+18. **Stop explicitly** — named terminal state only.
 
-## Candidate-variable promotion
+## Hidden-variable promotion
 
-A useful progression is:
+`event -> residual -> dependency -> candidate variable -> operational definition -> test -> decision effect -> recurrence -> promotion`
 
-**event → state change → missing or uncertain dependency → residual → candidate variable → operational definition → test → decision effect → recurrence → promotion**
+Statuses:
 
-Suggested statuses:
+`CANDIDATE -> LOCAL -> RECURRENT/DOMAIN -> CORE`
 
-**candidate → local → recurrent/domain → core**
+A variable may also become `DORMANT` or `REJECTED`, and previously promoted variables may be demoted.
 
-A variable may also become **dormant** or **rejected**, and a previously promoted variable may be demoted.
+Promote only when enough of these survive: operationality, observability/boundability, mechanism, residual reduction, decision relevance, alternative explanations, recurrence/independent mechanism, non-duplication, semantic stability, complexity justification.
 
-Promotion should be justified by enough of the following to match the claim being made: operational definition, observability or defensible bounds, plausible mechanism, residual reduction, decision relevance, alternative explanations, recurrence or independent mechanism, non-duplication, semantic stability, and justified complexity cost.
+## Patience / branch preservation
+
+- Patience is control of commitment timing, not inactivity.
+- Park branches externally before narrowing the active workspace.
+- Low probability alone is not a deletion rule.
+- A pause is useful only if the model can resume from preserved state.
+- Delay is not neutral; compare its cost with expected information and option value.
+- If delay consumes a hard margin, act rather than waiting for comfort.
+
+## External guidance
+
+Check separately:
+
+`scope | independence | calibration | authority | responsibility`
+
+A second source is useful when it changes the evidence or constraints, not merely when it repeats the first conclusion.
 
 ## Terminal states
 
-- **Supported** — the target claim is supported to the declared strength.
-- **Decision robust** — the action class remains stable under plausible refinements.
-- **Preservation blocked** — a hard margin is negative or unresolved.
-- **Rescue required** — strict preservation is no longer available; least-loss comparison is required.
-- **External wait** — an external dependency is the true blocker.
-- **Insufficient evidence** — no justified current step can resolve the key uncertainty.
-- **Model contradiction** — current assumptions cannot jointly explain the observations.
-- **Terminal system state** — the selected system has no modeled continuation under the stated definition.
-- **Question reframed** — the original question was drawn at the wrong boundary, scale, or level.
+`SUPPORTED`
+
+`DECISION_ROBUST`
+
+`PRESERVATION_BLOCK`
+
+`RESCUE_REQUIRED`
+
+`EXTERNAL_WAIT`
+
+`INSUFFICIENT_EVIDENCE`
+
+`MODEL_CONTRADICTION`
+
+`TERMINAL_SYSTEM_STATE`
+
+`QUESTION_REFRAMED`
 
 ## Core invariant
 
-> The strength of the claim must not exceed the strength of the evidence, the model, and the preserved ability to correct it.
-
-In the expedition story, this is what the compass is for: not choosing the destination, but keeping orientation while the surroundings remain uncertain.
+> The strength of the claim must not exceed the strength of the evidence, model, preserved alternatives, and ability to correct course.

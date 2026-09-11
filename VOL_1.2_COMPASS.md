@@ -14,7 +14,7 @@ This volume extends *Observer's Notes* without replacing its definitions.
 
 The technical vocabulary of Vol. 1 remains authoritative: element, state, interaction, relation, structure, condition, viability domain, maintenance, recursive maintenance, generative maintenance, observer effect, value premise, and intervention keep their earlier meanings.
 
-The ocean expedition is only the environment in which the new notes unfold. It is not a second technical vocabulary. A buoy may appear in the story; the model still speaks about an element, a measured state, a relation, uncertainty, or a reference. A reef may be present in the scene; the technical text still speaks about a boundary or constraint.
+The ocean expedition is only the environment in which the new notes unfold. It is not a second technical vocabulary. A buoy may appear in the story; the model still speaks about an element, a measured state, a relation, uncertainty, or a reference. A reef may appear in the scene; the technical text still speaks about a boundary or constraint.
 
 The story is allowed to make an idea easier to see. It is not allowed to establish the idea as true.
 
@@ -28,7 +28,9 @@ The conceptual extensions in this volume grew from post-publication working disc
 
 A small research vessel leaves a harbor before sunrise. Not far offshore stands a weather buoy. Its light is easy to see. Its radio is not always quiet.
 
-At first the buoy seems like a convenient reference. Later the crew discovers that its signal has noise. Then that the buoy itself can drift. Then that the current affecting the buoy also affects the vessel. Then that a second instrument disagrees. Each new observation complicates the picture, but not arbitrarily. The same environment is being revisited with a better model.
+At first the buoy seems like a convenient reference. Later the crew discovers that its signal has noise. Then that the buoy itself can drift. Then that the current affecting the buoy also affects the vessel. Then that a second instrument disagrees. Farther offshore, the route approaches a shoal. Weather closes in. The crew has to decide when to continue, when to wait, when to ask for another reference, and whether the route home remains independent of the same conditions creating the problem.
+
+Each new observation complicates the picture, but not arbitrarily. The same environment is being revisited with a better model.
 
 That continuity is the purpose of the expedition.
 
@@ -38,7 +40,7 @@ The notes that follow keep the pattern of Vol. 1:
 
 **observation → general statement → limits → field note → carry-forward rules → operational model → measurements → use → example → validation.**
 
-The formulas are deliberately small. A formula should clarify a measurable relation, not serialize the entire model into letters.
+The technical content is intentionally not reduced to make the pages look simpler. The visual rule is different: formulas should show one measurable relation at a time; symbol tables should carry the notation; serialized model state belongs in the companion template, not in an equation.
 
 ---
 
@@ -51,11 +53,13 @@ The formulas are deliberately small. A formula should clarify a measurable relat
 | C3 | [What Must Survive the Crossing](#c3) |
 | C4 | [The Water Ahead](#c4) |
 | C5 | [Soundings Near the Shoal](#c5) |
-| C6 | [The Return Route](#c6) |
-| C7 | [The Logbook After the Storm](#c7) |
-| C8 | [The Compass](#c8) |
+| C6 | [The Engine at Idle](#c6) |
+| C7 | [A Voice Through the Fog](#c7) |
+| C8 | [The Return Route](#c8) |
+| C9 | [The Logbook After the Storm](#c9) |
+| C10 | [The Compass](#c10) |
 
-> Vol. 1 definitions remain inherited. C1–C8 introduce only extension-specific operational terms.
+> Vol. 1 definitions remain inherited. C1–C10 introduce only extension-specific operational terms.
 
 ---
 
@@ -97,6 +101,7 @@ This gives Compass its first discipline: **keep observations, uncertainty, metho
 - Record method, time, scope, and uncertainty with a measurement.
 - Many correlated observations are not many independent observations.
 - Do not promote a measurement artifact into a system variable without evidence.
+- Evidence can become stale; state-dependent evidence should carry a time or version.
 
 ### Operational model
 
@@ -105,7 +110,7 @@ This gives Compass its first discipline: **keep observations, uncertainty, metho
 For two estimates of the same selected quantity, a simple standardized disagreement is:
 
 $$
-D = \frac{|x_1-x_2|}{\sqrt{u_1^2+u_2^2}}
+\boxed{D = \frac{|x_1-x_2|}{\sqrt{u_1^2+u_2^2}}}
 $$
 
 The value is useful only when the uncertainty terms are comparable and the estimates refer to the same quantity and interval.
@@ -123,6 +128,7 @@ The value is useful only when the uncertainty terms are comparable and the estim
 1. Confirm that the two estimates refer to the same variable, scope, and relevant interval.
 2. Record uncertainty before comparing values.
 3. Treat a large $D$ as a reason to investigate method, time, boundary, or hidden variables—not as proof of any one cause.
+4. Record whether the two methods share calibration, data, model assumptions, or physical dependencies.
 
 **Working example.** One position estimate is 12.0 m from a reference line with 0.5 m uncertainty; another is 13.2 m with 0.6 m uncertainty. $D\approx1.54$. The estimates disagree enough to justify checking timing, calibration, and motion before collapsing them into one position.
 
@@ -164,7 +170,9 @@ Candidate variables should not enter the reusable template merely because they p
 
 A candidate becomes stronger when it can be operationally defined, measured or bounded, connected through a plausible relation, shown to reduce residuals outside the case that suggested it, and shown to matter to the decision or viability boundary.
 
-Recurrence matters most when it crosses contexts. Recovery-path independence, observer disturbance, common-cause dependency, delay, and hidden shared resources are examples of variables that can recur across very different systems while retaining the same operational relation.
+Recurrence matters most when it crosses contexts. Recovery-path independence, observer disturbance, common-cause dependency, delay, hidden shared resources, and freshness of state are examples of variables that can recur across very different systems while retaining the same operational relation.
+
+A promoted variable is not permanent. Later evidence can show that it duplicates an existing variable, is domain-specific, or does not improve decisions. Demotion is part of model maintenance.
 
 ### Field note
 
@@ -176,6 +184,7 @@ Recurrence matters most when it crosses contexts. Recovery-path independence, ob
 - Check simpler explanations before adding model dimensions.
 - Prefer variables with operational definitions and observable consequences.
 - A variable becomes more reusable when it survives materially different cases.
+- Preserve the case that exposed a candidate and the evidence that promoted it.
 - Previously promoted variables may later be demoted.
 
 ### Operational model
@@ -185,7 +194,7 @@ Recurrence matters most when it crosses contexts. Recovery-path independence, ob
 Let $R_0$ be prediction error under the current model and $R_x$ the error after adding candidate variable $x$ under the same validation rule.
 
 $$
-\Delta R_x = R_0-R_x
+\boxed{\Delta R_x = R_0-R_x}
 $$
 
 A positive $\Delta R_x$ means the candidate reduced residual error. Promotion still requires checks against overfitting, alternative explanations, and decision relevance.
@@ -204,6 +213,8 @@ A positive $\Delta R_x$ means the candidate reduced residual error. Promotion st
 2. Add one candidate relation or variable where practical.
 3. Test on data or cases not used to invent the candidate.
 4. Record whether the candidate changes a decision, explanation boundary, or viability margin.
+5. Check whether it duplicates an existing variable or simply renames an observed effect.
+6. Record a future test that could demote the variable.
 
 **Working example.** Position error averages 18 m without a current term and 6 m after adding a measured lateral-current estimate on a later segment. $\Delta R_x=12$ m. The current is locally supported, but not yet a universal variable for every navigation model.
 
@@ -245,9 +256,11 @@ The evaluation should include more than immediate function. A change can preserv
 
 The lower-level dependency map matters.
 
-For consequential action, preservation evaluation should normally include identity, viability, constitutive dependencies, continuity, access/control, irreplaceable state, recoverability, and verification capacity when those dimensions are relevant.
+For consequential action, preservation evaluation should normally inspect identity, viability, constitutive dependencies, continuity, access/control, irreplaceable state, recoverability, verification capacity, and containing-system externalities when those dimensions are relevant.
 
 These are not new universal categories forced onto every problem. They are prompts to check whether the selected system's real dependencies have been represented.
+
+Preservation also changes with horizon. An action can preserve the next minute and destroy the next day. A temporary controlled loss can also be acceptable if it belongs to an explicit recovery path that preserves the higher-level system.
 
 ### Field note
 
@@ -259,6 +272,7 @@ These are not new universal categories forced onto every problem. They are promp
 - Distinguish identity preservation from viability preservation and generative preservation.
 - Check lower-level and containing-system dependencies.
 - A recovery path must survive the failure it is intended to recover from.
+- Evaluate more than one horizon when delayed effects are plausible.
 - When strict preservation is already impossible, switch to rescue / least-loss evaluation rather than pretending otherwise.
 
 ### Operational model
@@ -270,7 +284,7 @@ For every declared hard condition $j$, let $\underline m_j(a)$ be the conservati
 Strict preservation requires:
 
 $$
-\underline m_j(a) \ge r_j \qquad \text{for every hard condition } j
+\boxed{\underline m_j(a) \ge r_j \qquad \text{for every hard condition } j}
 $$
 
 The conditions should be checked jointly when common-cause failure is possible.
@@ -290,7 +304,8 @@ The conditions should be checked jointly when common-cause failure is possible.
 2. Identify hard conditions and their failure boundaries.
 3. Project each margin after the action, including uncertainty.
 4. Check common-cause failure and recovery-path independence.
-5. If no candidate action, including non-action, satisfies the hard conditions, classify the problem as rescue / least-loss rather than strict preservation.
+5. Check at least one containing system when material externalities are plausible.
+6. If no candidate action, including non-action, satisfies the hard conditions, classify the problem as rescue / least-loss rather than strict preservation.
 
 **Working example.** A control-system migration has positive service margin and data-integrity margin, but the only rollback requires the same credential service that the migration may disable. Recoverability remains unresolved, so strict preservation is not established even though the expected main path succeeds.
 
@@ -302,7 +317,7 @@ Meeting all declared bounds supports a strict preservation claim under the curre
 
 **VALIDATE IT**
 
-Test the dependency and recovery map with a materially different failure scenario, especially one involving shared resources or common authority.
+Test the dependency and recovery map with a materially different failure scenario, especially one involving shared resources, common authority, or delayed effects.
 
 ---
 
@@ -342,6 +357,8 @@ A useful projection therefore keeps at least:
 
 Unknown territory is not scored as if it already contained valuable structure. It remains uncertainty until evidence supports more.
 
+Interestingness is also not desirability. A dangerous failure point can be highly interesting. A safe, mature component can be uninteresting. The measure allocates attention; it does not supply a value premise.
+
 ### Field note
 
 > *The most interesting water is not necessarily the least known. It is where a change can reorganize what becomes reachable.*
@@ -353,6 +370,7 @@ Unknown territory is not scored as if it already contained valuable structure. I
 - Keep known future structure separate from unresolved frontier.
 - Rare catastrophic branches remain visible even when averages are small.
 - A projection is a compression, not the future itself.
+- Interestingness does not mean goodness.
 
 ### Operational model
 
@@ -360,16 +378,16 @@ Unknown territory is not scored as if it already contained valuable structure. I
 
 Let $B$ describe supported breadth of reachable futures on the selected projection, $E$ describe how broadly supported futures occupy the declared outcome scale, and $L$ describe the leverage of the selected element on that projection.
 
-First combine future diversity:
+First combine supported future diversity:
 
 $$
-D_F = w_B B + w_E E
+\boxed{D_F = w_B B + w_E E}
 $$
 
 with $w_B+w_E=1$, then estimate:
 
 $$
-I = L\,D_F
+\boxed{I = L\,D_F}
 $$
 
 Report confidence and unresolved frontier separately rather than allowing ignorance to inflate $I$.
@@ -388,7 +406,7 @@ Report confidence and unresolved frontier separately rather than allowing ignora
 When a probability or normalized occupancy distribution across fixed bins is justified, a Shannon-style evenness term can be used [R3]:
 
 $$
-E = -\frac{\sum_{k=1}^{K} p_k\ln p_k}{\ln K}, \qquad K\ge2
+\boxed{E = -\frac{\sum_{k=1}^{K} p_k\ln p_k}{\ln K}, \qquad K\ge2}
 $$
 
 with $0\ln0=0$.
@@ -399,8 +417,9 @@ with $0\ln0=0$.
 2. Keep binning or normalization fixed across the comparison.
 3. Estimate leverage from intervention, controlled comparison, or clearly labeled sensitivity analysis.
 4. Report confidence, unresolved frontier, and hard-tail conditions separately.
+5. Repeat the ranking under at least one materially different reasonable projection when the ranking drives action.
 
-**Working example.** Two candidate controls have similar uncertainty. One barely changes the projected outcome range ($L=0.1$). The other shifts several outcomes across a viability threshold ($L=0.8$). The second is more interesting for the current decision even if both have similar raw entropy.
+**Working example.** Two candidate controls have similar uncertainty. One barely changes the projected outcome range ($L=0.1$). The other shifts several outcomes across a viability boundary ($L=0.8$). The second is more interesting for the current decision even if both have similar raw entropy.
 
 **Limit.** The score depends on projection choice and normalization. It should not be treated as an intrinsic property of the object.
 
@@ -438,9 +457,11 @@ This resembles adaptive refinement methods in numerical simulation, which alloca
 
 The same principle applies to reasoning.
 
-A long logical chain is useful when each step preserves the assumptions needed by the next. It becomes wasteful when detail is added without changing a prediction, decision, or residual.
+A long logical chain is useful when each step preserves the assumptions needed by the next. It becomes wasteful when detail is added without changing a prediction, decision, residual, or recognized dependency.
 
 Selective refinement is what allows the general picture to remain visible while microprocesses are inspected where necessary.
+
+The refinement target can also be a hidden variable rather than a numerical interval. A contradiction, stale evidence item, or uncertain dependency can deserve more resolution if resolving it would change the action class.
 
 ### Field note
 
@@ -450,6 +471,7 @@ Selective refinement is what allows the general picture to remain visible while 
 
 - Start coarse enough to see the whole dependency path.
 - Refine near hard boundaries, strong sensitivity, disagreement, or consequential tails.
+- Refine stale or weak evidence when it can change the decision.
 - Stop refining when plausible additional detail cannot change the action class or claim.
 - Compression should remove irrelevant detail, not exceptions or provenance.
 
@@ -460,7 +482,7 @@ Selective refinement is what allows the general picture to remain visible while 
 For region $i$, let $U_i$ describe unresolved width, $S_i$ decision sensitivity, and $C_i$ the cost or disturbance of obtaining more resolution.
 
 $$
-R_i = \frac{U_iS_i}{1+C_i}
+\boxed{R_i = \frac{U_iS_i}{1+C_i}}
 $$
 
 Hard constraints and catastrophic tails can override the ranking.
@@ -480,8 +502,9 @@ Hard constraints and catastrophic tails can override the ranking.
 2. Estimate the cost or disturbance of obtaining more information.
 3. Use $R_i$ only as a priority heuristic; hard safety or preservation boundaries override it.
 4. Recalculate after each new observation.
+5. Record whether the refinement actually changed the model, decision, or residual.
 
-**Working example.** A broad operating region has uncertainty 0.4 but sensitivity 0.05. A narrow threshold region has uncertainty 0.15 and sensitivity 0.9. Even with less uncertainty, the threshold region deserves earlier refinement because its uncertainty can change the decision.
+**Working example.** A broad operating region has uncertainty 0.4 but sensitivity 0.05. A narrow boundary region has uncertainty 0.15 and sensitivity 0.9. Even with less uncertainty, the boundary region deserves earlier refinement because its uncertainty can change the decision.
 
 **Limit.** Normalized values depend on the comparison set. The heuristic is not a universal optimization law.
 
@@ -497,7 +520,175 @@ After refinement, check whether the new information actually changed the project
 
 <a id="c6"></a>
 
-# C6 · The Return Route
+# C6 · The Engine at Idle
+
+*Patience preserves options when immediate narrowing is not required*
+
+### Observation
+
+*Near the shoal, the crew has enough information to keep moving but not enough to know which channel is best. The engine drops to idle. The vessel still responds to the helm. The buoy remains visible behind them. No route has been erased from the chart.*
+
+*Nothing has failed. Nothing has been solved either.*
+
+Patience in this volume is not a personality virtue and not passive delay. It is a control policy over the timing of commitment.
+
+A reasoning process is patient when it can preserve the current state, keep unresolved alternatives recoverable, and delay irreversible narrowing long enough for additional evidence, comparison, or capacity to matter—without ignoring the cost of delay.
+
+This matters in calm conditions because premature closure can hide lower-probability branches that later become important. It matters in focused extreme conditions because salience can narrow attention around the immediately dominant branch. Human research finds that acute stress often impairs working memory and cognitive flexibility, although effects vary by task and condition [R14]. That does not mean every stressed decision should be delayed. It means that confidence in a narrowed option set should not automatically increase merely because attention has become intense.
+
+Patience therefore protects **option integrity**: explored branches, unresolved alternatives, and stopping conditions remain externally represented instead of disappearing when one branch becomes dominant.
+
+· ❦ ·
+
+A pause is useful only if it preserves the work needed to resume.
+
+The process can externalize the current model, park the active branch, and return to a procedural reference state: observations preserved, assumptions visible, unresolved branches recorded, and no optional branch privileged merely because it was last active.
+
+This "reference state" is not a claim about a universal neutral brain state. It is a modeling state. For a person it may correspond to stepping away from a high-load task after writing down the live state. For an AI system it may correspond to ending a branch, preserving externally auditable state, and resuming later or with a different tool or agent.
+
+Incubation research gives a grounded human parallel: setting a problem aside can improve later problem solving in some task classes, and high-demand activity during the interval can reduce that benefit [R15]. Cognitive offloading research also shows why external state can free limited working memory, while reminding us that an unreliable external record can create new failure modes [R16].
+
+Patience does not impose an arbitrary threshold on exploration. A low-probability branch stays available unless evidence or a hard constraint rules it out. The branch may even deserve an early, small probe when the information it could produce would materially change the model.
+
+### Field note
+
+> *Idle is not lost motion when it preserves the ability to choose a better motion next.*
+
+**What to carry forward**
+
+- Patience controls commitment timing; it is not inactivity.
+- Preserve low-probability branches externally before narrowing the active workspace.
+- Probability alone is not a reason to delete a branch.
+- Return to a reference state when urgency permits and the active branch is producing little new information.
+- If delay itself threatens viability, patience may mean acting carefully now rather than waiting.
+- Distinguish actual recoverable resources from metaphorical "energy"; measure battery, time, compute, sleep, attention, or workload when those variables matter.
+
+### Operational model
+
+*A decision-value view of waiting, not a hard threshold.*
+
+Let $V_{\mathrm{info}}(\tau)$ be the expected improvement in the later decision from information that may become available over a bounded delay $\tau$, and let $C_{\mathrm{delay}}(\tau)$ be the expected cost of that delay.
+
+$$
+\boxed{V_{\mathrm{wait}}(\tau)=V_{\mathrm{info}}(\tau)-C_{\mathrm{delay}}(\tau)}
+$$
+
+The expression ranks waiting against immediate commitment; it does not create a universal "wait" threshold. Hard deadlines, irreversible deterioration, and preservation boundaries remain separate constraints.
+
+#### Measurements
+
+| Symbol | Operational definition and units |
+|---|---|
+| $\tau$ | bounded delay or incubation interval [time] |
+| $V_{\mathrm{info}}(\tau)$ | expected decision improvement from additional information, comparison, or recovery during $\tau$ [declared value unit] |
+| $C_{\mathrm{delay}}(\tau)$ | expected loss from waiting $\tau$ [same value unit] |
+| $V_{\mathrm{wait}}$ | net modeled value of waiting [same value unit] |
+
+#### How to use it
+
+1. Preserve the current model and branch state before pausing.
+2. Record which low-probability alternatives remain unresolved rather than deleting them.
+3. Estimate what new evidence, capacity, or independent comparison could realistically appear during the delay.
+4. Estimate what delay can damage: deadline, viability margin, opportunity, or recovery time.
+5. Compare waiting with the best immediate bounded action; do not assume either is neutral.
+6. Resume from the preserved state, not from memory of the last emotionally or computationally salient branch.
+
+**Working example.** A system fault has one dominant explanation and two low-probability alternatives. Immediate repair is reversible, but irreversible data migration would destroy evidence that distinguishes the alternatives. A short diagnostic interval has low delay cost and high information value. Patience favors preserving the branch set and diagnosing before migration, without requiring the rare alternatives to cross an arbitrary probability threshold.
+
+**Limit.** Expected information value is itself a model. Under true emergencies, delay costs can rise faster than the information value of waiting.
+
+**READ THE RESULT**
+
+Positive $V_{\mathrm{wait}}$ supports keeping the decision open for the modeled interval; negative values favor acting sooner under the same value premise. Neither result overrides hard constraints.
+
+**VALIDATE IT**
+
+After the pause or immediate action, compare what information actually arrived, whether the preserved branch set mattered, and whether the delay estimate was realistic. Update future tempo decisions from that evidence.
+
+---
+
+<a id="c7"></a>
+
+# C7 · A Voice Through the Fog
+
+*External guidance can correct a model without replacing responsibility*
+
+### Observation
+
+*Fog closes around the vessel. The buoy light disappears. The radio still works. A coastal station can provide a position estimate. Another vessel can report the current. The onboard chart can be checked against a newer survey.*
+
+*None of those sources is automatically the captain.*
+
+External guidance is any information, structure, or decision aid outside the currently active reasoning loop that can test, constrain, or redirect the model.
+
+It does not have to be human.
+
+A second sensor, checklist, simulator, independent model, database, map, formal rule, another AI system, or another person can all provide external guidance. The useful distinction is not human versus non-human. It is **independence, relevance, calibration, authority, and responsibility**.
+
+A source can be informative without having authority. A source can have authority without being the most accurate measurement instrument. A human may carry legal or organizational responsibility even when a non-human system supplies the better estimate. Those roles should not be collapsed.
+
+· ❦ ·
+
+External guidance becomes particularly valuable when the active process can no longer calibrate itself well.
+
+A high-load human can miss steps; systematic reviews of cognitive aids in clinical emergencies find that checklists and decision aids can reduce omitted steps and errors, although design and familiarization matter [R17]. Metacognition research similarly emphasizes that confidence is an inference about one's own performance and can diverge from actual accuracy [R18].
+
+The same logic applies to AI-assisted work. Agreement among several agents is weak evidence when they share the same model, prompt, dataset, retrieval source, or hidden premise. A second output is not an independent guide merely because it came from another process.
+
+External guidance should therefore enter through the evidence model, not through deference alone.
+
+### Field note
+
+> *A second voice is useful when it changes the evidence, not merely when it repeats the first voice more confidently.*
+
+**What to carry forward**
+
+- Guidance and authority are different variables.
+- Responsibility can remain human even when guidance is automated.
+- Check independence before treating agreement as confirmation.
+- External aids should preserve provenance and the conditions under which they are reliable.
+- Ask for guidance when uncertainty, load, conflict, or responsibility exceeds what the active loop can resolve safely.
+- External guidance should return the process to the real system, not encourage a self-consistent imagined one.
+
+### Operational model
+
+*A guidance review rather than a single universal score.*
+
+For each proposed guidance source, record five questions:
+
+1. **Scope:** what claim can this source actually support?
+2. **Independence:** what data, assumptions, instruments, or authorities does it share with the current model?
+3. **Calibration:** what evidence exists about its reliability for this class of question?
+4. **Authority:** does it have the power to permit, prohibit, or direct the action?
+5. **Responsibility:** who remains accountable for the consequence?
+
+The source should enter the model only at the strength supported by those answers.
+
+#### How to use it
+
+1. Identify the unresolved claim before seeking guidance.
+2. Choose a source that can add a genuinely different constraint, observation, or method.
+3. Record shared assumptions and possible correlated errors.
+4. Keep advice separate from authority and responsibility.
+5. Re-evaluate the local model after guidance; do not merely append the guidance as another conclusion.
+
+**Working example.** Three AI agents agree that a structural detail is acceptable, but all three rely on the same extracted code summary. A direct code citation or engineer review adds more independent evidence than a fourth agent repeating the same source. If a licensed professional is legally responsible for the decision, that responsibility remains separate from which source supplied the best technical clue.
+
+**Limit.** External guidance can be wrong, stale, biased, or correlated with the original error. More advice is not automatically more evidence.
+
+**READ THE RESULT**
+
+A good guidance source changes the evidence state or constrains action in a traceable way. It does not merely reduce discomfort with uncertainty.
+
+**VALIDATE IT**
+
+Where practical, compare the guided conclusion against later realized outcomes or a materially independent method. Track which guidance sources actually improved decisions over time.
+
+---
+
+<a id="c8"></a>
+
+# C8 · The Return Route
 
 *Recovery is part of action, not an afterthought*
 
@@ -523,6 +714,8 @@ A path that can restore the system in twelve hours is not viable when irreversib
 
 When strict preservation is already impossible, recovery logic becomes rescue logic. Non-action belongs in the comparison because it is also a policy with projected consequences.
 
+Recovery planning should preserve the information needed to know whether recovery succeeded. A rollback that returns the system to an unknown state is not fully verified recovery.
+
 ### Field note
 
 > *A return route exists only if it remains reachable when it is needed.*
@@ -531,7 +724,7 @@ When strict preservation is already impossible, recovery logic becomes rescue lo
 
 - Check shared failure domains, not only backup count.
 - Compare recovery time with time to irreversible loss.
-- Preserve access, authority, and irreplaceable state needed for recovery.
+- Preserve access, authority, evidence, and irreplaceable state needed for recovery.
 - Include non-action in rescue / least-loss comparisons.
 - Do not call rescue a successful strict-preservation result.
 
@@ -542,7 +735,7 @@ When strict preservation is already impossible, recovery logic becomes rescue lo
 Let $T_F$ be the estimated time until irreversible failure under the relevant scenario and $T_R$ the estimated time required to restore a viable state.
 
 $$
-M_R = T_F-T_R
+\boxed{M_R = T_F-T_R}
 $$
 
 A positive margin is useful only if the recovery path itself is independent of the failure being modeled.
@@ -561,10 +754,11 @@ A positive margin is useful only if the recovery path itself is independent of t
 2. Estimate recovery time including access, authority, setup, and verification.
 3. Test whether the recovery path shares the relevant failure domain.
 4. Treat non-independent recovery as unresolved even when $M_R>0$.
+5. Recalculate if state, access, workload, or dependency availability changes.
 
 **Working example.** Irreversible data loss is expected after 90 minutes of continued corruption; verified restore requires 40 minutes. $M_R=50$ minutes. If the restore credentials depend on the same compromised identity service, the positive time margin does not establish recoverability.
 
-**Limit.** Time estimates can change during an incident. Recalculate when state, access, or dependency availability changes.
+**Limit.** Time estimates can change during an incident. Recovery independence can also change when dependencies fail progressively.
 
 **READ THE RESULT**
 
@@ -576,15 +770,15 @@ Exercise or simulate recovery from a failure domain that removes the primary pat
 
 ---
 
-<a id="c7"></a>
+<a id="c9"></a>
 
-# C7 · The Logbook After the Storm
+# C9 · The Logbook After the Storm
 
 *Exact external state makes exploration cumulative*
 
 ### Observation
 
-*The vessel returns after dark. The buoy is still flashing, but the position in the notebook is not the position printed on the morning chart. The crew can reconstruct what changed because each sounding, course correction, and observation was recorded with time.*
+*The vessel returns after dark. The buoy is still flashing, but the position in the notebook is not the position printed on the morning chart. The crew can reconstruct what changed because each sounding, course correction, pause, outside report, and observation was recorded with time.*
 
 Without the logbook, tomorrow's crew would inherit conclusions without the chain of evidence that produced them.
 
@@ -605,9 +799,11 @@ Contradictions should also survive compression.
 
 If two grounded methods disagree, the disagreement should be localized: shared assumptions, different methods, different scopes, and what decision the disagreement can change.
 
-An assumption should have a revision condition. Evidence that can become stale should carry a time or version. A candidate hidden variable should retain the case that exposed it and the tests that promoted or rejected it.
+An assumption should have a revision condition. Evidence that can become stale should carry a time or version. A candidate hidden variable should retain the case that exposed it and the tests that promoted or rejected it. A parked low-probability branch should remain recoverable without remaining active in working memory.
 
 This external state is useful to a person, a team, or an AI system. It is not a transcript of private reasoning. It is a compact, auditable model of what the exploration currently claims to know.
+
+For a person, this is cognitive offloading with a reliability requirement: the external record frees limited working memory only if the record itself remains available and trustworthy [R16]. For an AI system, the same structure prevents a long task from depending on a fragile narrative summary. The state can be passed between tools or agents without pretending their internal reasoning is identical.
 
 ### Field note
 
@@ -619,7 +815,9 @@ This external state is useful to a person, a team, or an AI system. It is not a 
 - Keep provenance and freshness with evidence.
 - Preserve contradictions until evidence resolves them.
 - Record why a variable was promoted or demoted.
-- A summary that removes hard constraints or rare consequential branches is not a faithful compression.
+- Preserve parked branches and their last supported state.
+- A summary that removes hard constraints, rare consequential branches, or recovery conditions is not a faithful compression.
+- Multiple agents sharing one record are not independent merely because they are separate processes.
 
 ### Operational model
 
@@ -628,7 +826,7 @@ This external state is useful to a person, a team, or an AI system. It is not a 
 For a predicted value $\hat y_t$ and realized observation $y_t$:
 
 $$
-\delta_t = y_t-\hat y_t
+\boxed{\delta_t = y_t-\hat y_t}
 $$
 
 When the observation falls outside the model's supported uncertainty range, create a revision record rather than silently widening the model after the fact.
@@ -647,6 +845,7 @@ When the observation falls outside the model's supported uncertainty range, crea
 2. Record the realized value and method.
 3. If the residual is material, inspect measurement, assumption, boundary, parameter, relation, and hidden-variable explanations.
 4. Version the model change that follows.
+5. Preserve unresolved alternatives when the new evidence does not distinguish them.
 
 **Working example.** A model predicts a buoy drift of $4\pm2$ m; the observed displacement is 13 m. Do not rewrite the earlier range as if 13 m had always been expected. Preserve the residual and test missing-current, timing, calibration, and boundary explanations.
 
@@ -662,19 +861,19 @@ Check whether the revised model improves later predictions or independent cases 
 
 ---
 
-<a id="c8"></a>
+<a id="c10"></a>
 
-# C8 · The Compass
+# C10 · The Compass
 
 *The reusable tool is the cycle, not the metaphor*
 
 ### Observation
 
-*The next morning another crew leaves the same harbor. They carry yesterday's logbook, but they are not required to follow yesterday's route. The buoy remains offshore. The current may have changed.*
+*The next morning another crew leaves the same harbor. They carry yesterday's logbook, but they are not required to follow yesterday's route. The buoy remains offshore. The current may have changed. One channel has already been explored. Another remains unlikely but open.*
 
 The purpose of Compass is to preserve orientation while the local model changes.
 
-It is not a single equation. It is a disciplined cycle that decides what to represent, what to leave unresolved, where to spend resolution, and when to stop.
+It is not a single equation. It is a disciplined cycle that decides what to represent, what to leave unresolved, where to spend resolution, how quickly to narrow, when to ask for another source, and when to stop.
 
 The cycle inherits the earlier Observer model:
 
@@ -686,31 +885,66 @@ The cycle inherits the earlier Observer model:
 - state the value premise before optimization;
 - evaluate intervention, reversibility, verification, and stopping conditions.
 
-Vol. 1.2 adds four explicit disciplines:
+Vol. 1.2 adds six explicit disciplines:
 
 1. future-space projection instead of exhaustive enumeration;
 2. interestingness as structured future leverage rather than raw uncertainty;
 3. preservation evaluation including recovery-path independence;
-4. candidate-variable promotion from real applications without allowing storytelling to become theory.
+4. candidate-variable promotion from real applications without allowing storytelling to become theory;
+5. patience as control of commitment timing while branch state remains recoverable;
+6. external guidance as an evidence source distinct from authority and responsibility.
 
 · ❦ ·
 
 A useful execution cycle is:
 
-1. define the exact question or claim;
+1. define the exact question, claim, or decision;
 2. localize system, boundary, scale, interval, horizon, assumptions, and value premise;
-3. record evidence with provenance and uncertainty;
-4. map dependencies, hard boundaries, reserves, and recovery conditions;
-5. project only the future dimensions relevant to the question;
-6. identify consequential uncertainty, disagreement, or hidden-variable candidates;
-7. choose the smallest evidence-producing next step likely to change the model or decision;
-8. run preservation / rescue checks before consequential intervention;
-9. execute one justified step;
-10. compare the realized state with the projected range;
-11. update the model, preserve contradictions, and simplify irrelevant detail;
-12. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, or the question must be reframed.
+3. record evidence with provenance, uncertainty, freshness, and method independence;
+4. map dependencies, hard boundaries, reserves, containing-system effects, and recovery conditions;
+5. register candidate hidden variables and preserve residuals that exposed them;
+6. project only the future dimensions relevant to the question;
+7. identify consequential uncertainty, disagreement, tail risk, or hidden-variable candidates;
+8. choose whether to continue the active branch, probe a lower-probability branch, pause in a preserved reference state, or request external guidance;
+9. choose the smallest evidence-producing next step likely to change the model or decision;
+10. run preservation / rescue checks before consequential intervention;
+11. execute one justified step rather than the whole imagined route;
+12. compare the realized state with the projected range;
+13. update the model, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;
+14. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, recovery is required, or the question must be reframed.
 
 This cycle can be represented in a machine-readable state template, but the serialization is not itself part of the theory.
+
+### Human use
+
+For a human observer, Compass externalizes state so that attention does not have to carry the entire dependency graph at once. Patience can reduce premature closure; external aids can prevent omissions; and the logbook preserves low-probability alternatives until evidence resolves them.
+
+The method should not be read as a prescription to remain calm before acting. Real emergencies can require rapid action. The practical requirement is narrower: preserve enough external state and hard constraints that intense focus does not silently delete the rest of the model.
+
+### AI use
+
+For an AI system, Compass is an external auditable state representation, not a request to expose private chain-of-thought.
+
+A Compass-compatible workflow should preserve:
+
+- the selected question and claim strength;
+- observed facts and provenance;
+- assumptions and revision conditions;
+- dependency graph and hard boundaries;
+- projected ranges and unresolved frontier;
+- active and parked branches;
+- candidate-variable status;
+- recovery state;
+- external guidance and its independence;
+- explicit stopping conditions.
+
+This allows different tools or agents to contribute without treating agreement as independent evidence automatically. A specialized agent can refine one branch while the global model remains intact. A lower-probability branch can be explored in isolation without overwriting the dominant one. A stalled loop can end in an explicit external-wait or insufficient-evidence state rather than continuing because compute remains available.
+
+### Multi-agent use
+
+A fleet of agents is not automatically more intelligent than one agent. The useful unit is the interaction architecture.
+
+Roles may include evidence retrieval, dependency mapping, simulation, adversarial assumption checking, preservation evaluation, and verification. Disagreement should point to a variable, assumption, or evidence gap that another step can resolve. Voting without independence can multiply one error.
 
 ### Field note
 
@@ -719,9 +953,11 @@ This cycle can be represented in a machine-readable state template, but the seri
 **What to carry forward**
 
 - The question selects the local model; it is not a poetic direction variable.
-- The model should be no more detailed than the decision requires.
-- Every consequential loop needs new evidence, state change, or a bounded reason to repeat.
-- Human and AI systems both benefit from explicit external state when it preserves provenance, uncertainty, dependencies, and stopping rules.
+- The model should be no more detailed than the decision requires, but no less detailed than its hard dependencies require.
+- Every consequential loop needs new evidence, state change, bounded waiting, or a reason to branch.
+- Patience preserves options; it does not excuse endless deferral.
+- External guidance can be non-human; responsibility and authority remain separate.
+- Human and AI systems both benefit from explicit external state when it preserves provenance, uncertainty, dependencies, branches, and stopping rules.
 - The technical model remains universal; the expedition only keeps the reasoning continuous enough to see it.
 
 ### Operational model
@@ -742,11 +978,11 @@ A run should terminate explicitly as one of the following:
 - **terminal system state** — no modeled continuation exists under the selected definition;
 - **question reframed** — the original boundary, scale, or question was wrong.
 
-**Limit.** No procedure guarantees that all relevant variables are represented. Compass improves correction by making omissions, residuals, and revision paths visible.
+**Limit.** No procedure guarantees that all relevant variables are represented. Compass improves correction by making omissions, residuals, branch loss, and revision paths visible.
 
 **READ THE RESULT**
 
-A completed Compass run is not "the answer." It is a bounded claim plus an auditable account of what supports it, what remains unresolved, and what would cause revision.
+A completed Compass run is not "the answer." It is a bounded claim plus an auditable account of what supports it, what remains unresolved, what alternatives remain parked, and what would cause revision.
 
 **VALIDATE IT**
 
@@ -768,6 +1004,9 @@ The following extend rather than replace Vol. 1 definitions.
 | **Recovery-path independence** | The degree to which a recovery path remains available under the same failure that makes recovery necessary. |
 | **Preservation evaluation** | A model-relative test of whether selected invariants, viability conditions, dependencies, and recoverability remain within declared bounds through a change. |
 | **Unresolved frontier** | Evidence-backed reason to believe the modeled support may be incomplete, without inventing specific unobserved futures. |
+| **Patience** | A control policy that preserves state and alternatives while delaying irreversible narrowing when additional information or recovered capacity can matter more than the cost of delay. |
+| **Reference state** | A procedural state in which the active branch is parked, evidence and alternatives remain externalized, and no optional branch is privileged merely because it was last active. |
+| **External guidance** | Information or structure from outside the currently active reasoning loop used to test, constrain, or redirect the model. |
 | **Compass** | The name of the reusable exploration procedure in this volume; not a replacement for the universal technical terms above. |
 
 ---
@@ -794,12 +1033,19 @@ The operational templates above have been checked against the following recurrin
 | Measurement changes the system | Include observer / instrument disturbance in the model when material. |
 | Association presented as causality | Use intervention language only when causal identification is justified; otherwise label sensitivity or association. |
 | Several agents agree | Check shared model, data, retrieval, and assumptions before treating agreement as independent evidence. |
-| Compression removes exception | Preserve hard constraints, contradictions, rare consequential branches, provenance, and recovery state. |
-| Refinement repeats without new evidence | Stop or branch; repetition without state change or new evidence is not exploration. |
+| Compression removes exception | Preserve hard constraints, contradictions, rare consequential branches, provenance, parked alternatives, and recovery state. |
+| Refinement repeats without new evidence | Stop, pause, seek guidance, or branch; repetition without state change or information value is not exploration. |
 | Story suggests a hidden variable | Keep it a candidate until it has an operational definition and supporting evidence. |
 | Variable fits one case perfectly | Check independent cases or mechanism before reusable promotion. |
 | Promoted variable later becomes redundant | Demote it and preserve the model history. |
 | Evidence becomes stale | Reduce confidence or measure again when the stale evidence can change the decision. |
+| Low-probability branch | Do not delete it solely for low probability; preserve it when it remains possible and can change consequence or information value. |
+| High-load / stressed processing | Preserve external state and hard constraints before narrowing; when safe, pause or seek an independent aid rather than treating intense focus as increased certainty. |
+| Pause with no preserved state | Not considered useful patience; the process must be able to resume from an external record rather than reconstructing from salience or memory. |
+| Delay threatens viability | Patience does not require waiting; include delay cost and act when waiting consumes the relevant margin. |
+| External guidance shares the same source | Treat as correlated evidence, not independent confirmation. |
+| Guidance conflicts with authority | Keep epistemic reliability, authority, and responsibility separate in the decision record. |
+| Human responsibility with automated guidance | Preserve the responsible human/role explicitly where law, policy, or safety assigns responsibility; do not transfer it merely because a tool generated the recommendation. |
 
 ---
 
@@ -817,6 +1063,11 @@ These are grounding parallels and notation sources, not claims that Compass is a
 - systems verification and end-to-end testing: [R10]
 - AI lifecycle evaluation: [R11], [R12]
 - expected information / experiment selection: [R13]
+- acute stress and executive function: [R14]
+- incubation / delayed problem solving: [R15]
+- cognitive offloading: [R16]
+- external cognitive aids under emergency conditions: [R17]
+- metacognition and confidence calibration: [R18]
 
 ## References
 
@@ -848,21 +1099,31 @@ These are grounding parallels and notation sources, not claims that Compass is a
 
 **[R13] Lindley, Dennis V.** "On a Measure of the Information Provided by an Experiment." *Annals of Mathematical Statistics* 27(4) (1956): 986–1005. DOI: 10.1214/aoms/1177728069. https://doi.org/10.1214/aoms/1177728069
 
+**[R14] Shields, Grant S.; Sazma, Matthew A.; Yonelinas, Andrew P.** "The Effects of Acute Stress on Core Executive Functions: A Meta-Analysis and Comparison with Cortisol." *Neuroscience & Biobehavioral Reviews* 68 (2016): 651–668. DOI: 10.1016/j.neubiorev.2016.06.038. https://pubmed.ncbi.nlm.nih.gov/27371161/
+
+**[R15] Sio, Ut Na; Ormerod, Thomas C.** "Does Incubation Enhance Problem Solving? A Meta-Analytic Review." *Psychological Bulletin* 135(1) (2009): 94–120. DOI: 10.1037/a0014212. https://pubmed.ncbi.nlm.nih.gov/19210055/
+
+**[R16] Gilbert, Sam J.** "Cognitive Offloading Is Value-Based Decision Making: Modelling Cognitive Effort and the Expected Value of Memory." *Cognition* 247 (2024): 105783. DOI: 10.1016/j.cognition.2024.105783. https://doi.org/10.1016/j.cognition.2024.105783
+
+**[R17] Greig, Paul R.; Zolger, D.; Onwochei, D. N.; et al.** "Cognitive Aids in the Management of Clinical Emergencies: A Systematic Review." *Anaesthesia* 78(3) (2023): 343–355. DOI: 10.1111/anae.15939. https://pubmed.ncbi.nlm.nih.gov/36517981/
+
+**[R18] Fleming, Stephen M.** "Metacognition and Confidence: A Review and Synthesis." *Annual Review of Psychology* 75 (2024). DOI: 10.1146/annurev-psych-022423-032425. https://pubmed.ncbi.nlm.nih.gov/37722748/
+
 ---
 
 ## The extension in one passage
 
 The buoy is still there.
 
-At first it was a reference. Then it was noisy. Then it drifted. Then its drift helped expose a current. The current changed the route. The route approached a shoal. The shoal made additional soundings worthwhile. The weather made the return route relevant. The logbook made the next day's corrections possible.
+At first it was a reference. Then it was noisy. Then it drifted. Then its drift helped expose a current. The current changed the route. The route approached a shoal. The shoal made additional soundings worthwhile. The crew sometimes idled rather than deleting uncertain routes. Fog made outside guidance useful. Weather made the return route relevant. The logbook made the next day's corrections possible.
 
 None of those story objects became technical definitions.
 
-The technical model remained a model of elements, states, relations, boundaries, viability, evidence, uncertainty, future projections, intervention, preservation, and revision.
+The technical model remained a model of elements, states, relations, boundaries, viability, evidence, uncertainty, future projections, intervention, preservation, patience, guidance, and revision.
 
 That is the purpose of the story: not to rename the model, but to keep enough of the world continuous that hidden assumptions have somewhere to reveal themselves.
 
-And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, uncertainty, preservation conditions, and next justified step visible at the same time**.
+And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, uncertainty, preserved alternatives, preservation conditions, guidance, and next justified step visible at the same time**.
 
 ---
 
