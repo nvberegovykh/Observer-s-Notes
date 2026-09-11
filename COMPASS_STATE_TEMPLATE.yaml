@@ -2,19 +2,19 @@ version: "1.2"
 protocol: "Observer's Notes COMPASS"
 status: "working operational template"
 
-# This file is a reusable external state template for human/AI-assisted research.
-# It is not a request for private chain-of-thought. Fill only auditable state.
+# Reusable external state for human- or AI-assisted research.
+# Use universal technical terms here. Storytelling references belong in the volume text.
 
 meta:
   run_id: ""
   created_at: ""
   updated_at: ""
   operator: ""
-  chart_version: 0
-  parent_chart_version: null
+  model_version: 0
+  parent_model_version: null
 
-north:
-  question: ""
+question:
+  statement: ""
   claim_type: "descriptive|causal|predictive|diagnostic|decision|preservation"
   required_claim_strength: ""
   success_condition: ""
@@ -30,12 +30,10 @@ localization:
   authority: ""
   assumptions: []
 
-# Technical core: C_t = {Q,S,B,sigma,Delta_t,H,W,Theta,X,D,V,G,E,P,U,A,R,L}
-
 variable_registry:
-  # status: OBSERVED|DERIVED|CANDIDATE|LOCAL|RECURRENT|CORE|DOMAIN|DORMANT|REJECTED
+  # status: OBSERVED|DERIVED|CANDIDATE|LOCAL|RECURRENT|DOMAIN|CORE|DORMANT|REJECTED
   variables: []
-  # Example candidate variable record:
+  # Example:
   # - id: "x_recovery_independence"
   #   name: "recovery-path independence"
   #   status: "CANDIDATE"
@@ -51,7 +49,7 @@ variable_registry:
   #   promotion_reason: ""
   #   demotion_test: ""
 
-promotion_gate:
+promotion_review:
   operationality: null
   observability_or_boundability: null
   mechanistic_relevance: null
@@ -65,7 +63,7 @@ promotion_gate:
   decision: "KEEP_CANDIDATE|PROMOTE_LOCAL|PROMOTE_RECURRENT|PROMOTE_DOMAIN|PROMOTE_CORE|DORMANT|REJECT"
   reason: ""
 
-evidence_ledger:
+evidence:
   # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN
   items: []
   # - id: "E1"
@@ -80,10 +78,10 @@ evidence_ledger:
   #   disturbance: ""
   #   freshness: "current|possibly_stale|stale"
 
-dependency_chart:
-  nodes: []
-  relations: []
-  external_currents: []
+relations:
+  elements: []
+  dependencies: []
+  external_influences: []
   common_cause_groups: []
   containing_systems_with_material_externalities: []
 
@@ -97,15 +95,16 @@ preservation:
   #   required_reserve: null
   #   units: ""
   #   evidence_ids: []
-  irreplaceable_cargo: []
+  irreplaceable_state: []
   recovery_paths: []
   recovery_path_independence: []
   irreversible_consequences: []
   non_action_baseline: ""
-  preservation_gate: "PASS|FAIL|UNRESOLVED|RESCUE_REQUIRED|NOT_APPLICABLE"
+  result: "PASS|FAIL|UNRESOLVED|RESCUE_REQUIRED|NOT_APPLICABLE"
 
 projections:
-  # Each projection keeps interval/support + occupancy + confidence + frontier + provenance.
+  # Each axis may contain a range/support, occupancy/distribution,
+  # confidence, unresolved frontier, provenance, and relevant boundaries.
   axes: []
   # - id: "P1"
   #   name: ""
@@ -115,24 +114,24 @@ projections:
   #   unresolved_frontier: ""
   #   provenance: []
   #   hard_boundary: null
-  #   tail_flag: false
+  #   rare_consequential_tail: false
   #   scenario_generator: ""
   #   sampling_rule: ""
   #   horizon: ""
 
 interestingness:
+  # Keep the estimated property separate from confidence and unresolved frontier.
   elements: []
   # - id: "x1"
-  #   breadth_B: null
-  #   evenness_E: null
-  #   leverage_C: null
-  #   unresolved_R: null
-  #   grounding_Q: null
-  #   catastrophic_tail_T: false
-  #   known_score: null
-  #   interval: []
+  #   future_breadth: null
+  #   distribution_evenness: null
+  #   leverage: null
+  #   estimated_interestingness: null
+  #   confidence: null
+  #   unresolved_frontier: null
+  #   rare_consequential_tail: false
 
-contradiction_ledger:
+contradictions:
   items: []
   # - id: "C1"
   #   claim_A: ""
@@ -143,7 +142,7 @@ contradiction_ledger:
   #   candidate_resolutions: []
   #   decision_impact: ""
 
-assumption_ledger:
+assumption_register:
   items: []
   # - id: "A1"
   #   statement: ""
@@ -163,11 +162,11 @@ residuals:
   #   candidate_variables: []
   #   action: "investigate|accept_noise|reframe_boundary|refine_model"
 
-candidate_headings:
-  # heading_type: observe|retrieve|simulate|test|intervene|wait_external
+candidate_steps:
+  # step_type: observe|retrieve|simulate|test|intervene|wait_external
   options: []
-  # - id: "H1"
-  #   heading_type: "test"
+  # - id: "S1"
+  #   step_type: "test"
   #   purpose: ""
   #   expected_information_or_decision_value: ""
   #   disturbance_or_cost: ""
@@ -175,15 +174,15 @@ candidate_headings:
   #   state_change_required_for_repeat: ""
   #   cutoff: ""
 
-next_heading:
+next_step:
   selected_id: ""
   reason: ""
-  preservation_gate_checked: false
+  preservation_check_completed: false
   expected_state_change: ""
-  stop_or_turn_condition: ""
+  stop_or_redirect_condition: ""
 
-logbook:
-  changes_from_previous_chart: []
+record:
+  changes_from_previous_model: []
   new_evidence_ids: []
   variables_promoted: []
   variables_demoted: []
