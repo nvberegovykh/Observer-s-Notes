@@ -2,1088 +2,819 @@
 
 # COMPASS
 
-## An Ocean Expedition for Grounded Exploration
+*An ocean field book for grounded exploration*
 
 **Extension 1**
 
-**Status:** working operational volume. The ocean-expedition form is intentional, but every nautical image in this volume has a fixed technical counterpart. The metaphor is an orientation layer, never a source of evidence.
+---
 
-**Purpose:** turn the post-publication extensions of *Observer's Notes* into a reusable exploration instrument. Vol. 1 described a garden: dependency, maintenance, viability, and generative conditions. Vol. 1.2 moves offshore. A garden can often be walked and inspected directly; an ocean cannot. Navigation therefore requires charts, soundings, margins, course correction, recovery routes, and disciplined treatment of what remains beyond sight.
+## Publication note
 
-The central operational claim is modest:
+This volume extends *Observer's Notes* without replacing its definitions.
 
-> **Do not try to hold the whole possible world in memory. Maintain a grounded local chart, keep its uncertainty visible, preserve the vessel and return routes, and spend resolution where new evidence can materially change the course.**
+The technical vocabulary of Vol. 1 remains authoritative: element, state, interaction, relation, structure, condition, viability domain, maintenance, recursive maintenance, generative maintenance, observer effect, value premise, and intervention keep their earlier meanings.
 
-**Provenance:** the conceptual extensions in this volume grew from post-publication working discussions between Nikita Beregovykh and ChatGPT in 2026. External references are listed separately as neighboring formal traditions, notation sources, or grounding for specific operational claims. They are not presented as the origin of the Observer's Notes model.
+The ocean expedition is only the environment in which the new notes unfold. It is not a second technical vocabulary. A buoy may appear in the story; the model still speaks about an element, a measured state, a relation, uncertainty, or a reference. A reef may be present in the scene; the technical text still speaks about a boundary or constraint.
+
+The story is allowed to make an idea easier to see. It is not allowed to establish the idea as true.
+
+The conceptual extensions in this volume grew from post-publication working discussions between Nikita Beregovykh and ChatGPT in 2026. External references are listed at the end as neighboring formal traditions, notation sources, and grounding for specific operational claims. They are not presented as the origin of the Observer's Notes model.
+
+· ❦ ·
+
+> *A compass does not decide where to go. It helps preserve orientation while the surroundings move.*
+
+## A note before sailing
+
+A small research vessel leaves a harbor before sunrise. Not far offshore stands a weather buoy. Its light is easy to see. Its radio is not always quiet.
+
+At first the buoy seems like a convenient reference. Later the crew discovers that its signal has noise. Then that the buoy itself can drift. Then that the current affecting the buoy also affects the vessel. Then that a second instrument disagrees. Each new observation complicates the picture, but not arbitrarily. The same environment is being revisited with a better model.
+
+That continuity is the purpose of the expedition.
+
+A story can hold assumptions still long enough for hidden variables to become visible. The variables do not become part of the general model merely because the story contains them. They must survive operational definition, evidence, comparison, and reuse.
+
+The notes that follow keep the pattern of Vol. 1:
+
+**observation → general statement → limits → field note → carry-forward rules → operational model → measurements → use → example → validation.**
+
+The formulas are deliberately small. A formula should clarify a measurable relation, not serialize the entire model into letters.
 
 ---
 
-# 0. The Expedition Legend
+## Contents
 
-The nautical language is fixed so that the story remains useful without becoming dreamy.
+| Ref | Note |
+|:---:|---|
+| C1 | [The Buoy That Wouldn't Be Quiet](#c1) |
+| C2 | [The Current That Wasn't on the Chart](#c2) |
+| C3 | [What Must Survive the Crossing](#c3) |
+| C4 | [The Water Ahead](#c4) |
+| C5 | [Soundings Near the Shoal](#c5) |
+| C6 | [The Return Route](#c6) |
+| C7 | [The Logbook After the Storm](#c7) |
+| C8 | [The Compass](#c8) |
 
-| Expedition term | Technical meaning |
+> Vol. 1 definitions remain inherited. C1–C8 introduce only extension-specific operational terms.
+
+---
+
+<a id="c1"></a>
+
+# C1 · The Buoy That Wouldn't Be Quiet
+
+*Evidence can disagree before the system itself changes*
+
+### Observation
+
+*The vessel is still close enough to see the harbor lights. Ahead, the weather buoy flashes at a steady interval. Its radio packet reports position, wind, and wave height. The first reading is clean. The second differs slightly. The third differs again.*
+
+*Nothing obvious has moved. The sea looks calm.*
+
+The simplest response would be to average the readings and continue. That may be correct. It may also erase the first useful clue.
+
+An observation is not identical to the state being observed. It is a state estimate produced through an instrument, method, sampling interval, calibration, and interpretation. Vol. 1 already placed the observer inside the instrument. Here the consequence becomes operational: two observations of the same selected variable can disagree without immediately telling us why.
+
+The disagreement may come from measurement noise. It may come from time variation. It may come from different spatial locations, calibration drift, unmodeled interaction, or a mistaken assumption that both instruments are measuring the same thing.
+
+The first task is therefore not to explain the disagreement. It is to preserve it.
+
+· ❦ ·
+
+A model becomes unreliable when disagreement is automatically compressed into one value. Agreement is evidence only to the extent that the methods are sufficiently independent and their scopes overlap. Repeated readings from one faulty instrument do not become independent because there are many of them.
+
+The buoy is useful precisely because it remains in the scene. Later, if its position changes, the earlier noisy measurements can be reinterpreted. A record that seemed unimportant may become evidence of drift.
+
+This gives Compass its first discipline: **keep observations, uncertainty, method, time, and provenance separable from the explanation placed on top of them.**
+
+### Field note
+
+> *A noisy reference is still a reference if its uncertainty is kept visible.*
+
+**What to carry forward**
+
+- Preserve disagreement before explaining it.
+- Record method, time, scope, and uncertainty with a measurement.
+- Many correlated observations are not many independent observations.
+- Do not promote a measurement artifact into a system variable without evidence.
+
+### Operational model
+
+*A measurable local template, not a universal law.*
+
+For two estimates of the same selected quantity, a simple standardized disagreement is:
+
+$$
+D = \frac{|x_1-x_2|}{\sqrt{u_1^2+u_2^2}}
+$$
+
+The value is useful only when the uncertainty terms are comparable and the estimates refer to the same quantity and interval.
+
+#### Measurements
+
+| Symbol | Operational definition and units |
 |---|---|
-| **Ocean** | the larger possibility space beyond the current local model |
-| **Vessel** | the selected system being analyzed or acted through |
-| **Hull** | identity invariants and tolerances that keep the selected system recognizable |
-| **Seaworthiness** | current viability margins |
-| **Cargo** | irreplaceable or hard-to-reconstruct state, memory, data, specimens, identity, or resources |
-| **Crew / helm** | actors, control authority, and mechanisms able to change the system |
-| **Chart** | the current explicit local model |
-| **Compass** | the reusable protocol in this volume for maintaining and updating that model |
-| **North** | the declared question, target claim, or decision objective |
-| **Heading** | the next bounded observation, test, retrieval, simulation, or action |
-| **Sounding** | a measurement, observation, test, or evidence-producing probe |
-| **Current** | an external influence or dependency that changes future state |
-| **Wind / weather** | uncertainty, disturbance, or changing external conditions |
-| **Reef / shoal** | a hard constraint, failure boundary, legal/safety limit, or irreversible hazard |
-| **Margin under keel** | reserve between current/projected state and a hard boundary |
-| **Harbor** | a known viable or recoverable state |
-| **Lifeboat / return route** | an independent recovery, rollback, substitution, or rescue path |
-| **Wake** | history of realized changes and evidence left behind |
-| **Logbook** | auditable provenance, versions, assumptions, observations, and decisions |
-| **Uncharted water** | evidence-backed unresolved territory, not imaginary futures |
-| **Fleet** | multiple observers, agents, tools, or teams sharing a common chart |
+| $x_1,x_2$ | two estimates of the same selected quantity [native units] |
+| $u_1,u_2$ | stated standard uncertainty or comparable uncertainty scale [same units as $x$] |
+| $D$ | standardized disagreement [dimensionless] |
 
-**Rule of interpretation:** if the nautical language and the technical definition ever diverge, the technical definition controls.
+#### How to use it
 
-The metaphor may suggest a question. It may never establish a fact.
+1. Confirm that the two estimates refer to the same variable, scope, and relevant interval.
+2. Record uncertainty before comparing values.
+3. Treat a large $D$ as a reason to investigate method, time, boundary, or hidden variables—not as proof of any one cause.
+
+**Working example.** One position estimate is 12.0 m from a reference line with 0.5 m uncertainty; another is 13.2 m with 0.6 m uncertainty. $D\approx1.54$. The estimates disagree enough to justify checking timing, calibration, and motion before collapsing them into one position.
+
+**Limit.** A small $D$ does not prove correctness. Two methods can agree because they share the same bias.
+
+**READ THE RESULT**
+
+$D$ reports disagreement relative to stated uncertainty. It does not identify the cause.
+
+**VALIDATE IT**
+
+Repeat with a materially different method, calibration path, or observation interval. Check whether disagreement follows the instrument, the time, or the system.
 
 ---
 
-# 1. The Compass Is an Instrument, Not a Mood
+<a id="c2"></a>
 
-## 1.1 The Compass state
+# C2 · The Current That Wasn't on the Chart
 
-A Compass run maintains an explicit state at time `t`:
+*Applications expose hidden variables through residuals*
 
-`C_t = {Q, S, B, σ, Δt, H, W, Θ, X, D, V, G, E, P, U, A, R, L}`
+### Observation
 
-where:
+*By midmorning the buoy is no longer where the chart says it should be. The first explanation is instrument error. Then the vessel's own dead-reckoned position begins to differ from GPS in the same direction.*
 
-- `Q` — **North**: the question, claim, or decision being pursued;
-- `S` — selected **vessel/system**;
-- `B` — system boundary;
-- `σ` — scale;
-- `Δt` — observation / evaluation interval;
-- `H` — future horizon or set of horizons;
-- `W` — value premise when a decision or preservation claim is involved;
-- `Θ` — declared assumptions;
-- `X` — variable registry, including candidate and promoted hidden variables;
-- `D` — dependency / interaction graph;
-- `V` — viability and preservation margins;
-- `G` — hard gates, constraints, and terminal conditions;
-- `E` — evidence ledger with provenance and freshness;
-- `P` — projected reachable intervals / distributions relevant to the question;
-- `U` — unresolved territory and model disagreement;
-- `A` — candidate observations, tests, simulations, or actions;
-- `R` — recovery, rollback, substitute, and rescue paths;
-- `L` — logbook: model versions, changes, realized outcomes, and reasons.
+*The buoy may not be the problem.*
 
-The state is intentionally larger than a single equation. A complex model is safer when uncertainty, assumptions, evidence, and recovery are not compressed into one score.
+A general model begins with selected variables. Real applications force those variables through sequences of actual interactions. When the realized state repeatedly falls outside the model's supported range, the mismatch is information.
 
-## 1.2 Minimum output of every Compass cycle
+A residual is the difference between a model's prediction and an observation under the same declared conditions. A residual can come from noise, a wrong parameter, a wrong boundary, a wrong scale, a wrong relation, or a missing variable.
 
-A Compass cycle is incomplete unless it can externally report:
+The important move is not to invent a hidden cause. It is to ask what additional variable would have to exist for the observed chain to become coherent, and then test that candidate independently.
 
-1. **North:** what exact question or claim is being pursued;
-2. **Current chart:** what system, boundary, scale, horizon, and assumptions are active;
-3. **Soundings:** what is directly observed / measured and where it came from;
-4. **Inferences:** what is derived rather than directly observed;
-5. **Open water:** what remains unresolved and why it is suspected to matter;
-6. **Reefs:** what hard boundaries or irreversible hazards constrain action;
-7. **Harbors / return routes:** what viable recovery states remain reachable;
-8. **Candidate hidden variables:** what application-specific reasoning exposed;
-9. **Promotion status:** which variables are merely plausible, locally supported, recurrent, or reusable;
-10. **Projected waters:** what future intervals matter to the decision;
-11. **Next heading:** the smallest justified evidence-producing step;
-12. **Stop / turn condition:** what observation would stop, redirect, or terminate the current route.
+In the expedition, a lateral current becomes a candidate because it can affect both the buoy and the vessel in the observed direction. The story makes the candidate visible. The model still has to earn it.
 
-This is an auditable external state representation. It is not a request to expose private chain-of-thought.
+· ❦ ·
 
-## 1.3 The navigation invariant
+Candidate variables should not enter the reusable template merely because they produce a satisfying explanation once.
 
-At every cycle:
+A candidate becomes stronger when it can be operationally defined, measured or bounded, connected through a plausible relation, shown to reduce residuals outside the case that suggested it, and shown to matter to the decision or viability boundary.
 
-> **The strength of the claim must not exceed the strength of the chart, the soundings, and the preserved ability to correct course.**
+Recurrence matters most when it crosses contexts. Recovery-path independence, observer disturbance, common-cause dependency, delay, and hidden shared resources are examples of variables that can recur across very different systems while retaining the same operational relation.
 
-That is the core invariant of Compass.
+### Field note
 
----
+> *A residual is not an embarrassment. It is a place where the chart and the world have stopped agreeing.*
 
-# 2. Leaving Harbor — Localize Before Sailing
+**What to carry forward**
 
-Vol. 1 already established the base architecture [R0]: select the system, purpose, scale, and interval; define identity and viability; map dependencies; state the value premise before optimization; and attach intervention to measurement, reversibility where possible, verification, and a stopping condition.
+- A hidden variable begins as a candidate, not a fact.
+- Check simpler explanations before adding model dimensions.
+- Prefer variables with operational definitions and observable consequences.
+- A variable becomes more reusable when it survives materially different cases.
+- Previously promoted variables may later be demoted.
 
-Compass begins by making that localization executable.
+### Operational model
 
-## 2.1 Fix North
+*A measurable local template for candidate-variable testing.*
 
-Before generating explanations or options, write one sentence that identifies the target:
+Let $R_0$ be prediction error under the current model and $R_x$ the error after adding candidate variable $x$ under the same validation rule.
 
-- **descriptive North:** what is happening?
-- **causal North:** what changes what?
-- **predictive North:** what states remain reachable?
-- **diagnostic North:** what hidden variable or dependency could explain the residual?
-- **decision North:** which admissible action best serves the declared value premise?
-- **preservation North:** can the selected system remain viable / recoverable through the change?
+$$
+\Delta R_x = R_0-R_x
+$$
 
-Different Norths can use the same data but require different evidence.
+A positive $\Delta R_x$ means the candidate reduced residual error. Promotion still requires checks against overfitting, alternative explanations, and decision relevance.
 
-## 2.2 Draw only the local chart
+#### Measurements
 
-Do not model the entire ocean.
+| Symbol | Operational definition and units |
+|---|---|
+| $R_0$ | baseline prediction error under the existing model [declared error unit] |
+| $R_x$ | prediction error after adding candidate $x$ [same unit] |
+| $\Delta R_x$ | residual reduction [same unit] |
 
-Declare:
+#### How to use it
 
-- vessel/system `S`;
-- boundary `B`;
-- scale `σ`;
-- observation interval `Δt`;
-- future horizon `H`;
-- assumptions `Θ`;
-- value premise `W` where needed.
+1. Define the error rule before comparing models.
+2. Add one candidate relation or variable where practical.
+3. Test on data or cases not used to invent the candidate.
+4. Record whether the candidate changes a decision, explanation boundary, or viability margin.
 
-A local chart is not a claim that nothing exists outside it. It is a claim about what is currently represented.
+**Working example.** Position error averages 18 m without a current term and 6 m after adding a measured lateral-current estimate on a later segment. $\Delta R_x=12$ m. The current is locally supported, but not yet a universal variable for every navigation model.
 
-## 2.3 Mark chart provenance
+**Limit.** Better fit alone can reward unnecessary complexity. Validation must include independent cases or an independently grounded mechanism.
 
-Every state entry should be classed as one of:
+**READ THE RESULT**
 
-- **MEASURED** — direct observation or test;
-- **CONSTRAINT** — physical, logical, geometric, legal, or operational bound;
-- **MODEL** — simulation, equation, estimator, or predictive model;
-- **INFERRED** — supported indirectly by relations among observations;
-- **ASSUMED** — introduced to make the current model tractable;
-- **OPEN** — unresolved but evidence suggests the chart may be incomplete.
+Positive $\Delta R_x$ supports usefulness of the candidate under the stated validation rule; it does not prove causality by itself.
 
-If provenance is unknown, mark it unknown. Do not silently upgrade it.
+**VALIDATE IT**
+
+Test a different route, time, instrument, or system where the same candidate predicts a measurable effect before seeing the outcome.
 
 ---
 
-# 3. Soundings — Evidence Before Detail
+<a id="c3"></a>
 
-A sailor does not infer the seabed from the beauty of the horizon. Compass similarly distinguishes what is observed from what is imagined.
+# C3 · What Must Survive the Crossing
 
-## 3.1 Evidence ledger
+*Preservation is selected continuity, not frozen material*
 
-For each evidence item `e` record:
+### Observation
 
-`e = {id, claim_supported, source, method, timestamp, scope, uncertainty, independence, disturbance}`
+*The vessel turns farther offshore. A shoal lies between the current position and the next sampling station. The boat does not need to remain on its present heading. It does need to remain capable of completing the crossing—or returning from it.*
 
-Important fields:
+The original Notes distinguished persistence, maintenance, viability, intervention, and generative maintenance. Preservation remained easier to misunderstand.
 
-- **source:** where it came from;
-- **method:** how it was produced;
-- **timestamp / version:** whether it may now be stale;
-- **scope:** which region of the chart it actually supports;
-- **uncertainty:** measurement/model uncertainty;
-- **independence:** whether apparently separate evidence shares the same source or assumption;
-- **disturbance:** whether measuring changed the system materially.
+Preservation does not mean keeping every material component unchanged. It means retaining the selected invariants, relations, conditions, and recovery capacity required by the stated value premise over the stated interval and horizon.
 
-## 3.2 Evidence levels
+A part may be replaced while the system is preserved. Material may remain while the system is lost.
 
-Do not use a local check to prove an end-to-end claim.
+A server can be replaced while a service continues. A structural member can be strengthened while a building's use and load path remain. A scientific model can change while evidence, provenance, and reproducibility are preserved.
 
-A useful ladder is:
+Preservation is therefore evaluated against the selected system definition, not against visual sameness.
 
-- identity / checksum evidence;
-- local unit behavior;
-- interface / integration behavior;
-- end-to-end realized path;
-- repeated behavior under materially different conditions.
+· ❦ ·
 
-NASA systems-engineering guidance similarly distinguishes component/end-item verification, complete-system integration, and end-to-end validation [R10].
+The evaluation should include more than immediate function. A change can preserve today's output while removing the ability to repair tomorrow's failure. It can preserve the selected subsystem while damaging a containing system. It can preserve a primary path while making the backup depend on the same failure source.
 
-## 3.3 Independent soundings
+The lower-level dependency map matters.
 
-Several measurements are not independent merely because they are numerous.
+For consequential action, preservation evaluation should normally include identity, viability, constitutive dependencies, continuity, access/control, irreplaceable state, recoverability, and verification capacity when those dimensions are relevant.
 
-Shared sensor, shared calibration, shared model, shared dataset, shared prompt, or shared assumption can produce correlated agreement.
+These are not new universal categories forced onto every problem. They are prompts to check whether the selected system's real dependencies have been represented.
 
-Compass therefore records **method diversity**, not only count.
+### Field note
 
----
+> *Preserve what makes continuation possible, not merely what happens to be present now.*
 
-# 4. Currents Beneath the Surface — Dependencies and Hidden Variables
+**What to carry forward**
 
-This chapter is the main bridge from story to reusable model.
+- State what is being preserved and why.
+- Distinguish identity preservation from viability preservation and generative preservation.
+- Check lower-level and containing-system dependencies.
+- A recovery path must survive the failure it is intended to recover from.
+- When strict preservation is already impossible, switch to rescue / least-loss evaluation rather than pretending otherwise.
 
-Real applications force a general model through long logical chains. Those chains expose variables that were invisible at the abstract level. That is useful only if the variables are promoted carefully instead of being added because one story made them sound important.
+### Operational model
 
-## 4.1 From narrative event to candidate variable
+*A local preservation gate.*
 
-When a use case exposes something unexpected, do not immediately edit the general formula.
-
-Trace the chain:
-
-`observed event -> state transition -> dependency -> residual / mismatch -> candidate variable -> operational definition -> test -> decision effect -> recurrence -> promotion`
-
-Each arrow must be externally describable.
-
-### Example pattern
-
-A live platform update appears successful locally but users still cannot complete a workflow.
-
-Story-level observation:
-
-> "The service is up, but the journey is still broken."
-
-Technical chain:
-
-1. service health passes;
-2. end-to-end transaction fails;
-3. transaction depends on identity authority;
-4. identity authority is reachable only through a credential path;
-5. recovery uses the same credential path;
-6. therefore **recovery-path independence** is a candidate variable that was absent from the simpler model.
-
-The story exposed the variable. The chain justifies why it exists.
-
-## 4.2 Variable registry
-
-Every variable in `X` receives a status:
-
-- `OBSERVED` — directly measured state variable;
-- `DERIVED` — calculated from established variables;
-- `CANDIDATE` — plausible hidden variable exposed by a residual, failure, or application chain;
-- `LOCAL` — candidate has operational definition and local evidence;
-- `RECURRENT` — local variable recurs in a materially different application or follows from an independently grounded mechanism;
-- `CORE` — promoted into the reusable Compass template;
-- `REJECTED` — tested and unsupported / redundant for the present purpose;
-- `DORMANT` — possibly relevant but not worth resolving under the current North.
-
-## 4.3 Candidate-variable record
-
-For candidate `x*`, store:
-
-`x* = {name, discovered_from, operational_definition, observable_proxy, mechanism, evidence, alternatives, decision_effect, recurrence, promotion_status}`
-
-A candidate is not a fact until the relevant fields are supported.
-
-## 4.4 Promotion gate
-
-A hidden variable may be promoted from an application into the reusable Compass state only when enough of the following survive examination:
-
-1. **Operationality:** the variable can be defined independently of the story that suggested it.
-2. **Observability:** it can be measured, bounded, or represented by a defensible proxy.
-3. **Mechanistic relevance:** there is a plausible dependency path connecting it to modeled outcomes.
-4. **Residual reduction:** including it explains a repeated mismatch, improves prediction, or resolves a contradiction without merely overfitting the same case.
-5. **Decision relevance:** varying it can cross a decision, viability, preservation, or explanation boundary.
-6. **Alternative challenge:** simpler explanations have been checked where practical.
-7. **Recurrence:** it appears in a materially different application, dataset, scale, or independently grounded mechanism.
-8. **Non-duplication:** it is not just a renamed existing variable.
-9. **Stability:** its meaning survives reasonable changes of representation.
-10. **Cost justification:** the added model complexity is warranted by the information or decisions it improves.
-
-Promotion does **not** require every item in every domain. The reason for promotion must be written.
-
-## 4.5 Cross-case recurrence is stronger than narrative repetition
-
-Repeating the same story in different words is not recurrence.
-
-A strong recurrence test asks whether the variable appears under materially different conditions.
-
-Examples:
-
-- `recovery-path independence` appears in software credentials, emergency power, biological redundancy, and institutional succession;
-- `observer disturbance` appears in ecology, debugging, medicine, and social measurement;
-- `common-cause dependency` appears in redundant servers sharing one power source, two pumps sharing one intake, or multiple agents sharing one flawed dataset.
-
-When a variable survives translation across domains while retaining the same operational relation, it becomes a stronger candidate for the general template.
-
-## 4.6 Demotion is allowed
-
-A variable promoted earlier can be demoted if later evidence shows it is redundant, misleading, domain-specific, or not decision-relevant.
-
-Compass must be able to simplify its own chart.
-
----
-
-# 5. Reefs and Harbors — Preservation Evaluation
-
-The first obligation of navigation is not to maximize distance traveled. It is to know what must remain intact for navigation to continue.
-
-## 5.1 Preservation is selected continuity, not frozen material
-
-For selected system `S`, preservation asks:
-
-> After an action or disturbance, does enough of the selected organization, dependency base, viability, and recoverability remain for the valued system to stay viable, remain identifiable, or return to an acceptable state within the declared interval and horizon?
-
-The same material need not remain.
-
-A server can be replaced while a service is preserved. A structural member can be replaced while a load path and use are preserved. A scientific model can change while evidence and reproducibility are preserved.
-
-Conversely, material can remain while the system is lost.
-
-This is compatible with viability theory's concern with trajectories remaining inside constraints, while Compass uses viability as one component of a broader localized model rather than claiming equivalence to Aubin's framework [R1].
-
-## 5.2 Preservation vector
-
-For action `a`, project each hard preservation dimension into a post-action margin interval:
-
-`m_j(a) = [lower_j, upper_j]`
-
-Useful dimensions include:
-
-| Compass image | Technical dimension | Question |
-|---|---|---|
-| hull | identity margin `M_I` | Are defining invariants within tolerance? |
-| seaworthiness | viability margin `M_V` | Are operating / survival conditions viable? |
-| rigging / supplies | dependency margin `M_D` | Are constitutive dependencies, buffers, substitutes, and interfaces available? |
-| propulsion / steerage | continuity `C` | Can required function continue through the intervention? |
-| harbor / lifeboat | recoverability `R` | Is there an evidence-backed path back to a viable state? |
-| helm | access/control `A_C` | Will recovery actors still be able to reach/control the system? |
-| cargo | irreplaceable-state integrity `K` | Are unique states, records, keys, specimens, or memory protected? |
-| instruments | verification capacity `Q_V` | Can we know whether preservation succeeded? |
-
-These dimensions are not assumed independent.
-
-## 5.3 Required reserve
-
-For each hard dimension declare reserve `r_j >= 0`.
+For every declared hard condition $j$, let $\underline m_j(a)$ be the conservative lower bound of the projected post-action margin and $r_j$ the required reserve.
 
 Strict preservation requires:
 
-`lower(m_j(a)) >= r_j`
+$$
+\underline m_j(a) \ge r_j \qquad \text{for every hard condition } j
+$$
 
-for every hard dimension, plus joint/common-cause checks.
+The conditions should be checked jointly when common-cause failure is possible.
 
-A zero reserve may be logically admissible but operationally fragile.
+#### Measurements
 
-## 5.4 Recovery-path independence
-
-A return route must survive the failure it is intended to recover from.
-
-Examples:
-
-- backup credentials stored behind the same broken identity service are not an independent recovery path;
-- emergency power sharing the same flooded switchgear is not independent;
-- a rollback requiring the schema that the migration destroys is not a rollback;
-- several AI agents sharing the same corrupted source are not independent verification.
-
-This variable became visible through application chains and therefore belongs explicitly in Compass.
-
-## 5.5 Rescue / least-loss mode
-
-Strict preservation cannot be required when the vessel is already on the reef.
-
-If no available action, including non-action, keeps all hard margins above reserve:
-
-- switch mode from **PRESERVE** to **RESCUE**;
-- include non-action as a candidate;
-- compare time-to-failure, irreversible loss, recoverability, and protected cargo;
-- preserve future recovery capacity where possible;
-- state whose value premise and authority govern the choice;
-- do not describe the result as strict preservation.
-
-## 5.6 Multiple horizons
-
-A route can be safe for ten minutes and fatal by morning.
-
-Evaluate multiple horizons when delayed effects matter:
-
-`H = {H_short, H_operational, H_recovery, H_long}`
-
-Report horizon reversals instead of averaging them away.
-
-## 5.7 Preservation is not maximum stability
-
-Maximum stability can prevent adaptation, repair, or generation. Ecological research distinguishes resilience from narrower notions of stability [R2].
-
-Compass therefore distinguishes:
-
-- identity preservation;
-- viability preservation;
-- generative preservation / optionality.
-
-These may conflict and must remain separately visible.
-
----
-
-# 6. The Open Sea — Reachable Futures and Interestingness
-
-## 6.1 Interestingness is local future structure
-
-An element is interesting, within the declared chart, when its state or alteration has leverage over a broad and structured set of consequential reachable futures.
-
-Interestingness depends on:
-
-- boundary;
-- assumptions;
-- scale;
-- horizon;
-- selected projection axes;
-- current evidence.
-
-It is not an intrinsic property of the object.
-
-## 6.2 Not raw branch count
-
-A noisy buoy can generate enormous state entropy without changing the ship's route. A small rudder movement can have few immediate states but reorganize the entire reachable coast.
-
-Therefore ask:
-
-> **How much does this element reshape consequential reachable future-space?**
-
-not merely:
-
-> How many branches can be imagined?
-
-## 6.3 Priority projection
-
-Let `F_x(T)` be the represented futures reachable over horizon `T` under element `x`.
-
-Project onto a declared priority axis `U`, for example:
-
-`U in [-1, +1]`
-
-where endpoints are locally defined.
-
-Use fixed bins `K >= 2` across comparisons.
-
-If `p_b` is normalized modeled probability mass or explicitly declared occupancy weight:
-
-`p_b >= 0`
-
-`sum(p_b) = 1`
-
-`0 ln(0) = 0`
-
-then normalized Shannon-style evenness [R3] is:
-
-`E_U = -sum_{b=1..K}(p_b ln p_b) / ln(K)`
-
-with:
-
-`0 <= E_U <= 1`.
-
-This describes spread across the declared scale. It does not make bad outcomes desirable.
-
-## 6.4 Catastrophic tail flag
-
-Evenness is not safety.
-
-Define:
-
-`T_x = 1`
-
-when grounded reachable support crosses a declared catastrophic / hard failure boundary; otherwise `T_x = 0`.
-
-A rare credible reef matters even if the average sea looks calm.
-
-## 6.5 Causal leverage
-
-When a causal intervention model is justified:
-
-`C_x = distance(P(F | do(x=x1)), P(F | do(x=x0)))`
-
-using Pearl's intervention notation [R4].
-
-If causal identification is not justified, label the quantity as sensitivity / association rather than decorating it with `do(·)` notation.
-
-## 6.6 Known structure versus uncharted water
-
-Use:
-
-`I_vec(x) = (B_x, E_x, C_x, R_x, Q_x, T_x)`
-
-where:
-
-- `B_x` — normalized breadth of grounded projected support;
-- `E_x` — distribution evenness;
-- `C_x` — causal leverage or labeled sensitivity;
-- `R_x` — evidence-backed unresolved frontier;
-- `Q_x` — grounding/confidence of resolved support;
-- `T_x` — catastrophic-tail flag.
-
-Unknown territory must not automatically raise central interestingness.
-
-One provisional known-structure score is:
-
-`I_known(x) = C_x * Q_x * (w_B B_x + w_E E_x)`
-
-with:
-
-`w_B >= 0, w_E >= 0, w_B + w_E = 1`.
-
-Report frontier separately:
-
-`F_unresolved(x) = (R_x, 1-Q_x)`.
-
-If a single interval is needed:
-
-`I_interval(x) = [I_known, min(1, I_known + C_x w_R R_x (1-Q_x))]`
-
-The upper extension is an uncertainty/discovery allowance, not evidence that the hidden structure already exists.
-
----
-
-# 7. Charts at Several Scales — Projection of Intervals
-
-An ocean chart is useful because it suppresses almost everything while preserving what matters to navigation.
-
-## 7.1 Projection record
-
-For projection `k`:
-
-`P_k(F) = (I_k, rho_k, q_k, r_k, prov_k)`
-
-where:
-
-- `I_k` — resolved interval or union of intervals;
-- `rho_k` — occupancy structure inside the interval;
-- `q_k` — grounding / confidence;
-- `r_k` — evidence-backed unresolved boundary information;
-- `prov_k` — provenance.
-
-The interval alone is insufficient.
-
-Dense support across `[-1,+1]` and two clusters near `-1` and `+1` share the same outer interval but imply different future structure.
-
-## 7.2 Rigorous enclosure versus descriptive chart
-
-Classical interval analysis computes mathematically defined enclosures under specified assumptions [R5].
-
-Compass often uses broader descriptive intervals from scenarios, measurements, ensembles, or expert constraints.
-
-Do not call a descriptive interval a rigorous enclosure unless it has that guarantee.
-
-## 7.3 Keep the path back to source
-
-Every projection should retain:
-
-- source variables;
-- transform rule;
-- scale;
-- horizon;
-- thresholds;
-- scenario generator;
-- weighting / sampling rule;
-- unresolved variables;
-- provenance;
-- timestamp/version when state can drift.
-
-A short chart that cannot be traced back to evidence is not navigation; it is illustration.
-
----
-
-# 8. Sound the Shoals — Adaptive Refinement
-
-## 8.1 Start coarse
-
-Use broad chart resolution until it becomes decision-sensitive.
-
-Refine when:
-
-- projected intervals cross a hard boundary;
-- materially different models disagree;
-- the decision changes under small assumption variation;
-- causal leverage is high;
-- a rare tail threatens irreplaceable state;
-- an application exposes a candidate hidden variable;
-- the cost of obtaining additional evidence is small relative to the decision consequence.
-
-The resource-allocation analogy to adaptive mesh refinement is intentional: use fine resolution where structure/error requires it rather than everywhere [R6][R7]. Compass borrows the allocation principle, not AMR's numerical machinery.
-
-## 8.2 Refinement priority vector
-
-For local region / question `i`:
-
-`R_i = (S_i, U_i, G_i, D_i, C_i)`
-
-where:
-
-- `S_i` — sensitivity / leverage;
-- `U_i` — unresolved width;
-- `G_i` — consequence / decision gradient;
-- `D_i` — disagreement across materially different methods;
-- `C_i` — cost / disturbance of resolving it.
-
-Do not collapse this to a scalar unless comparison requires it.
-
-Expected information-gain traditions provide neighboring formal tools for experiment selection [R13].
-
-## 8.3 The refinement loop
-
-Compass refinement is:
-
-`chart -> sound -> compare -> isolate -> refine -> validate -> propagate -> compress`
-
-Detailed procedure:
-
-1. project coarsely;
-2. locate boundary-sensitive or contradictory regions;
-3. select the smallest useful new sounding / test / retrieval;
-4. obtain evidence;
-5. update variables and intervals;
-6. test whether the decision or explanation changed;
-7. propagate only supported changes upward;
-8. compress detail that no longer changes higher-level conclusions;
-9. record the update in the logbook.
-
-## 8.4 Stop refinement when
-
-- the claim is supported at its required level;
-- the decision is robust under plausible alternate models;
-- remaining uncertainty cannot change the action class;
-- the next probe would violate preservation without adequate justification;
-- the true blocker is external and no new local evidence can resolve it;
-- the loop is no longer producing new state or evidence.
-
-A loop without new evidence is circling, not exploration.
-
----
-
-# 9. The Knife Overboard — Exploration Without Destructive Blindness
-
-## 9.1 The probe rule
-
-> **The efficiency of a probe does not cancel the disturbance it creates.**
-
-Cutting is sometimes the fastest way to learn what is inside something. It can also destroy the relation being studied.
-
-The same applies to destructive debugging, invasive experiments, organizational intervention, ecological manipulation, or irreversible infrastructure changes.
-
-## 9.2 Escalation ladder
-
-Prefer, where appropriate:
-
-1. passive observation;
-2. historical / naturally occurring variation;
-3. model / simulation;
-4. isolated or sandboxed test;
-5. reversible local probe;
-6. reversible system intervention with monitoring;
-7. irreversible intervention after explicit preservation/rescue evaluation.
-
-This is not a command to always move slowly. Delay can itself destroy viability. The question is whether disturbance, delay, and recovery are represented explicitly.
-
-## 9.3 Receding-horizon navigation
-
-Model predictive control repeatedly solves a finite-horizon problem from the current state, applies a limited control move, observes the new state, then solves again [R8].
-
-Compass is broader, but uses the same useful pattern:
-
-> project far enough to justify the next bounded heading; sail only the justified leg; take a new sounding; redraw the chart.
-
----
-
-# 10. The Logbook — Exact External Thinking During Exploration
-
-Compass becomes reusable only when state survives the individual conversation or observer.
-
-## 10.1 Logbook entry
-
-Each consequential cycle should create:
-
-`L_t = {version, north, chart_changes, new_evidence, variable_changes, projection_changes, preservation_status, chosen_heading, stop_condition, realized_outcome}`
-
-## 10.2 Separate layers
-
-Keep four layers distinct:
-
-### Layer A — Observation
-What was directly seen, measured, retrieved, or tested?
-
-### Layer B — Model
-What dependency / causal / structural interpretation is currently used?
-
-### Layer C — Projection
-What future intervals follow if the model is used?
-
-### Layer D — Decision
-What action, if any, follows under the declared value premise and constraints?
-
-This separation makes it easier to replace a model without erasing the observations that produced it.
-
-## 10.3 Contradiction ledger
-
-Contradictions are not noise to remove.
-
-For contradiction `c` record:
-
-`c = {claim_A, claim_B, evidence_A, evidence_B, shared_assumptions, candidate_resolutions, decision_impact}`
-
-A contradiction with no decision impact may remain open. A contradiction that crosses a preservation boundary gets priority.
-
-## 10.4 Assumption ledger
-
-For each assumption:
-
-`θ = {statement, reason, scope, sensitivity, invalidation_test, expiry}`
-
-An assumption with high decision sensitivity deserves a sounding before a low-sensitivity unknown.
-
----
-
-# 11. Compass Execution Protocol
-
-This is the reusable instrument.
-
-## 11.1 Input
-
-A Compass run requires at minimum:
-
-- a question / task;
-- available evidence or permission to retrieve it;
-- a declared target claim or decision;
-- any known hard constraints.
-
-Everything else can be discovered progressively.
-
-## 11.2 Cycle
-
-### C0 — Set North
-Write `Q` and the claim strength required.
-
-### C1 — Draw the first chart
-Declare `S, B, σ, Δt, H, Θ, W`.
-
-### C2 — Load soundings
-Build evidence ledger `E`; separate observed from inferred.
-
-### C3 — Mark reefs and harbors
-Build `V, G, R`: hard boundaries, reserves, recovery routes, irreplaceable cargo.
-
-### C4 — Trace currents
-Build/update dependency graph `D`.
-
-### C5 — Register variables
-Update `X`; label every new variable by status.
-
-### C6 — Project waters ahead
-Build `P`; use intervals/distributions only at justified resolution.
-
-### C7 — Locate interesting regions
-Compare leverage, spread, disagreement, tail risk, and unresolved frontier.
-
-### C8 — Run variable-promotion gate
-For application-exposed hidden variables, test operationality, evidence, mechanism, decision effect, alternatives, recurrence, and redundancy.
-
-### C9 — Choose a heading
-Select the smallest step likely to reduce decision-relevant uncertainty or test the most consequential hidden variable.
-
-### C10 — Preservation gate
-Before consequential action, evaluate margins, common-cause risks, recovery independence, and mode: PRESERVE or RESCUE.
-
-### C11 — Execute one justified leg
-Observe / retrieve / simulate / test / act only to the extent justified by the current chart.
-
-### C12 — Take new soundings
-Compare realized state with projected intervals.
-
-### C13 — Update the chart
-Change only what new evidence supports. Preserve contradictions.
-
-### C14 — Compress
-Remove no-longer-relevant detail while retaining hard boundaries, rare consequential branches, provenance, assumptions, recovery state, and promoted variables.
-
-### C15 — Stop, turn, or repeat
-Apply explicit terminal conditions.
-
-## 11.3 Allowed terminal states
-
-A Compass run should end in one of a small number of explicit states:
-
-- `SUPPORTED` — target claim supported to declared strength;
-- `DECISION_ROBUST` — action class stable across plausible refinements;
-- `PRESERVATION_BLOCK` — action blocked by unresolved / negative hard margin;
-- `RESCUE_REQUIRED` — strict preservation unavailable; least-loss logic required;
-- `EXTERNAL_WAIT` — external dependency is the blocker;
-- `INSUFFICIENT_EVIDENCE` — no justified next step can presently resolve the key uncertainty;
-- `MODEL_CONTRADICTION` — current assumptions cannot jointly explain observations;
-- `TERMINAL_SYSTEM_STATE` — system itself has no modeled continuation under the selected definition;
-- `QUESTION_REFRAMED` — original North was drawn at the wrong boundary/scale.
-
-"Still thinking" is not a terminal state.
-
----
-
-# 12. Hidden-Variable Discovery as a Research Engine
-
-This is where Compass becomes more than a workflow manager.
-
-## 12.1 Applications are stress tests of the general template
-
-A general formula is intentionally sparse. Real applications introduce geometry, timing, authority, failure, environment, and observation constraints. The logical chain required to preserve the story while reaching an actual use case is not wasted prose; it is a **stress test** of the general model.
-
-Each time a chain fails, ask:
-
-> What variable or relation had to be silently assumed for the story to remain coherent?
-
-That variable becomes a candidate.
-
-## 12.2 Residual-driven discovery
-
-Let predicted projection be `P_pred` and realized observation be `y`.
-
-If `y` lies outside the supported region of `P_pred`, create residual record:
-
-`δ = {prediction, realization, violated_assumption, candidate_dependencies, candidate_variables}`
-
-Do not immediately widen `P_pred` to include `y`.
-
-First ask whether:
-
-- measurement is wrong;
-- boundary is wrong;
-- scale/horizon is wrong;
-- dependency is missing;
-- existing variable has wrong state;
-- a hidden variable is required.
-
-## 12.3 Variable enrichment without explosion
-
-If every application-specific variable is made core, Compass becomes unusable.
-
-Therefore the variable registry is layered:
-
-`CORE -> DOMAIN -> LOCAL -> CANDIDATE`
-
-- **CORE** variables recur across many systems and belong in the general Compass state;
-- **DOMAIN** variables recur within a class such as structures, software, ecology, or finance;
-- **LOCAL** variables matter to one application;
-- **CANDIDATE** variables are not yet established.
-
-A future research model loads only relevant layers.
-
-## 12.4 Promotion creates inheritance
-
-When a variable is promoted, record:
-
-- the cases that exposed it;
-- its operational definition;
-- supporting evidence;
-- known failure modes;
-- domains where it should / should not be inherited;
-- a test that could demote it later.
-
-This turns prior exploration into reusable structure without turning prior conclusions into dogma.
-
----
-
-# 13. Human Navigation
-
-A human observer has limited working memory. Compass externalizes the chart so microprocesses can remain light while the general picture remains visible.
-
-It helps by:
-
-- separating observed from inferred state;
-- holding dependency chains outside working memory;
-- preserving unresolved contradictions;
-- keeping assumptions and expiry visible;
-- showing which unknowns can actually change a decision;
-- allowing re-entry after interruption;
-- reducing the urge to solve every branch at equal resolution.
-
-The goal is not maximum detail. A mature chart may become simpler because irrelevant branches have been tested and compressed.
-
----
-
-# 14. AI Navigation
-
-The claim here is narrow: an AI system can benefit from the same external organization when the state is explicit and auditable.
-
-A Compass-compatible AI should maintain or produce:
-
-- current North;
-- chart boundary/scale/horizon;
-- evidence ledger with provenance;
-- dependency graph;
-- variable registry with promotion status;
-- preservation margins and recovery paths;
-- future projections;
-- unresolved frontier;
-- next heading;
-- stop conditions;
-- log of chart revisions.
-
-It should **not** treat its own fluency as a sounding.
-
-NIST's AI Risk Management Framework emphasizes validity/reliability, safety, resilience, transparency, and lifecycle evaluation [R11]. NIST's 2026 TEVV-Athlon draft proposes adaptable TEVV across varied AI systems, including agentic systems [R12]. These ground the evaluation discipline, not Compass's specific architecture.
-
-## 14.1 Fleet behavior
-
-Several agents form a fleet only if they share a chart and preserve disagreement.
-
-Useful roles include:
-
-- sounding / retrieval;
-- dependency mapping;
-- adversarial assumption checking;
-- scenario generation;
-- preservation evaluation;
-- verification;
-- synthesis.
-
-Several agents with one hidden assumption are several ships following one wrong chart.
-
-## 14.2 Compression rule
-
-Before summarizing, preserve:
-
-- reefs / hard constraints;
-- rare catastrophic branches;
-- contradictions;
-- provenance;
-- cargo / irreplaceable state;
-- recovery paths;
-- assumptions whose removal changes the conclusion;
-- promoted variables and the evidence that justified them.
-
-Compression that deletes these makes the system shorter, not smarter.
-
-## 14.3 Compass invocation for AI-assisted research
-
-A reusable instruction is:
-
-> **Use Compass. Initialize an external Compass state before deep exploration. Separate evidence, inference, projection, and decision. Maintain variable-promotion status. Treat application narratives as stress tests that may expose hidden variables, not as evidence by themselves. Refine only decision-sensitive regions. Before consequential action, run preservation/rescue gates and verify recovery-path independence. After each new observation, compare realization to projection, update the chart, preserve contradictions, and stop when an explicit terminal state is reached.**
-
-This instruction describes externally auditable process state, not hidden reasoning traces.
-
----
-
-# 15. Worked Expedition — A Coupled Technical System
-
-Consider a live technical platform being changed while users depend on it.
-
-## 15.1 North
-
-`Q = Can the update be deployed while preserving user workflow, recoverability, and irreplaceable state?`
-
-## 15.2 First chart
-
-Vessel/system:
-
-`user -> client -> identity -> service -> persistent state -> external provider`
-
-Return route:
-
-`operator authority -> backup -> restoration -> verification`
-
-## 15.3 Initial variables
-
-Core chart contains:
-
-- service availability;
-- state integrity;
-- dependency availability;
-- recovery time;
-- rollback presence.
-
-## 15.4 Story exposes a hidden current
-
-Local service health passes, but users cannot recover access after a failure.
-
-Logical chain:
-
-1. health endpoint passes;
-2. user transaction fails;
-3. operator attempts rollback;
-4. rollback requires identity authority;
-5. identity authority uses same failed dependency;
-6. nominal rollback existed but was unreachable.
-
-Candidate hidden variable:
-
-`R_ind = recovery-path independence`.
-
-## 15.5 Operationalize
-
-Define `R_ind` by failure-domain separation:
-
-- `R_ind = 1` only when at least one recovery path does not depend on the same failure mode it must recover from;
-- otherwise `R_ind = 0` or an interval if dependency independence is unresolved.
-
-This is a local definition, not a universal scalar for all domains.
-
-## 15.6 Decision effect
-
-Without `R_ind`, projected recoverability margin was positive.
-
-With `R_ind`, the lower bound crosses zero.
-
-Therefore the variable changes the preservation decision and deserves refinement.
-
-## 15.7 Recurrence
-
-The same structural variable appears in:
-
-- emergency power sharing the same flooded distribution room;
-- redundant pumps sharing one blocked intake;
-- multiple agents sharing one corrupted evidence source.
-
-The operational relation survives translation: a backup that shares the same relevant failure domain is not independent.
-
-`R_ind` is therefore a strong candidate for CORE promotion.
-
-## 15.8 Heading
-
-The next step is not a full platform rewrite. It is the smallest sounding that resolves independence:
-
-- map authority dependencies of the recovery path;
-- test recovery from an isolated failure domain;
-- verify that recovery remains reachable after primary-path loss.
-
-## 15.9 Update
-
-Only after the sounding does Compass update the preservation gate and choose the next deployment leg.
-
-This is how a storytelling chain can enrich the reusable model without becoming hallucinated theory.
-
----
-
-# 16. Validation and Edge-Case Checklist
-
-This checklist is a minimum test set for the current formulas and procedure. It must grow when applications expose new failure modes.
-
-| Edge case | Compass handling |
+| Symbol | Operational definition and units |
 |---|---|
-| One occupied priority bin | Use fixed `K >= 2`; no division by `ln(1)`. |
-| Zero occupancy bins | Use `0 ln 0 = 0`. |
-| Empty / contradictory reachable set | Mark model infeasible/unresolved; do not report interestingness as zero unless the system is genuinely terminal. |
-| Unbounded projection axis | Declare finite reference scale, transform, or domain thresholds before normalized breadth. |
-| Rare catastrophic branch | Preserve tail flag / hard reef; averages and entropy cannot erase it. |
-| Low-confidence model | Unknowns widen frontier/interval; they do not automatically raise central score. |
-| Scenario count baseline is zero | Optionality ratio undefined; use counts, fractions, or weighted viable mass. |
-| Different scenario sample sizes / generators | Counts not directly comparable without controlled basis. |
-| Already-failing system | Switch PRESERVE -> RESCUE; include non-action baseline. |
-| Irreversible action | Stronger evidence/containment/forward recovery; do not falsely require rollback. |
-| Common-cause dependencies | Model joint failure; independent positive margins are insufficient. |
-| Backup shares failure domain | Recovery-path independence fails. |
-| Subsystem preserved, containing system harmed | Evaluate material externalities at containing levels. |
-| Short-term preserved, long-term harmed | Evaluate several horizons; report reversals. |
-| Measurement disturbs system | Put measurement disturbance in evidence record/model. |
-| Association presented as causality | Use `do(·)` only with justified causal model. |
-| Multiple agents agree | Check common model/data/assumption before calling it independent validation. |
-| Compression deletes exception | Preserve reefs, tails, contradictions, provenance, cargo, and recovery state. |
-| Refinement repeats without new evidence | Stop/branch; circling is not exploration. |
-| Value premises conflict | Keep conflict explicit; do not hide it in a weighted average by default. |
-| Story suggests variable with no operational definition | Keep `CANDIDATE`; do not promote. |
-| Variable fits one case perfectly | Check alternatives and materially different cases before recurrence/core promotion. |
-| Variable recurs only because same source/template was reused | Treat as correlated recurrence, not independent evidence. |
-| New variable duplicates existing one | Merge or reject; do not inflate chart dimensionality. |
-| Promotion later proves harmful/redundant | Demote; preserve history in logbook. |
-| North changes mid-run | Create new chart version or `QUESTION_REFRAMED`; do not pretend continuity of claim. |
-| Evidence becomes stale | Lower freshness confidence; re-sound if decision-sensitive. |
-| Model and observation disagree | Create residual/contradiction; do not widen model automatically. |
+| $a$ | proposed action or intervention |
+| $\underline m_j(a)$ | conservative lower bound of post-action margin for condition $j$ [domain unit] |
+| $r_j$ | required reserve above the failure boundary [same unit] |
+| $j$ | a declared hard preservation condition |
+
+#### How to use it
+
+1. Define the selected system, value premise, interval, and horizon.
+2. Identify hard conditions and their failure boundaries.
+3. Project each margin after the action, including uncertainty.
+4. Check common-cause failure and recovery-path independence.
+5. If no candidate action, including non-action, satisfies the hard conditions, classify the problem as rescue / least-loss rather than strict preservation.
+
+**Working example.** A control-system migration has positive service margin and data-integrity margin, but the only rollback requires the same credential service that the migration may disable. Recoverability remains unresolved, so strict preservation is not established even though the expected main path succeeds.
+
+**Limit.** The gate is only as complete as the selected hard conditions. An omitted dependency can make a pass meaningless.
+
+**READ THE RESULT**
+
+Meeting all declared bounds supports a strict preservation claim under the current model. Failing one bound identifies the condition that blocks that claim.
+
+**VALIDATE IT**
+
+Test the dependency and recovery map with a materially different failure scenario, especially one involving shared resources or common authority.
 
 ---
 
-# 17. Reference Map
+<a id="c4"></a>
+
+# C4 · The Water Ahead
+
+*Interestingness is structured future potential, not raw uncertainty*
+
+### Observation
+
+*Beyond the buoy the route opens into several channels between islands. One route is broad and well charted. Another divides repeatedly around shallow water. A third is poorly surveyed.*
+
+*The poorly surveyed route is not automatically the most interesting. It may simply be poorly known.*
+
+For this volume, interestingness is local and model-relative. An element is interesting when changes in it materially reorganize a broad and structured set of reachable futures under the stated assumptions.
+
+Raw branch count is not enough. Random noise can create many possible outputs while having little causal leverage over anything that matters. A small decision can create only a few branches while moving the entire system between different viable regions.
+
+The useful question is not merely "how uncertain is this?" It is:
+
+> How much does this element change the reachable future structure that matters to the present question?
+
+This future structure can be projected onto selected dimensions: success/failure priority, cost, safety margin, ecological effect, energy, time, explanatory power, or another locally justified variable.
+
+· ❦ ·
+
+Projection reduces combinatorial explosion, but compression can hide structure. Two future sets can occupy the same outer interval while one fills the interval continuously and the other exists only near opposite extremes.
+
+A useful projection therefore keeps at least:
+
+- supported range or regions;
+- distribution or occupancy inside them where justified;
+- confidence / grounding quality;
+- unresolved frontier;
+- hard boundaries and rare consequential branches.
+
+Unknown territory is not scored as if it already contained valuable structure. It remains uncertainty until evidence supports more.
+
+### Field note
+
+> *The most interesting water is not necessarily the least known. It is where a change can reorganize what becomes reachable.*
+
+**What to carry forward**
+
+- Interestingness is local to a question and model.
+- Separate uncertainty from causal leverage.
+- Keep known future structure separate from unresolved frontier.
+- Rare catastrophic branches remain visible even when averages are small.
+- A projection is a compression, not the future itself.
+
+### Operational model
+
+*A first local measure, not a universal law.*
+
+Let $B$ describe supported breadth of reachable futures on the selected projection, $E$ describe how broadly supported futures occupy the declared outcome scale, and $L$ describe the leverage of the selected element on that projection.
+
+First combine future diversity:
+
+$$
+D_F = w_B B + w_E E
+$$
+
+with $w_B+w_E=1$, then estimate:
+
+$$
+I = L\,D_F
+$$
+
+Report confidence and unresolved frontier separately rather than allowing ignorance to inflate $I$.
+
+#### Measurements
+
+| Symbol | Operational definition and units |
+|---|---|
+| $B$ | normalized supported breadth of reachable projected states [0–1] |
+| $E$ | normalized distribution evenness or occupancy breadth [0–1] |
+| $w_B,w_E$ | declared comparison weights, $w_B+w_E=1$ |
+| $L$ | normalized leverage/sensitivity of the selected element on the projection [0–1] |
+| $D_F$ | supported future diversity [0–1] |
+| $I$ | local interestingness estimate [0–1] |
+
+When a probability or normalized occupancy distribution across fixed bins is justified, a Shannon-style evenness term can be used [R3]:
+
+$$
+E = -\frac{\sum_{k=1}^{K} p_k\ln p_k}{\ln K}, \qquad K\ge2
+$$
+
+with $0\ln0=0$.
+
+#### How to use it
+
+1. Declare the projection axis and horizon before comparing elements.
+2. Keep binning or normalization fixed across the comparison.
+3. Estimate leverage from intervention, controlled comparison, or clearly labeled sensitivity analysis.
+4. Report confidence, unresolved frontier, and hard-tail conditions separately.
+
+**Working example.** Two candidate controls have similar uncertainty. One barely changes the projected outcome range ($L=0.1$). The other shifts several outcomes across a viability threshold ($L=0.8$). The second is more interesting for the current decision even if both have similar raw entropy.
+
+**Limit.** The score depends on projection choice and normalization. It should not be treated as an intrinsic property of the object.
+
+**READ THE RESULT**
+
+$I$ ranks grounded structured future leverage under the declared model. It does not rank goodness, safety, or moral importance.
+
+**VALIDATE IT**
+
+Repeat the ranking under at least one materially different reasonable projection or binning and check whether the ordering is stable.
+
+---
+
+<a id="c5"></a>
+
+# C5 · Soundings Near the Shoal
+
+*Resolution should increase where it can change the decision*
+
+### Observation
+
+*The chart shows deep water across most of the route. Near one island the depth contours crowd together. The crew does not take a sounding every meter across the ocean. They take more soundings where the keel might meet the bottom.*
+
+Complex systems can consume unlimited attention if every variable is modeled at maximum resolution.
+
+The alternative is not to ignore detail. It is to refine selectively.
+
+Begin with a coarse local model. Increase resolution where uncertainty overlaps a decision boundary, where two grounded methods disagree, where small changes produce large consequences, or where a rare branch can destroy an irreplaceable condition.
+
+Once additional detail no longer changes the decision, explanation, or boundary classification, compress again.
+
+This resembles adaptive refinement methods in numerical simulation, which allocate finer resolution where error or solution structure requires it [R6][R7]. The analogy is about allocation of resolution, not about treating every system as a numerical mesh.
+
+· ❦ ·
+
+The same principle applies to reasoning.
+
+A long logical chain is useful when each step preserves the assumptions needed by the next. It becomes wasteful when detail is added without changing a prediction, decision, or residual.
+
+Selective refinement is what allows the general picture to remain visible while microprocesses are inspected where necessary.
+
+### Field note
+
+> *Take more soundings where another meter can change the route.*
+
+**What to carry forward**
+
+- Start coarse enough to see the whole dependency path.
+- Refine near hard boundaries, strong sensitivity, disagreement, or consequential tails.
+- Stop refining when plausible additional detail cannot change the action class or claim.
+- Compression should remove irrelevant detail, not exceptions or provenance.
+
+### Operational model
+
+*A local refinement-priority heuristic.*
+
+For region $i$, let $U_i$ describe unresolved width, $S_i$ decision sensitivity, and $C_i$ the cost or disturbance of obtaining more resolution.
+
+$$
+R_i = \frac{U_iS_i}{1+C_i}
+$$
+
+Hard constraints and catastrophic tails can override the ranking.
+
+#### Measurements
+
+| Symbol | Operational definition and units |
+|---|---|
+| $U_i$ | normalized uncertainty or unresolved width in region $i$ [0–1] |
+| $S_i$ | normalized decision sensitivity / leverage [0–1] |
+| $C_i$ | normalized cost or disturbance of refinement [$\ge0$] |
+| $R_i$ | relative refinement priority |
+
+#### How to use it
+
+1. Identify regions where uncertainty can change the conclusion.
+2. Estimate the cost or disturbance of obtaining more information.
+3. Use $R_i$ only as a priority heuristic; hard safety or preservation boundaries override it.
+4. Recalculate after each new observation.
+
+**Working example.** A broad operating region has uncertainty 0.4 but sensitivity 0.05. A narrow threshold region has uncertainty 0.15 and sensitivity 0.9. Even with less uncertainty, the threshold region deserves earlier refinement because its uncertainty can change the decision.
+
+**Limit.** Normalized values depend on the comparison set. The heuristic is not a universal optimization law.
+
+**READ THE RESULT**
+
+Higher $R_i$ means additional resolution is more likely to matter relative to its cost under the stated model.
+
+**VALIDATE IT**
+
+After refinement, check whether the new information actually changed the projected range, decision, or residual. If not, lower the priority of similar refinements.
+
+---
+
+<a id="c6"></a>
+
+# C6 · The Return Route
+
+*Recovery is part of action, not an afterthought*
+
+### Observation
+
+*Weather closes in before the final station. The crew has enough fuel to continue. They also have enough fuel to return—if the inlet remains navigable.*
+
+*A return route drawn on the chart is not useful if the same storm that creates the emergency also closes the inlet.*
+
+Vol. 1 linked intervention to reversibility, verification, and a stopping condition. This extension makes one hidden variable explicit: **recovery-path independence**.
+
+A recovery path is independent only to the extent that the failure it is meant to recover from does not disable the resources, authority, information, or physical route required for recovery.
+
+Backups can share hidden dependencies. Two servers can share one power source. Two pumps can share one intake. Two administrators can depend on one identity provider. Several AI agents can share one corrupted dataset.
+
+Counting backups is therefore weaker than mapping failure domains.
+
+· ❦ ·
+
+Recovery also has timing.
+
+A path that can restore the system in twelve hours is not viable when irreversible failure occurs in two.
+
+When strict preservation is already impossible, recovery logic becomes rescue logic. Non-action belongs in the comparison because it is also a policy with projected consequences.
+
+### Field note
+
+> *A return route exists only if it remains reachable when it is needed.*
+
+**What to carry forward**
+
+- Check shared failure domains, not only backup count.
+- Compare recovery time with time to irreversible loss.
+- Preserve access, authority, and irreplaceable state needed for recovery.
+- Include non-action in rescue / least-loss comparisons.
+- Do not call rescue a successful strict-preservation result.
+
+### Operational model
+
+*A simple recovery-time margin.*
+
+Let $T_F$ be the estimated time until irreversible failure under the relevant scenario and $T_R$ the estimated time required to restore a viable state.
+
+$$
+M_R = T_F-T_R
+$$
+
+A positive margin is useful only if the recovery path itself is independent of the failure being modeled.
+
+#### Measurements
+
+| Symbol | Operational definition and units |
+|---|---|
+| $T_F$ | time from the current state to irreversible failure under the selected scenario [time] |
+| $T_R$ | time required to restore a viable state [time] |
+| $M_R$ | recovery-time margin [time] |
+
+#### How to use it
+
+1. Define the failure scenario and irreversible boundary.
+2. Estimate recovery time including access, authority, setup, and verification.
+3. Test whether the recovery path shares the relevant failure domain.
+4. Treat non-independent recovery as unresolved even when $M_R>0$.
+
+**Working example.** Irreversible data loss is expected after 90 minutes of continued corruption; verified restore requires 40 minutes. $M_R=50$ minutes. If the restore credentials depend on the same compromised identity service, the positive time margin does not establish recoverability.
+
+**Limit.** Time estimates can change during an incident. Recalculate when state, access, or dependency availability changes.
+
+**READ THE RESULT**
+
+$M_R>0$ indicates temporal room for recovery under the stated scenario. Independence and viability of the recovery path remain separate requirements.
+
+**VALIDATE IT**
+
+Exercise or simulate recovery from a failure domain that removes the primary path, not merely under normal operating conditions.
+
+---
+
+<a id="c7"></a>
+
+# C7 · The Logbook After the Storm
+
+*Exact external state makes exploration cumulative*
+
+### Observation
+
+*The vessel returns after dark. The buoy is still flashing, but the position in the notebook is not the position printed on the morning chart. The crew can reconstruct what changed because each sounding, course correction, and observation was recorded with time.*
+
+Without the logbook, tomorrow's crew would inherit conclusions without the chain of evidence that produced them.
+
+A reusable reasoning system needs the same continuity.
+
+The external record should separate at least four layers:
+
+1. observation — what was measured, retrieved, or directly tested;
+2. model — the relations currently used to interpret those observations;
+3. projection — what future states the model supports;
+4. decision — what action follows under the declared value premise and constraints.
+
+Keeping those layers distinct makes correction possible. A model can be replaced without erasing the observations that contradicted it.
+
+· ❦ ·
+
+Contradictions should also survive compression.
+
+If two grounded methods disagree, the disagreement should be localized: shared assumptions, different methods, different scopes, and what decision the disagreement can change.
+
+An assumption should have a revision condition. Evidence that can become stale should carry a time or version. A candidate hidden variable should retain the case that exposed it and the tests that promoted or rejected it.
+
+This external state is useful to a person, a team, or an AI system. It is not a transcript of private reasoning. It is a compact, auditable model of what the exploration currently claims to know.
+
+### Field note
+
+> *A good logbook preserves enough of yesterday's uncertainty for tomorrow to correct it.*
+
+**What to carry forward**
+
+- Separate observations, models, projections, and decisions.
+- Keep provenance and freshness with evidence.
+- Preserve contradictions until evidence resolves them.
+- Record why a variable was promoted or demoted.
+- A summary that removes hard constraints or rare consequential branches is not a faithful compression.
+
+### Operational model
+
+*A residual is one trigger for revision.*
+
+For a predicted value $\hat y_t$ and realized observation $y_t$:
+
+$$
+\delta_t = y_t-\hat y_t
+$$
+
+When the observation falls outside the model's supported uncertainty range, create a revision record rather than silently widening the model after the fact.
+
+#### Measurements
+
+| Symbol | Operational definition and units |
+|---|---|
+| $\hat y_t$ | predicted value or center of predicted region at time $t$ [native units] |
+| $y_t$ | realized observation at the same relevant time/scope [same units] |
+| $\delta_t$ | signed residual [same units] |
+
+#### How to use it
+
+1. Preserve the original prediction and its uncertainty before observing the outcome.
+2. Record the realized value and method.
+3. If the residual is material, inspect measurement, assumption, boundary, parameter, relation, and hidden-variable explanations.
+4. Version the model change that follows.
+
+**Working example.** A model predicts a buoy drift of $4\pm2$ m; the observed displacement is 13 m. Do not rewrite the earlier range as if 13 m had always been expected. Preserve the residual and test missing-current, timing, calibration, and boundary explanations.
+
+**Limit.** A residual can arise from noise. One outlier does not automatically justify model expansion.
+
+**READ THE RESULT**
+
+$\delta_t$ records the direction and magnitude of mismatch. Its significance depends on the predicted uncertainty and consequence of being wrong.
+
+**VALIDATE IT**
+
+Check whether the revised model improves later predictions or independent cases without erasing earlier contradictions.
+
+---
+
+<a id="c8"></a>
+
+# C8 · The Compass
+
+*The reusable tool is the cycle, not the metaphor*
+
+### Observation
+
+*The next morning another crew leaves the same harbor. They carry yesterday's logbook, but they are not required to follow yesterday's route. The buoy remains offshore. The current may have changed.*
+
+The purpose of Compass is to preserve orientation while the local model changes.
+
+It is not a single equation. It is a disciplined cycle that decides what to represent, what to leave unresolved, where to spend resolution, and when to stop.
+
+The cycle inherits the earlier Observer model:
+
+- localize the system;
+- select elements, states, and relations;
+- define identity and viability;
+- map dependencies;
+- preserve evidence and observer effects;
+- state the value premise before optimization;
+- evaluate intervention, reversibility, verification, and stopping conditions.
+
+Vol. 1.2 adds four explicit disciplines:
+
+1. future-space projection instead of exhaustive enumeration;
+2. interestingness as structured future leverage rather than raw uncertainty;
+3. preservation evaluation including recovery-path independence;
+4. candidate-variable promotion from real applications without allowing storytelling to become theory.
+
+· ❦ ·
+
+A useful execution cycle is:
+
+1. define the exact question or claim;
+2. localize system, boundary, scale, interval, horizon, assumptions, and value premise;
+3. record evidence with provenance and uncertainty;
+4. map dependencies, hard boundaries, reserves, and recovery conditions;
+5. project only the future dimensions relevant to the question;
+6. identify consequential uncertainty, disagreement, or hidden-variable candidates;
+7. choose the smallest evidence-producing next step likely to change the model or decision;
+8. run preservation / rescue checks before consequential intervention;
+9. execute one justified step;
+10. compare the realized state with the projected range;
+11. update the model, preserve contradictions, and simplify irrelevant detail;
+12. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, or the question must be reframed.
+
+This cycle can be represented in a machine-readable state template, but the serialization is not itself part of the theory.
+
+### Field note
+
+> *The compass is useful because the map can be wrong.*
+
+**What to carry forward**
+
+- The question selects the local model; it is not a poetic direction variable.
+- The model should be no more detailed than the decision requires.
+- Every consequential loop needs new evidence, state change, or a bounded reason to repeat.
+- Human and AI systems both benefit from explicit external state when it preserves provenance, uncertainty, dependencies, and stopping rules.
+- The technical model remains universal; the expedition only keeps the reasoning continuous enough to see it.
+
+### Operational model
+
+*A reusable procedure rather than a new equation.*
+
+Use the cycle above together with `COMPASS_STATE_TEMPLATE.yaml` for auditable state and `COMPASS_QUICK_CARD.md` for short execution.
+
+A run should terminate explicitly as one of the following:
+
+- **supported** — target claim supported to the declared strength;
+- **decision robust** — action class stable across plausible refinements;
+- **preservation blocked** — a hard margin is negative or unresolved;
+- **rescue required** — strict preservation is unavailable;
+- **external wait** — an external dependency is the blocker;
+- **insufficient evidence** — no justified current step can resolve the key uncertainty;
+- **model contradiction** — current assumptions cannot jointly explain observations;
+- **terminal system state** — no modeled continuation exists under the selected definition;
+- **question reframed** — the original boundary, scale, or question was wrong.
+
+**Limit.** No procedure guarantees that all relevant variables are represented. Compass improves correction by making omissions, residuals, and revision paths visible.
+
+**READ THE RESULT**
+
+A completed Compass run is not "the answer." It is a bounded claim plus an auditable account of what supports it, what remains unresolved, and what would cause revision.
+
+**VALIDATE IT**
+
+Apply the same procedure to a materially different problem. The technical terms should transfer without importing the ocean story. If they do not, the abstraction is not yet universal enough.
+
+---
+
+# Working definitions added in Vol. 1.2
+
+The following extend rather than replace Vol. 1 definitions.
+
+| Term | Working definition |
+|---|---|
+| **Projection** | A selected lower-dimensional representation of reachable states used for the present question. |
+| **Residual** | A recorded mismatch between an observation and the state or range supported by the current model under comparable conditions. |
+| **Candidate variable** | A proposed state, condition, or relation introduced to explain a residual or dependency not adequately represented by the current model. |
+| **Promotion** | The act of moving a candidate variable into a more reusable model layer after operational, evidential, mechanistic, and relevance checks. |
+| **Recovery path** | A sequence of actions and required conditions capable of returning the selected system to a declared viable state after disturbance. |
+| **Recovery-path independence** | The degree to which a recovery path remains available under the same failure that makes recovery necessary. |
+| **Preservation evaluation** | A model-relative test of whether selected invariants, viability conditions, dependencies, and recoverability remain within declared bounds through a change. |
+| **Unresolved frontier** | Evidence-backed reason to believe the modeled support may be incomplete, without inventing specific unobserved futures. |
+| **Compass** | The name of the reusable exploration procedure in this volume; not a replacement for the universal technical terms above. |
+
+---
+
+# Validation and edge cases
+
+The operational templates above have been checked against the following recurring failure modes:
+
+| Edge case | Handling |
+|---|---|
+| One occupied outcome bin | Evenness uses a fixed declared $K\ge2$, not the number of occupied bins. |
+| Zero occupancy | Use $0\ln0=0$. |
+| Empty or contradictory reachable set | Mark the model infeasible/unresolved rather than reporting zero interestingness. |
+| Unbounded projection axis | Declare a finite comparison scale, transform, or relevant thresholds before normalization. |
+| Rare catastrophic branch | Keep a separate hard-boundary/tail condition; averages and entropy cannot erase it. |
+| Low-confidence model | Uncertainty widens the reported interval/frontier; it does not automatically increase the central interestingness estimate. |
+| Scenario baseline count is zero | Optionality ratios using that denominator are undefined; report counts/fractions or weighted mass instead. |
+| Different scenario generators | Counts are not directly comparable without a controlled basis. |
+| Already-failing system | Switch from strict preservation to rescue / least-loss comparison, including non-action. |
+| Irreversible action | Do not invent rollback; require explicit irreversible consequences, stronger evidence, containment, or forward recovery where possible. |
+| Common-cause dependencies | Evaluate joint failure; independent positive margins are insufficient. |
+| Backup shares failure domain | Recovery-path independence is not established. |
+| Short-term preservation, long-term loss | Evaluate multiple horizons and report reversal rather than averaging it away. |
+| Measurement changes the system | Include observer / instrument disturbance in the model when material. |
+| Association presented as causality | Use intervention language only when causal identification is justified; otherwise label sensitivity or association. |
+| Several agents agree | Check shared model, data, retrieval, and assumptions before treating agreement as independent evidence. |
+| Compression removes exception | Preserve hard constraints, contradictions, rare consequential branches, provenance, and recovery state. |
+| Refinement repeats without new evidence | Stop or branch; repetition without state change or new evidence is not exploration. |
+| Story suggests a hidden variable | Keep it a candidate until it has an operational definition and supporting evidence. |
+| Variable fits one case perfectly | Check independent cases or mechanism before reusable promotion. |
+| Promoted variable later becomes redundant | Demote it and preserve the model history. |
+| Evidence becomes stale | Reduce confidence or measure again when the stale evidence can change the decision. |
+
+---
+
+# Reference map
 
 These are grounding parallels and notation sources, not claims that Compass is a restatement of any one tradition.
 
-- preservation / viability: [R1], [R2]
+- viability and preservation: [R1], [R2]
 - entropy / distribution evenness: [R3]
 - causal intervention notation: [R4]
 - rigorous interval methods: [R5]
 - adaptive refinement analogy: [R6], [R7]
 - receding-horizon control analogy: [R8]
-- abstraction/refinement analogy: [R9]
-- systems V&V / end-to-end testing: [R10]
+- abstraction / refinement analogy: [R9]
+- systems verification and end-to-end testing: [R10]
 - AI lifecycle evaluation: [R11], [R12]
 - expected information / experiment selection: [R13]
 
@@ -1095,7 +826,7 @@ These are grounding parallels and notation sources, not claims that Compass is a
 
 **[R2] Holling, C. S.** "Resilience and Stability of Ecological Systems." *Annual Review of Ecology and Systematics* 4 (1973): 1–23. DOI: 10.1146/annurev.es.04.110173.000245. https://doi.org/10.1146/annurev.es.04.110173.000245
 
-**[R3] Shannon, Claude E.** "A Mathematical Theory of Communication." *Bell System Technical Journal* 27 (1948), parts I–II, pp. 379–423 and 623–656. DOI part I: 10.1002/j.1538-7305.1948.tb01338.x; part II: 10.1002/j.1538-7305.1948.tb00917.x. https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
+**[R3] Shannon, Claude E.** "A Mathematical Theory of Communication." *Bell System Technical Journal* 27 (1948), parts I–II, pp. 379–423 and 623–656. DOI part I: 10.1002/j.1538-7305.1948.tb01338.x. https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
 
 **[R4] Pearl, Judea.** *Causality: Models, Reasoning, and Inference.* 2nd ed. Cambridge University Press, 2009. https://bayes.cs.ucla.edu/BOOK-2K/
 
@@ -1119,31 +850,19 @@ These are grounding parallels and notation sources, not claims that Compass is a
 
 ---
 
-# 18. The Compass in One Passage
+## The extension in one passage
 
-For any difficult exploration:
+The buoy is still there.
 
-1. **Set North.** State the exact question and required claim strength.
-2. **Draw the chart.** Localize system, boundary, scale, interval, horizon, assumptions, and value premise.
-3. **Take soundings.** Separate measured evidence from inference and assumption.
-4. **Mark reefs and harbors.** Record hard constraints, reserves, irreplaceable state, and independent recovery paths.
-5. **Trace currents.** Map dependencies and common-cause paths.
-6. **Register hidden variables.** Treat application stories as stress tests; promote variables only through the promotion gate.
-7. **Project open water.** Use intervals/distributions with provenance; keep unknown frontier separate from known structure.
-8. **Find the consequential region.** Prioritize leverage, disagreement, boundary proximity, tail risk, and decision-sensitive uncertainty.
-9. **Choose one bounded heading.** Prefer the smallest evidence-producing step that can change the chart or decision.
-10. **Preserve before acting.** Run PRESERVE/RESCUE gates and check recovery-path independence.
-11. **Sail one justified leg.** Do not execute the whole imagined route because the first chart looked plausible.
-12. **Sound again.** Compare realization to projection.
-13. **Update and log.** Change only what evidence supports; preserve contradictions and provenance.
-14. **Compress carefully.** Remove detail, not reefs.
-15. **Stop explicitly.** End in a named terminal state rather than an unbounded reasoning loop.
+At first it was a reference. Then it was noisy. Then it drifted. Then its drift helped expose a current. The current changed the route. The route approached a shoal. The shoal made additional soundings worthwhile. The weather made the return route relevant. The logbook made the next day's corrections possible.
 
-The purpose of Compass is not to make uncertainty disappear.
+None of those story objects became technical definitions.
 
-It is to make the **direction, boundary, evidence, unknowns, preservation conditions, and next justified move visible at the same time**.
+The technical model remained a model of elements, states, relations, boundaries, viability, evidence, uncertainty, future projections, intervention, preservation, and revision.
 
-That is enough to navigate farther without pretending the ocean has already been mapped.
+That is the purpose of the story: not to rename the model, but to keep enough of the world continuous that hidden assumptions have somewhere to reveal themselves.
+
+And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, uncertainty, preservation conditions, and next justified step visible at the same time**.
 
 ---
 
