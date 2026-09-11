@@ -1,0 +1,314 @@
+version: "1.2"
+protocol: "Observer's Notes COMPASS"
+status: "working operational template"
+
+# Reusable external state for human- or AI-assisted research.
+# Use universal technical terms here. Storytelling references belong in the volume text.
+# This is not a request for private chain-of-thought; record only auditable state.
+
+meta:
+  run_id: ""
+  created_at: ""
+  updated_at: ""
+  operator: ""
+  model_version: 0
+  parent_model_version: null
+
+question:
+  statement: ""
+  claim_type: "descriptive|causal|predictive|diagnostic|decision|preservation"
+  required_claim_strength: ""
+  success_condition: ""
+  terminal_condition: ""
+
+localization:
+  system: ""
+  boundary: ""
+  scale: ""
+  observation_interval: ""
+  horizons: []
+  value_premise: ""
+  authority: ""
+  assumptions: []
+
+variable_registry:
+  # status: OBSERVED|DERIVED|CANDIDATE|LOCAL|RECURRENT|DOMAIN|CORE|DORMANT|REJECTED
+  variables: []
+  # - id: "x_recovery_independence"
+  #   name: "recovery-path independence"
+  #   status: "CANDIDATE"
+  #   discovered_from: ""
+  #   operational_definition: ""
+  #   observable_proxy: ""
+  #   mechanism: ""
+  #   evidence_ids: []
+  #   alternative_explanations: []
+  #   decision_effect: ""
+  #   recurrence_cases: []
+  #   non_duplication_check: ""
+  #   promotion_reason: ""
+  #   demotion_test: ""
+
+promotion_review:
+  operationality: null
+  observability_or_boundability: null
+  mechanistic_relevance: null
+  residual_reduction: null
+  decision_relevance: null
+  alternatives_checked: null
+  recurrence_or_independent_mechanism: null
+  non_duplication: null
+  semantic_stability: null
+  complexity_cost_justified: null
+  decision: "KEEP_CANDIDATE|PROMOTE_LOCAL|PROMOTE_RECURRENT|PROMOTE_DOMAIN|PROMOTE_CORE|DORMANT|REJECT"
+  reason: ""
+
+evidence:
+  # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN|COMMUNICATED
+  items: []
+  # - id: "E1"
+  #   claim_supported: ""
+  #   provenance: "MEASURED"
+  #   source: ""
+  #   method: ""
+  #   timestamp_or_version: ""
+  #   scope: ""
+  #   uncertainty: ""
+  #   independence: ""
+  #   disturbance: ""
+  #   freshness: "current|possibly_stale|stale"
+  #   verification_state: "verified|partially_verified|unverified|not_applicable"
+
+dependencies:
+  nodes: []
+  relations: []
+  external_conditions: []
+  common_cause_groups: []
+  containing_systems_with_material_externalities: []
+
+preservation:
+  mode: "PRESERVE|RESCUE|NOT_APPLICABLE"
+  hard_conditions: []
+  # - id: "M_V"
+  #   name: "viability margin"
+  #   lower: null
+  #   upper: null
+  #   required_reserve: null
+  #   units: ""
+  #   evidence_ids: []
+  irreplaceable_state: []
+  recovery_paths: []
+  recovery_path_independence: []
+  irreversible_consequences: []
+  non_action_baseline: ""
+  gate: "PASS|FAIL|UNRESOLVED|RESCUE_REQUIRED|NOT_APPLICABLE"
+
+projections:
+  axes: []
+  # - id: "P1"
+  #   name: ""
+  #   resolved_support: []
+  #   occupancy_representation: ""
+  #   confidence: null
+  #   unresolved_frontier: ""
+  #   provenance: []
+  #   hard_boundary: null
+  #   tail_flag: false
+  #   scenario_generator: ""
+  #   sampling_rule: ""
+  #   horizon: ""
+
+interestingness:
+  elements: []
+  # - id: "x1"
+  #   breadth_B: null
+  #   evenness_E: null
+  #   leverage_L: null
+  #   supported_diversity_DF: null
+  #   local_interestingness_I: null
+  #   unresolved_frontier: ""
+  #   confidence: null
+  #   catastrophic_tail: false
+
+refinement:
+  regions: []
+  # - id: "R1"
+  #   unresolved_width: null
+  #   decision_sensitivity: null
+  #   refinement_cost_or_disturbance: null
+  #   priority: null
+  #   expected_decision_effect: ""
+
+processing_control:
+  active_branch: ""
+  parked_branches: []
+  low_probability_branches: []
+  current_load: "low|moderate|high|unknown"
+  urgency: ""
+  delay_cost: ""
+  expected_information_value_of_hold: ""
+  expected_option_value_of_hold: ""
+  reference_state_preserved: false
+  pause_reason: ""
+  resume_condition: ""
+  branch_pruning_reason: ""
+  # Do not prune solely because probability is low when the branch remains possible
+  # and could materially change consequence, explanation, or information value.
+
+communication:
+  applicable: false
+  interacting_parties: []
+  current_relation: "cooperative|neutral|uncertain|competitive|threatening|hostile|unknown"
+  communication_goal: ""
+  channel_type: "direct|mediated|asynchronous|one_way|authenticated|none|other"
+  channel_available: false
+  channel_safe: null
+  contact_refusal_allowed: true
+  safe_separation_available: null
+  coercion_risk: ""
+  deception_risk: ""
+  party_constraints: []
+  # - party_id: "A"
+  #   hard_viability_conditions: []
+  #   identity_invariants: []
+  #   voluntary_acceptance_conditions: []
+  #   authority: ""
+  #   stated_preferences: []
+  #   unknown_constraints: []
+  messages: []
+  # - id: "M1"
+  #   sender: ""
+  #   receiver: ""
+  #   timestamp: ""
+  #   literal_content: ""
+  #   inferred_intent: ""
+  #   verification_state: "verified|partially_verified|unverified"
+  #   source_authentication: ""
+  #   decision_effect: ""
+  coexistence_space:
+    horizon: ""
+    currently_nonempty: null
+    reachable_joint_futures_model: ""
+    party_A_viability_set: ""
+    party_B_viability_set: ""
+    party_A_voluntary_acceptance_set: ""
+    party_B_voluntary_acceptance_set: ""
+    known_paths: []
+    unresolved_paths: []
+    safe_separation_paths: []
+    reasons_for_apparent_emptiness: []
+  next_communication_probe: ""
+  communication_stop_condition: ""
+
+external_guidance:
+  sources: []
+  # - id: "G1"
+  #   source_type: "instrument|dataset|rule|checklist|simulator|human|ai|mediator|other"
+  #   claim_supported: ""
+  #   scope: ""
+  #   independence: ""
+  #   calibration_or_reliability: ""
+  #   freshness: ""
+  #   authority: ""
+  #   responsibility: ""
+  #   conflicts_with_current_model: ""
+  responsible_role: ""
+  authority_owner: ""
+
+contradictions:
+  items: []
+  # - id: "C1"
+  #   claim_A: ""
+  #   claim_B: ""
+  #   evidence_A: []
+  #   evidence_B: []
+  #   shared_assumptions: []
+  #   candidate_resolutions: []
+  #   decision_impact: ""
+
+assumption_ledger:
+  items: []
+  # - id: "A1"
+  #   statement: ""
+  #   reason: ""
+  #   scope: ""
+  #   sensitivity: ""
+  #   invalidation_test: ""
+  #   expiry: ""
+
+residuals:
+  items: []
+  # - id: "R1"
+  #   predicted_region: ""
+  #   realized_state: ""
+  #   violated_assumptions: []
+  #   candidate_dependencies: []
+  #   candidate_variables: []
+  #   communication_explanation: ""
+  #   action: "investigate|accept_noise|reframe_boundary|refine_model"
+
+candidate_steps:
+  # step_type: observe|retrieve|simulate|test|communicate|intervene|pause|seek_guidance|wait_external
+  options: []
+  # - id: "S1"
+  #   step_type: "test"
+  #   purpose: ""
+  #   expected_information_or_decision_value: ""
+  #   disturbance_or_cost: ""
+  #   preservation_effect: ""
+  #   freedom_of_choice_effect: ""
+  #   state_change_required_for_repeat: ""
+  #   cutoff: ""
+
+next_step:
+  selected_id: ""
+  reason: ""
+  preservation_gate_checked: false
+  communication_safety_checked: false
+  expected_state_change: ""
+  stop_or_redirect_condition: ""
+
+logbook:
+  changes_from_previous_model: []
+  new_evidence_ids: []
+  variables_promoted: []
+  variables_demoted: []
+  branches_parked: []
+  branches_reopened: []
+  projections_changed: []
+  contradictions_added_or_resolved: []
+  communications_attempted: []
+  coexistence_paths_added_or_removed: []
+  guidance_used: []
+  realized_outcome: ""
+  decision_changed: null
+  reason_for_stop_pause_or_repeat: ""
+
+terminal_state:
+  # SUPPORTED|DECISION_ROBUST|PRESERVATION_BLOCK|RESCUE_REQUIRED|EXTERNAL_WAIT|
+  # INSUFFICIENT_EVIDENCE|MODEL_CONTRADICTION|TERMINAL_SYSTEM_STATE|QUESTION_REFRAMED|CONTINUE
+  state: "CONTINUE"
+  reason: ""
+
+validation_checks:
+  claim_strength_matches_evidence: false
+  observation_model_projection_decision_layers_separated: false
+  hard_constraints_preserved_in_compression: false
+  rare_consequential_tails_preserved: false
+  recovery_path_independence_checked: false
+  common_cause_failures_checked: false
+  hidden_variables_have_promotion_status: false
+  stale_evidence_reviewed: false
+  causal_language_justified_or_labeled_as_sensitivity: false
+  low_probability_branches_not_pruned_without_reason: false
+  pause_state_is_recoverable: false
+  communication_considered_when_relevant_and_safe: false
+  communication_does_not_override_hard_safety: false
+  freedom_of_choice_or_refusal_preserved: false
+  coercion_risk_reviewed: false
+  safe_separation_counted_as_possible_coexistence: false
+  communication_claims_kept_separate_from_inferred_intent: false
+  external_guidance_independence_checked: false
+  guidance_authority_responsibility_separated: false
+  loop_has_new_evidence_state_change_communication_or_bounded_wait_reason: false
+  explicit_terminal_condition_present: false
