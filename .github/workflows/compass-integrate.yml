@@ -1,0 +1,350 @@
+name: Integrate Compass communication chapter
+
+on:
+  push:
+    branches:
+      - vol-1.2-observers-notes-extension-1
+    paths:
+      - .github/workflows/compass-integrate.yml
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: vol-1.2-observers-notes-extension-1
+          fetch-depth: 0
+
+      - name: Integrate communication chapter and Compass state
+        shell: python
+        run: |
+          from pathlib import Path
+
+          book_path = Path('VOL_1.2_COMPASS.md')
+          state_path = Path('COMPASS_STATE_TEMPLATE.yaml')
+          card_path = Path('COMPASS_QUICK_CARD.md')
+
+          book = book_path.read_text(encoding='utf-8')
+
+          # Contents and chapter count.
+          old_contents = '''| C6 | [The Engine at Idle](#c6) |
+          | C7 | [A Voice Through the Fog](#c7) |
+          | C8 | [The Return Route](#c8) |
+          | C9 | [The Logbook After the Storm](#c9) |
+          | C10 | [The Compass](#c10) |'''.replace('          ', '')
+          new_contents = '''| C6 | [The Engine at Idle](#c6) |
+          | C7 | [The Channel Between Two Lights](#c7) |
+          | C8 | [A Voice Through the Fog](#c8) |
+          | C9 | [The Return Route](#c9) |
+          | C10 | [The Logbook After the Storm](#c10) |
+          | C11 | [The Compass](#c11) |'''.replace('          ', '')
+          assert old_contents in book
+          book = book.replace(old_contents, new_contents, 1)
+          book = book.replace('C1–C10 introduce only extension-specific operational terms.',
+                              'C1–C11 introduce only extension-specific operational terms.', 1)
+
+          # Renumber existing later chapters, descending to avoid collisions.
+          renumbers = [
+              ('<a id="c10"></a>\n\n# C10 · The Compass', '<a id="c11"></a>\n\n# C11 · The Compass'),
+              ('<a id="c9"></a>\n\n# C9 · The Logbook After the Storm', '<a id="c10"></a>\n\n# C10 · The Logbook After the Storm'),
+              ('<a id="c8"></a>\n\n# C8 · The Return Route', '<a id="c9"></a>\n\n# C9 · The Return Route'),
+              ('<a id="c7"></a>\n\n# C7 · A Voice Through the Fog', '<a id="c8"></a>\n\n# C8 · A Voice Through the Fog'),
+          ]
+          for old, new in renumbers:
+              assert old in book
+              book = book.replace(old, new, 1)
+
+          communication = r'''
+          ---
+
+          <a id="c7"></a>
+
+          # C7 · The Channel Between Two Lights
+
+          *Communication searches for constructive overlap without taking away choice*
+
+          ### Observation
+
+          *In the fog, another vessel appears on radar before it appears by eye. Its projected path crosses ours. Nothing in the return says whether it is hostile, unaware, damaged, or simply following a route we did not model. The radio is available.*
+
+          *The safest immediate maneuver may be separation. The most informative next step may still be communication.*
+
+          Threat is a relation between projected states, actions, and boundaries. It is not, by itself, evidence of an inherent moral essence in the other system.
+
+          Communication matters because two complex systems can each possess internal models, constraints, identities, values, and viable future regions that are only partially visible to the other. A conflict seen from one side may therefore look like a closed zero-sum space even when a low-probability compatible path exists outside the current representation.
+
+          The operational purpose of communication is not to force agreement. It is to exchange enough grounded information to test whether the apparent conflict is complete.
+
+          This requires freedom of choice on both sides. Communication that works only by deception, coercion, trapping, or removing every meaningful alternative is not evidence of coexistence. Research on autonomy support distinguishes contexts that promote meaningful choice from contexts that pressure behavior toward a prescribed outcome [R21]. In acute de-escalation practice, noncoercive engagement, realistic choices, clear limits, and respect for the other person's ability to participate are treated as central tools while safety remains non-negotiable [R22].
+
+          · ❦ ·
+
+          A threat can be real while communication remains possible. The two statements do not cancel each other.
+
+          When two parties can be represented in a shared projected future space, let $V_A$ be the futures that preserve the declared hard conditions of one side and $V_B$ the futures that preserve the declared hard conditions of the other. Their constructive overlap is:
+
+          $$
+          \boxed{\mathcal C = V_A \cap V_B}
+          $$
+
+          $\mathcal C$ is not necessarily friendship, agreement, or joint action. It can contain cooperation, negotiated repair, coexistence, bounded separation, non-interference, or another future in which both sides retain the hard conditions and meaningful agency required by the current model.
+
+          Communication can change the **estimated** overlap by revealing hidden constraints, mistaken assumptions, priorities, or alternatives. It cannot be assumed to enlarge the real overlap. Sometimes it reveals that the overlap is smaller than believed. Sometimes it reveals that a fixed-pie model was wrong and mutually beneficial trades or compatible interests exist. Negotiation research distinguishes this value-creation possibility from purely distributive bargaining [R20].
+
+          Communication also requires grounding. Clark and Brennan describe communication as a coordinated activity in which participants update common ground and seek evidence that what was said has been understood well enough for the current purpose [R19]. A message is therefore not treated as shared state merely because it was transmitted.
+
+          Identity does not require a fixed action policy. Vol. 1 already defines identity through selected invariants and tolerances rather than unchanging material. The same idea allows a person, organization, or AI-assisted process to preserve core principles while changing route, language, timing, or local strategy. Flexibility can preserve identity by making a low-probability coexistence path reachable without surrendering hard principles.
+
+          ### Field note
+
+          > *Evil appears only when there is no space for good.*
+
+          In Compass this sentence is used as a **closure test**, not a metaphysical definition of evil.
+
+          Before concluding that only destructive action remains, test whether the constructive future region is actually empty or merely unobserved, misunderstood, or too narrow to have been found by the current model. “Good” here means futures compatible with the declared value premise and hard safety/autonomy conditions: repair, communication, coexistence, negotiated separation, safe non-interaction, or another non-destructive continuation.
+
+          If that region is verified empty under the current model—or communication is unsafe, refused, deceptive, or itself consumes a hard viability margin—containment or separation may be the responsible action. That still does not establish an inherent moral essence of the other party; it establishes the present absence of a safe constructive path under the selected model.
+
+          **What to carry forward**
+
+          - Preserve the possibility of communication when doing so does not violate a hard safety boundary or another party's refusal.
+          - Do not infer inherent evil from threat alone; model the threatening relation, action, and reachable futures.
+          - Communication searches for hidden overlap; it does not guarantee overlap exists.
+          - Preserve freedom of choice: offer real alternatives, keep refusal meaningful, and do not disguise coercion as dialogue.
+          - Identity can remain stable while behavior changes; flexible policy can preserve core invariants while searching low-probability coexistence paths.
+          - Safe separation is itself a constructive future when cooperation is impossible or unwanted.
+          - A trusted friend or collaborator can be exceptionally valuable because they can hold part of the model, challenge assumptions, and preserve alternatives without taking away the decision. Their agreement is still not independent evidence when they share the same sources or assumptions.
+          - Communication should update common ground explicitly; transmission alone is not mutual understanding.
+          - Keep safety, autonomy, authority, and responsibility distinct.
+
+          ### Operational model
+
+          *A constructive-overlap test, not a moral law.*
+
+          In a shared projected future space:
+
+          $$
+          \boxed{\mathcal C = V_A \cap V_B}
+          $$
+
+          The first question is whether $\mathcal C$ is supported as non-empty, supported as empty, or unresolved. Communication is useful when it can change that classification by resolving a variable that matters to the overlap.
+
+          #### Measurements
+
+          | Symbol | Operational definition |
+          |---|---|
+          | $V_A$ | projected future region that satisfies side A's declared hard conditions and meaningful agency |
+          | $V_B$ | projected future region that satisfies side B's declared hard conditions and meaningful agency |
+          | $\mathcal C$ | constructive overlap represented in the common projection |
+
+          #### How to use it
+
+          1. State the current threat or conflict as a relation between projected states rather than as a property of the other party.
+          2. Record each side's known hard conditions, stated preferences, unknowns, and right to refuse.
+          3. Build the smallest shared projection in which compatible and incompatible futures can be compared.
+          4. Search for $\mathcal C$ without assuming the intersection is empty or non-empty.
+          5. Communicate to resolve variables that can change the overlap: intent, constraint, timing, priority, misunderstanding, resource, boundary, or acceptable separation.
+          6. Ground the exchange: record what has actually been understood, not merely what was transmitted.
+          7. Preserve independent safety and recovery paths while communication continues.
+          8. If constructive overlap is found, choose only a path that respects both sides' hard conditions and meaningful agency.
+          9. If no overlap is found, or communication is refused or unsafe, move to separation, containment, or rescue logic without converting the operational result into a claim of inherent evil.
+
+          **Working example.** Two systems appear to require the same exclusive resource at the same time. Initial projections give no overlap. Communication reveals that one system requires the resource before a deadline while the other requires a minimum duration but has flexible start time. The shared future space now contains a scheduling path that preserves both hard conditions. The conflict was real; the zero-sum assumption was not.
+
+          **Limit.** The overlap is only as accurate as the stated constraints and common projection. Hidden coercion, asymmetric power, deception, or omitted externalities can make an apparent coexistence region invalid.
+
+          **READ THE RESULT**
+
+          A supported non-empty $\mathcal C$ means at least one constructive future remains represented under the current assumptions. An empty $\mathcal C$ means none is represented—not that none can exist outside the model, and not that the other party is inherently evil.
+
+          **VALIDATE IT**
+
+          Test whether the proposed coexistence path remains valid when each side's constraints are stated independently, when refusal remains possible, and when a materially different observer checks the shared assumptions.
+          '''.replace('          ', '')
+
+          marker = '<a id="c8"></a>\n\n# C8 · A Voice Through the Fog'
+          assert marker in book
+          book = book.replace(marker, communication + '\n\n' + marker, 1)
+
+          # Compass architecture: communication between patience and guidance.
+          old = '''Vol. 1.2 adds six explicit disciplines:
+
+1. future-space projection instead of exhaustive enumeration;
+2. interestingness as structured future leverage rather than raw uncertainty;
+3. preservation evaluation including recovery-path independence;
+4. candidate-variable promotion from real applications without allowing storytelling to become theory;
+5. patience as control of commitment timing while branch state remains recoverable;
+6. external guidance as an evidence source distinct from authority and responsibility.'''
+          new = '''Vol. 1.2 adds seven explicit disciplines:
+
+1. future-space projection instead of exhaustive enumeration;
+2. interestingness as structured future leverage rather than raw uncertainty;
+3. preservation evaluation including recovery-path independence;
+4. candidate-variable promotion from real applications without allowing storytelling to become theory;
+5. patience as control of commitment timing while branch state remains recoverable;
+6. communication as a search for constructive overlap while preserving meaningful choice;
+7. external guidance as an evidence source distinct from authority and responsibility.'''
+          assert old in book
+          book = book.replace(old, new, 1)
+
+          book = book.replace(
+              '8. choose whether to continue the active branch, probe a lower-probability branch, pause in a preserved reference state, or request external guidance;\n9. choose the smallest evidence-producing next step likely to change the model or decision;',
+              '8. choose whether to continue the active branch, probe a lower-probability branch, pause in a preserved reference state, open communication, or request external guidance;\n9. when another agent or party constrains the future space, test whether grounded communication can reveal a safe constructive overlap without removing meaningful choice;\n10. choose the smallest evidence-producing next step likely to change the model or decision;', 1)
+          book = book.replace('10. run preservation / rescue checks before consequential intervention;\n11. execute one justified step rather than the whole imagined route;\n12. compare the realized state with the projected range;\n13. update the model, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;\n14. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, recovery is required, or the question must be reframed.',
+                              '11. run preservation / rescue checks before consequential intervention;\n12. execute one justified step rather than the whole imagined route;\n13. compare the realized state with the projected range;\n14. update the model, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;\n15. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, recovery is required, or the question must be reframed.', 1)
+
+          # Human / AI / carry-forward additions.
+          book = book.replace('For a human observer, Compass externalizes state so that attention does not have to carry the entire dependency graph at once. Patience can reduce premature closure; external aids can prevent omissions; and the logbook preserves low-probability alternatives until evidence resolves them.',
+                              'For a human observer, Compass externalizes state so that attention does not have to carry the entire dependency graph at once. Patience can reduce premature closure; communication can expose compatible futures that one side cannot see alone; external aids can prevent omissions; and the logbook preserves low-probability alternatives until evidence resolves them.', 1)
+          book = book.replace('- external guidance and its independence;\n- explicit stopping conditions.',
+                              '- communication state, constructive overlap, refusal, and unresolved shared assumptions;\n- external guidance and its independence;\n- explicit stopping conditions.', 1)
+          book = book.replace('- Patience preserves options; it does not excuse endless deferral.\n- External guidance can be non-human; responsibility and authority remain separate.',
+                              '- Patience preserves options; it does not excuse endless deferral.\n- Communication searches for constructive overlap while preserving meaningful choice; it does not require unsafe contact or agreement.\n- Threat is modeled as a relation and projected consequence, not automatically as an inherent moral identity.\n- External guidance can be non-human; responsibility and authority remain separate.', 1)
+
+          # Working definitions.
+          defs_marker = '| **External guidance** | Information or structure from outside the currently active reasoning loop used to test, constrain, or redirect the model. |'
+          assert defs_marker in book
+          defs_insert = '''| **Constructive overlap** | A represented set of futures that satisfies the declared hard conditions and meaningful agency requirements of all participating sides in the selected common projection. |
+| **Communication path** | An exchange process intended to resolve variables that can change the represented compatibility of future states, while preserving safety and meaningful refusal. |
+| **Coexistence path** | A constructive future that can include cooperation, repair, bounded separation, non-interference, or another continuation that preserves declared hard conditions without requiring identical goals. |
+'''
+          book = book.replace(defs_marker, defs_insert + defs_marker, 1)
+
+          # Edge cases.
+          edge_marker = '| Human responsibility with automated guidance | Preserve the responsible human/role explicitly where law, policy, or safety assigns responsibility; do not transfer it merely because a tool generated the recommendation. |'
+          assert edge_marker in book
+          edge_insert = '''| Threat interpreted as inherent evil | Keep threat as a relation between states/actions and boundaries; test constructive futures before making broader moral claims. |
+| Constructive overlap appears empty | Distinguish verified empty from unresolved/poorly projected; include safe separation and non-interaction as possible constructive futures. |
+| Communication is refused | Respect refusal; preserve safety and move to separation, containment, or other admissible action rather than coercing dialogue. |
+| Communication itself is unsafe | Hard safety/viability constraints override keeping the channel open; use indirect, delayed, mediated, or no-contact paths as appropriate. |
+| Offered choices are not real | Do not count coercive or deceptive alternatives as preserved freedom of choice. |
+| Message sent but not grounded | Do not update shared state until there is sufficient evidence of mutual understanding for the current purpose. |
+| Flexible behavior mistaken for identity loss | Re-check the selected invariants and tolerances; tactical change can preserve identity and core principles. |
+'''
+          book = book.replace(edge_marker, edge_marker + '\n' + edge_insert, 1)
+
+          # Reference map and references.
+          ref_map_marker = '- metacognition and confidence calibration: [R18]'
+          assert ref_map_marker in book
+          book = book.replace(ref_map_marker, ref_map_marker + '''
+- common ground and communication grounding: [R19]
+- integrative negotiation / value creation: [R20]
+- autonomy-supportive versus controlling communication: [R21]
+- noncoercive de-escalation, realistic choices, and clear limits: [R22]
+- intergroup contact and prejudice reduction: [R23]
+- cooperative versus competitive interdependence: [R24]''', 1)
+
+          ref_anchor = '**[R18] Fleming, Stephen M.** "Metacognition and Confidence: A Review and Synthesis." *Annual Review of Psychology* 75 (2024). DOI: 10.1146/annurev-psych-022423-032425. https://pubmed.ncbi.nlm.nih.gov/37722748/'
+          assert ref_anchor in book
+          new_refs = r'''
+
+**[R19] Clark, Herbert H.; Brennan, Susan E.** “Grounding in Communication.” In *Perspectives on Socially Shared Cognition*, 1991, pp. 127–149. DOI: 10.1037/10096-006. https://doi.org/10.1037/10096-006
+
+**[R20] Thompson, Leigh L.; Wang, Jiunwen; Gunia, Brian C.** “Negotiation.” *Annual Review of Psychology* 61 (2010): 491–515. DOI: 10.1146/annurev.psych.093008.100458. https://doi.org/10.1146/annurev.psych.093008.100458
+
+**[R21] Deci, Edward L.; Ryan, Richard M.** “The Support of Autonomy and the Control of Behavior.” *Journal of Personality and Social Psychology* 53(6) (1987): 1024–1037. DOI: 10.1037/0022-3514.53.6.1024. https://pubmed.ncbi.nlm.nih.gov/3320334/
+
+**[R22] Richmond, Janet S.; Berlin, Jon S.; Fishkind, Avrim B.; et al.** “Verbal De-escalation of the Agitated Patient: Consensus Statement of the American Association for Emergency Psychiatry Project BETA De-escalation Workgroup.” *Western Journal of Emergency Medicine* 13(1) (2012): 17–25. DOI: 10.5811/westjem.2011.9.6864. https://pmc.ncbi.nlm.nih.gov/articles/PMC3298202/
+
+**[R23] Pettigrew, Thomas F.; Tropp, Linda R.** “A Meta-Analytic Test of Intergroup Contact Theory.” *Journal of Personality and Social Psychology* 90(5) (2006): 751–783. DOI: 10.1037/0022-3514.90.5.751. https://pubmed.ncbi.nlm.nih.gov/16737372/
+
+**[R24] Deutsch, Morton.** “A Theory of Co-operation and Competition.” *Human Relations* 2(2) (1949): 129–152. DOI: 10.1177/001872674900200204. https://doi.org/10.1177/001872674900200204
+'''
+          book = book.replace(ref_anchor, ref_anchor + new_refs, 1)
+
+          # Closing passage.
+          book = book.replace('The crew sometimes idled rather than deleting uncertain routes. Fog made outside guidance useful. Weather made the return route relevant.',
+                              'The crew sometimes idled rather than deleting uncertain routes. Another vessel crossed the projected path, and communication revealed that apparent conflict did not exhaust the future space. Fog made outside guidance useful. Weather made the return route relevant.', 1)
+          book = book.replace('evidence, uncertainty, future projections, intervention, preservation, patience, guidance, and revision.',
+                              'evidence, uncertainty, future projections, intervention, preservation, patience, communication, coexistence, guidance, and revision.', 1)
+          book = book.replace('question, evidence, model, boundary, uncertainty, preserved alternatives, preservation conditions, guidance, and next justified step visible at the same time',
+                              'question, evidence, model, boundary, uncertainty, preserved alternatives, communication space, preservation conditions, guidance, and next justified step visible at the same time', 1)
+
+          # Update state template with communication state before external guidance.
+          state = state_path.read_text(encoding='utf-8')
+          communication_state = r'''
+communication:
+  parties_or_agents: []
+  channel_status: "open|limited|refused|unsafe|closed|not_applicable"
+  shared_projection: ""
+  shared_ground: []
+  unresolved_interpretations: []
+  hard_conditions_by_side: []
+  meaningful_choices_by_side: []
+  refusal_respected: null
+  constructive_overlap_status: "SUPPORTED_NONEMPTY|SUPPORTED_EMPTY|UNRESOLVED|NOT_MODELED"
+  constructive_overlap_description: ""
+  coexistence_paths: []
+  safe_separation_paths: []
+  communication_risk_or_cost: ""
+  communication_can_change_decision: null
+  common_ground_verified: null
+  keep_channel_open_condition: ""
+  close_or_limit_channel_condition: ""
+  threat_relations: []
+  # Threat is recorded as relation/action/consequence, not an inherent moral essence.
+
+'''
+          assert 'external_guidance:\n' in state
+          state = state.replace('external_guidance:\n', communication_state + 'external_guidance:\n', 1)
+          state = state.replace('  external_guidance_independence_checked: false\n',
+                                '  constructive_overlap_checked_when_relevant: false\n  communication_refusal_respected: false\n  communication_safety_checked: false\n  communication_common_ground_checked: false\n  threat_not_equated_with_inherent_essence: false\n  meaningful_choice_preserved_when_communication_used: false\n  safe_separation_considered_when_needed: false\n  external_guidance_independence_checked: false\n', 1)
+
+          # Quick card: add communication between patience and guidance.
+          card = card_path.read_text(encoding='utf-8')
+          card = card.replace('12. **Review guidance** — scope, independence, calibration, authority, responsibility.\n13. **Choose one bounded step**',
+                              '12. **Communicate when relevant** — model threat as a relation; search grounded constructive overlap; preserve meaningful choice and refusal; keep independent safety paths.\n13. **Review guidance** — scope, independence, calibration, authority, responsibility.\n14. **Choose one bounded step**', 1)
+          card = card.replace('14. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.\n15. **Execute one justified step** — do not execute the whole imagined route.\n16. **Compare realization with projection** — record residuals and contradictions.\n17. **Update and compress** — retain hard constraints, rare branches, provenance, parked alternatives, recovery state, and variable history.\n18. **Stop explicitly** — named terminal state only.',
+                              '15. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.\n16. **Execute one justified step** — do not execute the whole imagined route.\n17. **Compare realization with projection** — record residuals and contradictions.\n18. **Update and compress** — retain hard constraints, rare branches, provenance, parked alternatives, communication state, recovery state, and variable history.\n19. **Stop explicitly** — named terminal state only.', 1)
+          card_marker = '## External guidance\n'
+          assert card_marker in card
+          card_section = '''## Communication / coexistence
+
+- Threat is a relation between projected states/actions and boundaries, not automatically an inherent moral identity.
+- Search for a constructive overlap of viable/admissible futures without assuming it exists.
+- Preserve meaningful choice: real alternatives, meaningful refusal, no deception presented as freedom.
+- Communication can reveal cooperation, repair, coexistence, or safe separation.
+- A sent message is not shared ground until understanding is sufficiently established for the purpose.
+- Hard safety boundaries and refusal can close or limit the channel.
+
+> *Evil appears only when there is no space for good.* — use this as a closure test: verify that constructive space is truly absent before collapsing the model to destructive-only futures.
+
+'''
+          card = card.replace(card_marker, card_section + card_marker, 1)
+          card = card.replace('evidence, model, preserved alternatives, and ability to correct course.',
+                              'evidence, model, preserved alternatives, communication space, and ability to correct course.', 1)
+
+          book_path.write_text(book, encoding='utf-8')
+          state_path.write_text(state, encoding='utf-8')
+          card_path.write_text(card, encoding='utf-8')
+
+          # Validation: no duplicate chapter ids/headings, references are present, old count is gone.
+          assert book.count('<a id="c7"></a>') == 1
+          assert book.count('<a id="c8"></a>') == 1
+          assert book.count('<a id="c9"></a>') == 1
+          assert book.count('<a id="c10"></a>') == 1
+          assert book.count('<a id="c11"></a>') == 1
+          assert '# C7 · The Channel Between Two Lights' in book
+          assert '# C11 · The Compass' in book
+          assert 'C1–C11' in book
+          assert '[R24]' in book
+          assert 'communication:' in state
+          assert '## Communication / coexistence' in card
+
+          # Temporary integration note is now incorporated.
+          Path('COMMUNICATION_COEXISTENCE_NOTE.md').unlink(missing_ok=True)
+
+      - name: Commit integrated volume
+        shell: bash
+        run: |
+          rm -f .github/workflows/compass-integrate.yml
+          git config user.name "Nikita Beregovykh"
+          git config user.email "116811305+nvberegovykh@users.noreply.github.com"
+          git add VOL_1.2_COMPASS.md COMPASS_STATE_TEMPLATE.yaml COMPASS_QUICK_CARD.md COMMUNICATION_COEXISTENCE_NOTE.md .github/workflows/compass-integrate.yml
+          git diff --cached --check
+          git commit -m "Finalize Compass communication, coexistence, and preserved choice"
+          git push origin HEAD:vol-1.2-observers-notes-extension-1
