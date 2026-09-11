@@ -1,0 +1,213 @@
+version: "1.2"
+protocol: "Observer's Notes COMPASS"
+status: "working operational template"
+
+# This file is a reusable external state template for human/AI-assisted research.
+# It is not a request for private chain-of-thought. Fill only auditable state.
+
+meta:
+  run_id: ""
+  created_at: ""
+  updated_at: ""
+  operator: ""
+  chart_version: 0
+  parent_chart_version: null
+
+north:
+  question: ""
+  claim_type: "descriptive|causal|predictive|diagnostic|decision|preservation"
+  required_claim_strength: ""
+  success_condition: ""
+  terminal_condition: ""
+
+localization:
+  system: ""
+  boundary: ""
+  scale: ""
+  observation_interval: ""
+  horizons: []
+  value_premise: ""
+  authority: ""
+  assumptions: []
+
+# Technical core: C_t = {Q,S,B,sigma,Delta_t,H,W,Theta,X,D,V,G,E,P,U,A,R,L}
+
+variable_registry:
+  # status: OBSERVED|DERIVED|CANDIDATE|LOCAL|RECURRENT|CORE|DOMAIN|DORMANT|REJECTED
+  variables: []
+  # Example candidate variable record:
+  # - id: "x_recovery_independence"
+  #   name: "recovery-path independence"
+  #   status: "CANDIDATE"
+  #   discovered_from: ""
+  #   operational_definition: ""
+  #   observable_proxy: ""
+  #   mechanism: ""
+  #   evidence_ids: []
+  #   alternative_explanations: []
+  #   decision_effect: ""
+  #   recurrence_cases: []
+  #   non_duplication_check: ""
+  #   promotion_reason: ""
+  #   demotion_test: ""
+
+promotion_gate:
+  operationality: null
+  observability_or_boundability: null
+  mechanistic_relevance: null
+  residual_reduction: null
+  decision_relevance: null
+  alternatives_checked: null
+  recurrence_or_independent_mechanism: null
+  non_duplication: null
+  semantic_stability: null
+  complexity_cost_justified: null
+  decision: "KEEP_CANDIDATE|PROMOTE_LOCAL|PROMOTE_RECURRENT|PROMOTE_DOMAIN|PROMOTE_CORE|DORMANT|REJECT"
+  reason: ""
+
+evidence_ledger:
+  # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN
+  items: []
+  # - id: "E1"
+  #   claim_supported: ""
+  #   provenance: "MEASURED"
+  #   source: ""
+  #   method: ""
+  #   timestamp_or_version: ""
+  #   scope: ""
+  #   uncertainty: ""
+  #   independence: ""
+  #   disturbance: ""
+  #   freshness: "current|possibly_stale|stale"
+
+dependency_chart:
+  nodes: []
+  relations: []
+  external_currents: []
+  common_cause_groups: []
+  containing_systems_with_material_externalities: []
+
+preservation:
+  mode: "PRESERVE|RESCUE|NOT_APPLICABLE"
+  hard_dimensions: []
+  # - id: "M_V"
+  #   name: "viability margin"
+  #   lower: null
+  #   upper: null
+  #   required_reserve: null
+  #   units: ""
+  #   evidence_ids: []
+  irreplaceable_cargo: []
+  recovery_paths: []
+  recovery_path_independence: []
+  irreversible_consequences: []
+  non_action_baseline: ""
+  preservation_gate: "PASS|FAIL|UNRESOLVED|RESCUE_REQUIRED|NOT_APPLICABLE"
+
+projections:
+  # Each projection keeps interval/support + occupancy + confidence + frontier + provenance.
+  axes: []
+  # - id: "P1"
+  #   name: ""
+  #   resolved_support: []
+  #   occupancy_representation: ""
+  #   confidence: null
+  #   unresolved_frontier: ""
+  #   provenance: []
+  #   hard_boundary: null
+  #   tail_flag: false
+  #   scenario_generator: ""
+  #   sampling_rule: ""
+  #   horizon: ""
+
+interestingness:
+  elements: []
+  # - id: "x1"
+  #   breadth_B: null
+  #   evenness_E: null
+  #   leverage_C: null
+  #   unresolved_R: null
+  #   grounding_Q: null
+  #   catastrophic_tail_T: false
+  #   known_score: null
+  #   interval: []
+
+contradiction_ledger:
+  items: []
+  # - id: "C1"
+  #   claim_A: ""
+  #   claim_B: ""
+  #   evidence_A: []
+  #   evidence_B: []
+  #   shared_assumptions: []
+  #   candidate_resolutions: []
+  #   decision_impact: ""
+
+assumption_ledger:
+  items: []
+  # - id: "A1"
+  #   statement: ""
+  #   reason: ""
+  #   scope: ""
+  #   sensitivity: ""
+  #   invalidation_test: ""
+  #   expiry: ""
+
+residuals:
+  items: []
+  # - id: "R1"
+  #   predicted_region: ""
+  #   realized_state: ""
+  #   violated_assumptions: []
+  #   candidate_dependencies: []
+  #   candidate_variables: []
+  #   action: "investigate|accept_noise|reframe_boundary|refine_model"
+
+candidate_headings:
+  # heading_type: observe|retrieve|simulate|test|intervene|wait_external
+  options: []
+  # - id: "H1"
+  #   heading_type: "test"
+  #   purpose: ""
+  #   expected_information_or_decision_value: ""
+  #   disturbance_or_cost: ""
+  #   preservation_effect: ""
+  #   state_change_required_for_repeat: ""
+  #   cutoff: ""
+
+next_heading:
+  selected_id: ""
+  reason: ""
+  preservation_gate_checked: false
+  expected_state_change: ""
+  stop_or_turn_condition: ""
+
+logbook:
+  changes_from_previous_chart: []
+  new_evidence_ids: []
+  variables_promoted: []
+  variables_demoted: []
+  projections_changed: []
+  contradictions_added_or_resolved: []
+  realized_outcome: ""
+  decision_changed: null
+  reason_for_stop_or_repeat: ""
+
+terminal_state:
+  # SUPPORTED|DECISION_ROBUST|PRESERVATION_BLOCK|RESCUE_REQUIRED|EXTERNAL_WAIT|
+  # INSUFFICIENT_EVIDENCE|MODEL_CONTRADICTION|TERMINAL_SYSTEM_STATE|QUESTION_REFRAMED|CONTINUE
+  state: "CONTINUE"
+  reason: ""
+
+validation_checks:
+  claim_strength_matches_evidence: false
+  observed_inferred_projected_decision_layers_separated: false
+  hard_constraints_preserved_in_compression: false
+  rare_consequential_tails_preserved: false
+  recovery_path_independence_checked: false
+  common_cause_failures_checked: false
+  hidden_variables_have_promotion_status: false
+  stale_evidence_reviewed: false
+  causal_language_justified_or_labeled_as_sensitivity: false
+  loop_has_new_evidence_or_state_change: false
+  explicit_terminal_condition_present: false
