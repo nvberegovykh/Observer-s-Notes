@@ -62,6 +62,15 @@ Promote only when enough of these survive: operationality, observability/boundab
 - Preserve/regenerate supporting conditions rather than freezing every current arrangement.
 - Outputs can become environmental inputs for later systems; inheritance needs provenance and revision, not automatic approval.
 
+## Scale / inheritance check
+
+- **Name the relation before changing level:** part-of, supports, contains, regulates, observes, authorizes, or interacts.
+- If a proposed step requires breaking a core constraint, the same local model cannot be the sole verifier of its own exception.
+- Verify through the nearest independent system, instrument, maintainer, authority, or adjacent scale that can actually observe the affected condition. The useful direction may be down, up, or sideways.
+- If evidence remains "impossible" after reasonable parameter changes, challenge the spatial scale, time scale, organizational boundary, or model class before inventing a cause.
+- A snapshot is not heritage. Preserve provenance/lineage when current state alone cannot show how an inherited structure was produced or maintained.
+- Extreme-looking behavior can be ordinary under a different valid model. Quantum entanglement is a caution about model-class limits, not a rule that simply moving to a larger spatial scale resolves contradictions.
+
 ## Patience / branch preservation
 
 - Patience is control of commitment timing, not inactivity.
@@ -128,3 +137,4 @@ A second source is useful when it changes the evidence or constraints, not merel
 > The strength of the claim must not exceed the strength of the evidence, model, preserved alternatives, and ability to correct course.
 >
 > Preserve the conditions that make viable activity, correction, communication, and generation possible now—not only later.
+> When a conclusion requires suspending a core constraint, require an independent path that can prove the exception wrong.

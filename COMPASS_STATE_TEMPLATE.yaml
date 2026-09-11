@@ -31,6 +31,35 @@ localization:
   authority: ""
   assumptions: []
 
+scale_and_inheritance:
+  spatial_scale: ""
+  temporal_scale: ""
+  organizational_scale: ""
+  model_class: ""
+  scale_boundary_questioned: false
+  scale_question_reason: ""
+  related_systems: []
+  # - id: "S1"
+  #   relation_type: "PART_OF|SUPPORTS|CONTAINS|REGULATES|OBSERVES|AUTHORIZES|INTERACTS"
+  #   system: ""
+  #   evidence_ids: []
+  core_constraint_exception:
+    proposed: false
+    constraint_ids: []
+    reason: ""
+    same_local_model_cannot_self_authorize: true
+    verifier: ""
+    verifier_relation: ""
+    verifier_evidence_ids: []
+    result: "NOT_REQUIRED|UNRESOLVED|SUPPORTED|REJECTED"
+  lineage:
+    snapshot_sufficient: null
+    inherited_structures: []
+    provenance_paths: []
+    missing_history: []
+    maintenance_conditions: []
+    revision_conditions: []
+
 navigation:
   map_status: "unmapped|partial|sufficient_for_question|validated"
   target: ""
@@ -341,6 +370,10 @@ terminal_state:
 validation_checks:
   claim_strength_matches_evidence: false
   minimum_system_map_built_before_structural_search: false
+  scale_relation_types_declared_when_cross_scale_reasoning_used: false
+  core_constraint_exception_has_independent_verification: false
+  persistent_impossibility_triggers_scale_or_model_class_review: false
+  lineage_preserved_when_snapshot_is_insufficient: false
   search_route_matches_target_and_map: false
   route_residuals_preserved: false
   learned_routes_have_provenance_scope_and_revision_condition: false

@@ -24,6 +24,19 @@ The conceptual extensions in this volume grew from post-publication working disc
 
 > *A compass does not decide where to go. It helps preserve orientation while the surroundings move.*
 
+## How to read this volume
+
+Compass has four reader-facing layers. They should not be confused with one another.
+
+1. **Story** keeps assumptions continuous long enough for hidden variables to appear. The vessel, buoy, fog, routes, and other objects are examples, not technical definitions.
+2. **Field note** states the local principle in memorable language. It is still a claim to be tested, not an axiom.
+3. **Operational model** gives a measurable relation, gate, or procedure that can fail. The equations are local templates rather than universal laws.
+4. **Companion state** records what an actual run knows: evidence, assumptions, routes, residuals, preservation conditions, communication state, scale, and stopping conditions.
+
+References serve a fifth role: they identify neighboring formal traditions that support, challenge, or clarify particular pieces of the method. No reference is presented as proof of Compass as a whole.
+
+When a concept feels too abstract, read in this order: **scene → field note → working example → operational model → limit → reference relation.**
+
 ## A note before sailing
 
 A small research vessel leaves a harbor before sunrise. Not far offshore stands a weather buoy. Its light is easy to see. Its radio is not always quiet.
@@ -1309,6 +1322,9 @@ The purpose is not to maximize complexity, novelty, or choice blindly. It is to 
 
 - The question selects the local model; it is not a poetic direction variable.
 - The model should be no more detailed than the decision requires, but no less detailed than its hard dependencies require.
+- If a core constraint is treated as breakable, require an independent verifier with a named relation to that constraint; the local model cannot self-authorize the exception.
+- If persistent evidence looks impossible, challenge spatial, temporal, organizational, and model-class boundaries before inventing causes.
+- Preserve lineage/provenance when a present snapshot cannot explain inherited structure.
 - Every consequential loop needs new evidence, state change, bounded waiting, communication, or a reason to branch.
 - Patience preserves options; it does not excuse endless deferral.
 - Communication preserves possibility when it remains safe and voluntary; it does not require trust or exposure.
@@ -1345,6 +1361,145 @@ A completed Compass run is not "the answer." It is a bounded claim plus an audit
 **VALIDATE IT**
 
 Apply the same procedure to a materially different problem. The technical terms should transfer without importing the ocean story. If they do not, the abstraction is not yet universal enough.
+
+---
+
+# Critical audit · Where Compass can be wrong
+
+This section assumes the framework is wrong somewhere and asks what would expose the error.
+
+Compass is intentionally local. That protects it from pretending to be a universal theory, but it creates a recurring danger: a locally coherent model can become self-sealing. It can choose the boundary, define the variables, judge the evidence, and then approve its own exception.
+
+The following checks are therefore not optional decorations. They are ways for the model to lose an argument with reality.
+
+## 1 · The hierarchy problem
+
+Words such as *higher*, *lower*, *inside*, and *outside* are useful only after the relation has been named.
+
+A second system can relate to the selected system as:
+
+- **part of** it;
+- a **supporting** substrate or dependency;
+- a **containing** environment;
+- a **regulator** or controller;
+- an **observer/instrument**;
+- an **authority or maintainer**;
+- or a **peer/interacting** system.
+
+These are not interchangeable.
+
+A human reviewing an AI system may be an external authority, maintainer, user, or independent verifier; that does not make the human a smaller physical component of the AI. Animals and plants are not lower-level components of a human merely because a human depends on ecosystems. Fish and seaweed are likewise not automatically lower-level components of other organisms. They may instead be peers, food-web relations, environmental conditions, or components of a containing ecological system.
+
+Ecology has long had to confront this problem. Levin argues that there is no single natural scale at which ecological phenomena should be studied and that mechanisms can operate at scales different from the patterns being observed [R30]. O'Neill and colleagues similarly use hierarchy theory to decompose ecosystems according to process rates and observation scale rather than assuming one fixed ladder [R34].
+
+### Field rule
+
+> *Do not move up or down a hierarchy until you know what relation the movement represents.*
+
+## 2 · Core-constraint exception gate
+
+A particularly dangerous assumption is: **the current model says a core constraint may be broken.**
+
+The model that benefits from the exception should not be its only verifier.
+
+When an action or explanation requires crossing a declared hard boundary, invalidating a defining invariant, or suspending a rule that previously protected viability, Compass requires an additional verification path appropriate to the relation involved.
+
+That verifier may be:
+
+- a lower-scale instrument exposing the mechanism;
+- a supporting subsystem that directly carries the affected condition;
+- a containing system that can reveal an externality the local model cannot see;
+- an independent peer model or experiment;
+- a responsible maintainer or authority;
+- or a human reviewer when human judgment, responsibility, or value interpretation is genuinely part of the system boundary.
+
+The direction is therefore not always **down**. The requirement is **independent access to the consequence that the local model is proposing to discount**.
+
+Operationally:
+
+> **If a proposed step requires a core-constraint exception, the same local model cannot be the sole source of both the exception and its verification.**
+
+If no appropriate verifier exists, the exception remains **unresolved** rather than becoming true by necessity.
+
+## 3 · The scale boundary can itself be wrong
+
+Some contradictions are not missing variables inside the current scale. They are evidence that the selected scale, time interval, organizational level, or even model class is wrong.
+
+Anderson's *More Is Different* is a classic warning that new organizing principles can become relevant at different levels of complexity [R31]. Wilson and Kogut's renormalization-group treatment gives a formal example of how descriptions and effective variables change with scale [R32]. Simon's work on complex hierarchy provides another neighboring view: systems often become tractable because interactions cluster into approximately decomposable structures, not because one description works unchanged at every level [R29].
+
+So when a residual survives reasonable parameter changes, Compass should ask four separate questions:
+
+| Scale question | What may be wrong? |
+|---|---|
+| **Spatial** | the modeled region is too small, too large, or missing a coupling across distance |
+| **Temporal** | the interval hides a fast process, slow accumulation, delay, or hysteresis |
+| **Organizational** | the relevant process belongs to a component, peer network, or containing system rather than the selected unit |
+| **Model class** | the variables and relations themselves are inappropriate for the phenomenon |
+
+Quantum entanglement is useful here as an extreme boundary example, but it must be stated carefully. Experiments with entangled states violate Bell inequalities and cannot be reproduced by the relevant class of local hidden-variable models [R33]. This does **not** mean that moving to a simply "larger" spatial scale explains entanglement. It means that intuitions and variables valid in one model class can fail, so a phenomenon that looks irrational under one projection may become ordinary only after the model itself changes.
+
+### Field rule
+
+> *Before inventing an impossible cause, ask whether the impossibility belongs to the model rather than the world.*
+
+## 4 · Heritage is not a snapshot
+
+A small present sample can be structurally poor evidence of how the present came to exist.
+
+A folder of random photographs may show many objects while preserving almost none of the relations that generated them: sequence, authorship, selection pressure, dependency, failed alternatives, maintenance, context, or transmission.
+
+The same problem appears in biology, culture, software, institutions, and personal memory. Current state is not lineage.
+
+Compass therefore separates **snapshot state** from **provenance/lineage state**. When an inherited constraint, tradition, route, adaptation, or interface matters to the decision, the record should preserve enough derivation to answer:
+
+- what produced this structure;
+- what maintained it;
+- what conditions it originally solved;
+- what transformations it survived;
+- what evidence shows that those conditions still apply;
+- and what would justify revision or abandonment.
+
+This is consistent with the broader provenance principle already used in Compass [R24], but it extends the idea from data derivation to inherited system structure.
+
+Heritage should not be romanticized. A transmitted structure can preserve knowledge, error, coercion, resilience, or all four at once. Provenance tells us where it came from; it does not tell us that it deserves to remain.
+
+## 5 · Defending the operational models
+
+The local formulas survive this audit only with explicit limits.
+
+| Model | Strongest defensible use | Main failure mode |
+|---|---|---|
+| standardized disagreement $D$ | locate disagreement relative to stated uncertainty | correlated bias can make agreement look stronger than it is |
+| residual reduction $\Delta R_x$ | test whether a candidate variable improves a fixed validation rule | overfitting or leakage can reward a false variable |
+| preservation gate $\underline m_j\ge r_j$ | reject actions that cross declared hard margins | omitted hard conditions or wrong system boundary |
+| interestingness $I$ | rank grounded future leverage under one projection | weights, normalization, and projection choice are local judgments |
+| refinement priority $R_i$ | allocate attention where added resolution can change a decision | normalized cost/sensitivity can hide a rare hard constraint |
+| patience value $V_{hold}$ | compare bounded delay with information and option value | delay and information values are uncertain and can change abruptly |
+| coexistence space $\mathcal C_{AB}$ | represent currently known jointly admissible paths | preferences, consent, power, deception, and future commitments are only partially observable |
+| recovery margin $M_R$ | test whether recovery is fast enough under a scenario | recovery path may share the same failure domain |
+| predecessor region $\mathcal P(q)$ | constrain search using a mapped system | an absent edge cannot be discovered by traversal alone |
+| present capability set $\mathcal A_t(E_t)$ | expose current capability loss from environmental change | the set may be impossible to enumerate and should usually be sampled/projected |
+
+None of these quantities deserves more precision than its inputs.
+
+## 6 · What survives the audit
+
+After trying to break the framework, the strongest part is not any individual formula. It is the discipline around revision:
+
+- localize before optimizing;
+- map before navigating;
+- distinguish observation from model and projection;
+- preserve residuals and contradictions;
+- do not let uncertainty masquerade as known possibility;
+- keep core constraints separate from average scores;
+- do not let a model self-authorize exceptions to the constraints that protect it;
+- question scale and model class when persistent evidence refuses to fit;
+- preserve lineage when a snapshot cannot explain inherited structure;
+- communicate across boundaries without requiring surrender of identity or choice;
+- preserve present environmental support as well as future optionality;
+- and keep an explicit route by which later evidence can prove the current model wrong.
+
+That is the defensible center of Compass.
 
 ---
 
@@ -1433,6 +1588,29 @@ The operational templates above have been checked against the following recurrin
 
 ---
 
+## How the references relate to the ideas
+
+The references below are deliberately grouped by **function**, not prestige. They do not jointly prove Compass. Each one supplies a neighboring formal result, caution, or vocabulary that makes one part of the local method less arbitrary.
+
+| Compass idea | References | Why they are here | What they do **not** establish |
+|---|---|---|---|
+| viability, resilience, preservation | [R1], [R2] | formal and ecological traditions for remaining inside viable regions and surviving disturbance | that Compass's preservation checklist is complete |
+| entropy and evenness | [R3] | source for the entropy form used only when a justified occupancy/probability distribution exists | that entropy alone measures interestingness |
+| intervention and causality | [R4] | distinguishes intervention claims from observation/association | that every Compass sensitivity relation is causal |
+| bounded uncertainty | [R5] | rigorous neighboring tradition for interval reasoning | that informal Compass bounds have interval-analysis guarantees |
+| adaptive refinement | [R6], [R7] | demonstrates allocating resolution where local error/structure requires it | that reasoning problems are numerical meshes |
+| receding horizon | [R8] | neighboring control tradition for acting, observing, and replanning | that Compass has MPC stability guarantees |
+| abstraction/refinement | [R9] | formal example of refining a coarse model when counterevidence appears | that every hidden-variable search is formal verification |
+| verification / TEVV | [R10]–[R12] | disciplined separation of claims, tests, lifecycle evaluation, and evidence | that following Compass automatically satisfies NASA/NIST requirements |
+| value of information | [R13] | grounding for information-producing actions and bounded waiting | that expected information value can always be estimated numerically |
+| stress, incubation, offloading, metacognition | [R14]–[R18] | human evidence relevant to patience, external state, confidence, and aids | that human cognitive findings transfer directly to AI systems |
+| communication and coexistence | [R19]–[R22] | evidence and theory showing communication, commitments, bargaining ranges, and autonomy can alter cooperative possibilities | that communication guarantees agreement or that every conflict has a safe settlement |
+| structural navigation | [R23]–[R26] | neighboring work on cue-guided search, provenance, backward fault analysis, and system-aware troubleshooting | that one universal search graph exists |
+| environment and generative conditions | [R27], [R28] | examples of systems modifying their environment and environmental conditions shaping present well-being | that every inherited environmental structure is beneficial |
+| scale, hierarchy, emergence | [R29]–[R34] | reasons to treat scale and relation type as model variables rather than a fixed ladder | that every phenomenon reduces cleanly upward or downward, or that a single hierarchy is objectively privileged |
+
+The intended reading is therefore: **Compass proposes a local synthesis; the references make particular moves accountable.**
+
 # Reference map
 
 These are grounding parallels and notation sources, not claims that Compass is a restatement of any one tradition.
@@ -1462,6 +1640,7 @@ These are grounding parallels and notation sources, not claims that Compass is a
 - system-aware troubleshooting and hypothesis testing: [R26]
 - organisms modifying environments and evolutionary feedback: [R27]
 - ecosystem conditions and present human well-being: [R28]
+- scale, hierarchy, emergence, and model-class boundaries: [R29]–[R34]
 
 ## References
 
@@ -1523,6 +1702,17 @@ These are grounding parallels and notation sources, not claims that Compass is a
 
 **[R28] Millennium Ecosystem Assessment.** *Ecosystems and Human Well-being: Synthesis.* Island Press, 2005. https://www.unep.org/resources/report/ecosystem-and-human-well-being-synthesis
 
+**[R29] Simon, Herbert A.** "The Architecture of Complexity." *Proceedings of the American Philosophical Society* 106(6) (1962): 467–482. https://www.jstor.org/stable/985254
+
+**[R30] Levin, Simon A.** "The Problem of Pattern and Scale in Ecology: The Robert H. MacArthur Award Lecture." *Ecology* 73(6) (1992): 1943–1967. DOI: 10.2307/1941447. https://doi.org/10.2307/1941447
+
+**[R31] Anderson, P. W.** "More Is Different: Broken Symmetry and the Nature of the Hierarchical Structure of Science." *Science* 177(4047) (1972): 393–396. DOI: 10.1126/science.177.4047.393. https://doi.org/10.1126/science.177.4047.393
+
+**[R32] Wilson, Kenneth G.; Kogut, John.** "The Renormalization Group and the Epsilon Expansion." *Physics Reports* 12(2) (1974): 75–199. DOI: 10.1016/0370-1573(74)90023-4. https://doi.org/10.1016/0370-1573(74)90023-4
+
+**[R33] Royal Swedish Academy of Sciences.** "The Nobel Prize in Physics 2022" — experiments with entangled photons, violation of Bell inequalities, and quantum information science. Nobel Prize Outreach, 4 October 2022. https://www.nobelprize.org/prizes/physics/2022/press-release/
+
+**[R34] O'Neill, Robert V.; DeAngelis, Donald L.; Waide, J. B.; Allen, Timothy F. H.** *A Hierarchical Concept of Ecosystems.* Princeton University Press, 1986. https://www.jstor.org/stable/j.ctv1sfsf8d
 ---
 
 ## The extension in one passage
