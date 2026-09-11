@@ -5,25 +5,29 @@ Use this only as the short execution surface. The full rationale, equations, edg
 ## One cycle
 
 1. **Set the question** — exact claim, uncertainty, or decision + required strength.
-2. **Localize** — system, boundary, scale, interval, horizon, assumptions, value premise.
-3. **Record evidence** — observed != inferred != projected; keep provenance, uncertainty, freshness, and method independence.
-4. **Map hard conditions** — viability boundaries, reserves, irreversible consequences, containing-system effects.
-5. **Map recovery** — independent recovery paths, access, authority, irreplaceable state, recovery-time margin.
-6. **Trace dependencies** — lower-level requirements, external conditions, common-cause failure groups.
-7. **Register hidden variables** — every application-exposed variable gets a status; story alone never promotes one.
-8. **Project relevant futures** — supported ranges/regions + occupancy + confidence + unresolved frontier + consequential tails.
-9. **Find the consequential region** — leverage, boundary proximity, disagreement, tail risk, or decision-sensitive uncertainty.
-10. **Control tempo** — continue, probe a lower-probability branch, pause with state preserved, communicate, or seek external guidance.
-11. **Check patience value** — compare information + option value of holding against delay cost; do not use low probability alone to delete a branch.
-12. **If another system matters, test coexistence** — separate threat from identity; look for safe, voluntary cooperation, repair, de-escalation, or separation paths.
-13. **Preserve freedom of choice** — communication does not require trust, proximity, compliance, or continued contact; refusal and safe separation remain valid states.
-14. **Review guidance** — scope, independence, calibration, authority, responsibility.
-15. **Choose one bounded step** — smallest evidence-producing action likely to change the model or decision.
-16. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.
-17. **Execute one justified step** — do not execute the whole imagined route.
-18. **Compare realization with projection** — record residuals, contradictions, and communication outcomes separately from inferred intent.
-19. **Update and compress** — retain hard constraints, rare branches, provenance, parked alternatives, coexistence paths, recovery state, and variable history.
-20. **Stop explicitly** — named terminal state only.
+2. **Map first** — minimum useful boundary, containers, relations, authority/maintainers, common operations, interfaces, observation points.
+3. **Localize** — scale, interval, horizon, assumptions, value premise.
+4. **Record evidence** — observed != inferred != projected; keep provenance, uncertainty, freshness, and method independence.
+5. **Choose search mode** — scan a small readable container; navigate a large structured one.
+6. **Choose direction** — for a required effect/destination, search backward through mapped admissible paths before expanding outward.
+7. **Map hard conditions** — viability boundaries, reserves, irreversible consequences, containing-system effects.
+8. **Map recovery** — independent recovery paths, access, authority, irreplaceable state, recovery-time margin.
+9. **Trace dependencies** — lower-level requirements, external conditions, common-cause failure groups.
+10. **Register hidden variables** — every application-exposed variable gets a status; story alone never promotes one.
+11. **Project relevant futures** — supported ranges/regions + occupancy + confidence + unresolved frontier + consequential tails.
+12. **Find the consequential region** — leverage, boundary proximity, disagreement, route residual, tail risk, or decision-sensitive uncertainty.
+13. **Use the cheapest trustworthy road** — existing qualified tool/interface/maintainer when it can answer the bounded question more efficiently; preserve verification.
+14. **Control tempo** — continue, probe a lower-probability branch, pause with state preserved, communicate, or seek external guidance.
+15. **Check patience value** — compare information + option value of holding against delay cost; do not use low probability alone to delete a branch.
+16. **If another system matters, test coexistence** — separate threat from identity; look for safe, voluntary cooperation, repair, de-escalation, or separation paths.
+17. **Preserve freedom of choice** — communication does not require trust, proximity, compliance, or continued contact; refusal and safe separation remain valid states.
+18. **Review guidance** — scope, independence, calibration, authority, responsibility.
+19. **Choose one bounded step** — smallest evidence-producing action likely to change the map, model, or decision.
+20. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.
+21. **Execute one justified step** — do not execute the whole imagined route.
+22. **Compare realization with projection and route** — record residuals, contradictions, and communication outcomes separately from inferred intent.
+23. **Update map + route memory + model** — retain provenance, failure cases, revision conditions, parked alternatives, coexistence paths, recovery state, and validated variables.
+24. **Stop explicitly** — named terminal state only.
 
 ## Hidden-variable promotion
 
@@ -36,6 +40,17 @@ Statuses:
 A variable may also become `DORMANT` or `REJECTED`, and previously promoted variables may be demoted.
 
 Promote only when enough of these survive: operationality, observability/boundability, mechanism, residual reduction, decision relevance, alternative explanations, recurrence/independent mechanism, non-duplication, semantic stability, complexity justification.
+
+## Structural navigation / route memory
+
+- **No map, no structural search.** Build the minimum useful map first.
+- Search backward from an effect/destination when that removes irrelevant forward branches.
+- Every mapped transition can act as a sensor: expected state vs observed state; a residual marks where the known road stopped matching reality.
+- Scan simple containers completely; navigate complex ones by structure and authority.
+- Check existing tools, interfaces, and maintainers before rebuilding their work.
+- Delegation is not ignorance when scope, provenance, and verification remain visible.
+- Preserve learned routes from modeling **and** experience with scope, confidence, failure cases, last validation, and revision conditions.
+- A previously successful road is a prior, not a law.
 
 ## Patience / branch preservation
 

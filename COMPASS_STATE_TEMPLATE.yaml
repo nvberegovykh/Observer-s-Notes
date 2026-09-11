@@ -31,6 +31,40 @@ localization:
   authority: ""
   assumptions: []
 
+navigation:
+  map_status: "unmapped|partial|sufficient_for_question|validated"
+  target: ""
+  target_type: "authority|state|rule|artifact|dependency|cause|maintainer|effect|other"
+  search_mode: "scan|navigate|mixed"
+  search_direction: "backward|forward|mixed"
+  boundary: ""
+  containers: []
+  relations: []
+  maintainers: []
+  authorities: []
+  common_operations: []
+  interfaces: []
+  observation_points: []
+  unknown_edges: []
+  predecessor_region: []
+  external_solution_checked: false
+  external_solution_or_maintainer: ""
+  local_route_residuals: []
+  route_memory: []
+  # - id: "RM1"
+  #   target_type: "rule"
+  #   route: []
+  #   learned_from: "MODELED|OBSERVED|SIMULATED|EXPERIENCED|COMMUNICATED"
+  #   authority_or_maintainer: ""
+  #   scope: ""
+  #   assumptions: []
+  #   evidence_ids: []
+  #   confidence: null
+  #   known_failure_cases: []
+  #   last_validated: ""
+  #   revision_condition: ""
+  #   status: "CANDIDATE|LOCAL|REUSABLE|STALE|REJECTED"
+
 variable_registry:
   # status: OBSERVED|DERIVED|CANDIDATE|LOCAL|RECURRENT|DOMAIN|CORE|DORMANT|REJECTED
   variables: []
@@ -64,7 +98,7 @@ promotion_review:
   reason: ""
 
 evidence:
-  # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN|COMMUNICATED
+  # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN|COMMUNICATED|SIMULATED|EXPERIENCED
   items: []
   # - id: "E1"
   #   claim_supported: ""
@@ -292,6 +326,11 @@ terminal_state:
 
 validation_checks:
   claim_strength_matches_evidence: false
+  minimum_system_map_built_before_structural_search: false
+  search_route_matches_target_and_map: false
+  route_residuals_preserved: false
+  learned_routes_have_provenance_scope_and_revision_condition: false
+  existing_qualified_solution_or_maintainer_checked_when_efficient: false
   observation_model_projection_decision_layers_separated: false
   hard_constraints_preserved_in_compression: false
   rare_consequential_tails_preserved: false
