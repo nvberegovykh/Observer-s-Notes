@@ -1585,6 +1585,10 @@ The operational templates above have been checked against the following recurrin
 | More present options assumed automatically better | Do not maximize raw capability count; value premise, hard constraints, and harm still govern admissibility. |
 | Environment frozen in the name of preservation | Preserve/regenerate supporting conditions and viable relations, not every current arrangement; adaptation can be part of preservation. |
 | Cultural or technical output becomes environmental input | Preserve provenance and maintenance/revision conditions where relevant; inheritance does not imply the output is beneficial. |
+| Core constraint exception justified only by the same local model | Keep the exception unresolved until an independent verifier with a named relation can test the affected condition. |
+| Cross-scale move with no relation type | Name whether the other system is part-of, supporting, containing, regulating, observing, authorizing, or interacting before using it as evidence. |
+| Persistent anomaly remains impossible under the local model | Review spatial, temporal, organizational, and model-class boundaries before inventing an extraordinary cause. |
+| Snapshot treated as lineage | Preserve provenance, sequence, maintenance, and revision history when present state cannot explain inherited structure. |
 
 ---
 
@@ -1713,6 +1717,7 @@ These are grounding parallels and notation sources, not claims that Compass is a
 **[R33] Royal Swedish Academy of Sciences.** "The Nobel Prize in Physics 2022" — experiments with entangled photons, violation of Bell inequalities, and quantum information science. Nobel Prize Outreach, 4 October 2022. https://www.nobelprize.org/prizes/physics/2022/press-release/
 
 **[R34] O'Neill, Robert V.; DeAngelis, Donald L.; Waide, J. B.; Allen, Timothy F. H.** *A Hierarchical Concept of Ecosystems.* Princeton University Press, 1986. https://www.jstor.org/stable/j.ctv1sfsf8d
+
 ---
 
 ## The extension in one passage
