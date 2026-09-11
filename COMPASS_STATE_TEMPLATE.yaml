@@ -64,7 +64,7 @@ promotion_review:
   reason: ""
 
 evidence:
-  # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN
+  # provenance: MEASURED|CONSTRAINT|MODEL|INFERRED|ASSUMED|OPEN|COMMUNICATED
   items: []
   # - id: "E1"
   #   claim_supported: ""
@@ -77,6 +77,7 @@ evidence:
   #   independence: ""
   #   disturbance: ""
   #   freshness: "current|possibly_stale|stale"
+  #   verification_state: "verified|partially_verified|unverified|not_applicable"
 
 dependencies:
   nodes: []
@@ -145,7 +146,8 @@ processing_control:
   current_load: "low|moderate|high|unknown"
   urgency: ""
   delay_cost: ""
-  expected_information_value_of_waiting: ""
+  expected_information_value_of_hold: ""
+  expected_option_value_of_hold: ""
   reference_state_preserved: false
   pause_reason: ""
   resume_condition: ""
@@ -153,10 +155,55 @@ processing_control:
   # Do not prune solely because probability is low when the branch remains possible
   # and could materially change consequence, explanation, or information value.
 
+communication:
+  applicable: false
+  interacting_parties: []
+  current_relation: "cooperative|neutral|uncertain|competitive|threatening|hostile|unknown"
+  communication_goal: ""
+  channel_type: "direct|mediated|asynchronous|one_way|authenticated|none|other"
+  channel_available: false
+  channel_safe: null
+  contact_refusal_allowed: true
+  safe_separation_available: null
+  coercion_risk: ""
+  deception_risk: ""
+  party_constraints: []
+  # - party_id: "A"
+  #   hard_viability_conditions: []
+  #   identity_invariants: []
+  #   voluntary_acceptance_conditions: []
+  #   authority: ""
+  #   stated_preferences: []
+  #   unknown_constraints: []
+  messages: []
+  # - id: "M1"
+  #   sender: ""
+  #   receiver: ""
+  #   timestamp: ""
+  #   literal_content: ""
+  #   inferred_intent: ""
+  #   verification_state: "verified|partially_verified|unverified"
+  #   source_authentication: ""
+  #   decision_effect: ""
+  coexistence_space:
+    horizon: ""
+    currently_nonempty: null
+    reachable_joint_futures_model: ""
+    party_A_viability_set: ""
+    party_B_viability_set: ""
+    party_A_voluntary_acceptance_set: ""
+    party_B_voluntary_acceptance_set: ""
+    known_paths: []
+    unresolved_paths: []
+    safe_separation_paths: []
+    reasons_for_apparent_emptiness: []
+  next_communication_probe: ""
+  communication_stop_condition: ""
+
 external_guidance:
   sources: []
   # - id: "G1"
-  #   source_type: "instrument|dataset|rule|checklist|simulator|human|ai|other"
+  #   source_type: "instrument|dataset|rule|checklist|simulator|human|ai|mediator|other"
   #   claim_supported: ""
   #   scope: ""
   #   independence: ""
@@ -197,10 +244,11 @@ residuals:
   #   violated_assumptions: []
   #   candidate_dependencies: []
   #   candidate_variables: []
+  #   communication_explanation: ""
   #   action: "investigate|accept_noise|reframe_boundary|refine_model"
 
 candidate_steps:
-  # step_type: observe|retrieve|simulate|test|intervene|pause|seek_guidance|wait_external
+  # step_type: observe|retrieve|simulate|test|communicate|intervene|pause|seek_guidance|wait_external
   options: []
   # - id: "S1"
   #   step_type: "test"
@@ -208,6 +256,7 @@ candidate_steps:
   #   expected_information_or_decision_value: ""
   #   disturbance_or_cost: ""
   #   preservation_effect: ""
+  #   freedom_of_choice_effect: ""
   #   state_change_required_for_repeat: ""
   #   cutoff: ""
 
@@ -215,6 +264,7 @@ next_step:
   selected_id: ""
   reason: ""
   preservation_gate_checked: false
+  communication_safety_checked: false
   expected_state_change: ""
   stop_or_redirect_condition: ""
 
@@ -227,6 +277,8 @@ logbook:
   branches_reopened: []
   projections_changed: []
   contradictions_added_or_resolved: []
+  communications_attempted: []
+  coexistence_paths_added_or_removed: []
   guidance_used: []
   realized_outcome: ""
   decision_changed: null
@@ -250,7 +302,13 @@ validation_checks:
   causal_language_justified_or_labeled_as_sensitivity: false
   low_probability_branches_not_pruned_without_reason: false
   pause_state_is_recoverable: false
+  communication_considered_when_relevant_and_safe: false
+  communication_does_not_override_hard_safety: false
+  freedom_of_choice_or_refusal_preserved: false
+  coercion_risk_reviewed: false
+  safe_separation_counted_as_possible_coexistence: false
+  communication_claims_kept_separate_from_inferred_intent: false
   external_guidance_independence_checked: false
   guidance_authority_responsibility_separated: false
-  loop_has_new_evidence_state_change_or_bounded_wait_reason: false
+  loop_has_new_evidence_state_change_communication_or_bounded_wait_reason: false
   explicit_terminal_condition_present: false

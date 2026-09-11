@@ -28,7 +28,7 @@ The conceptual extensions in this volume grew from post-publication working disc
 
 A small research vessel leaves a harbor before sunrise. Not far offshore stands a weather buoy. Its light is easy to see. Its radio is not always quiet.
 
-At first the buoy seems like a convenient reference. Later the crew discovers that its signal has noise. Then that the buoy itself can drift. Then that the current affecting the buoy also affects the vessel. Then that a second instrument disagrees. Farther offshore, the route approaches a shoal. Weather closes in. The crew has to decide when to continue, when to wait, when to ask for another reference, and whether the route home remains independent of the same conditions creating the problem.
+At first the buoy seems like a convenient reference. Later the crew discovers that its signal has noise. Then that the buoy itself can drift. Then that the current affecting the buoy also affects the vessel. Then that a second instrument disagrees. Farther offshore, the route approaches a shoal. Weather closes in. A second vessel appears through the fog on a crossing course. The crew has to decide when to continue, when to wait, when to communicate, when to ask for another reference, and whether the route home remains independent of the same conditions creating the problem.
 
 Each new observation complicates the picture, but not arbitrarily. The same environment is being revisited with a better model.
 
@@ -54,12 +54,13 @@ The technical content is intentionally not reduced to make the pages look simple
 | C4 | [The Water Ahead](#c4) |
 | C5 | [Soundings Near the Shoal](#c5) |
 | C6 | [The Engine at Idle](#c6) |
-| C7 | [A Voice Through the Fog](#c7) |
-| C8 | [The Return Route](#c8) |
-| C9 | [The Logbook After the Storm](#c9) |
-| C10 | [The Compass](#c10) |
+| C7 | [Another Light Across the Water](#c7) |
+| C8 | [A Voice Through the Fog](#c8) |
+| C9 | [The Return Route](#c9) |
+| C10 | [The Logbook After the Storm](#c10) |
+| C11 | [The Compass](#c11) |
 
-> Vol. 1 definitions remain inherited. C1–C10 introduce only extension-specific operational terms.
+> Vol. 1 definitions remain inherited. C1–C11 introduce only extension-specific operational terms.
 
 ---
 
@@ -526,13 +527,13 @@ After refinement, check whether the new information actually changed the project
 
 ### Observation
 
-*Near the shoal, the crew has enough information to keep moving but not enough to know which channel is best. The engine drops to idle. The vessel still responds to the helm. The buoy remains visible behind them. No route has been erased from the chart.*
+*Near the shoal, the crew has enough information to keep moving but not enough to know which channel is best. The engine drops to idle. The vessel still responds to the helm. The radio remains on. The buoy is still visible behind them. No route has been erased from the chart.*
 
 *Nothing has failed. Nothing has been solved either.*
 
 Patience in this volume is not a personality virtue and not passive delay. It is a control policy over the timing of commitment.
 
-A reasoning process is patient when it can preserve the current state, keep unresolved alternatives recoverable, and delay irreversible narrowing long enough for additional evidence, comparison, or capacity to matter—without ignoring the cost of delay.
+A reasoning process is patient when it can preserve the current state, keep unresolved alternatives recoverable, and delay irreversible narrowing long enough for additional evidence, communication, comparison, or capacity to matter—without ignoring the cost of delay.
 
 This matters in calm conditions because premature closure can hide lower-probability branches that later become important. It matters in focused extreme conditions because salience can narrow attention around the immediately dominant branch. Human research finds that acute stress often impairs working memory and cognitive flexibility, although effects vary by task and condition [R14]. That does not mean every stressed decision should be delayed. It means that confidence in a narrowed option set should not automatically increase merely because attention has become intense.
 
@@ -550,6 +551,8 @@ Incubation research gives a grounded human parallel: setting a problem aside can
 
 Patience does not impose an arbitrary threshold on exploration. A low-probability branch stays available unless evidence or a hard constraint rules it out. The branch may even deserve an early, small probe when the information it could produce would materially change the model.
 
+Communication is one such probe. A patient system does not have to remain silent. It can hold irreversible commitment while actively exchanging information, testing constraints, or looking for a path that was invisible under the current local model.
+
 ### Field note
 
 > *Idle is not lost motion when it preserves the ability to choose a better motion next.*
@@ -559,57 +562,175 @@ Patience does not impose an arbitrary threshold on exploration. A low-probabilit
 - Patience controls commitment timing; it is not inactivity.
 - Preserve low-probability branches externally before narrowing the active workspace.
 - Probability alone is not a reason to delete a branch.
+- Communication can be active exploration during a hold.
 - Return to a reference state when urgency permits and the active branch is producing little new information.
 - If delay itself threatens viability, patience may mean acting carefully now rather than waiting.
 - Distinguish actual recoverable resources from metaphorical "energy"; measure battery, time, compute, sleep, attention, or workload when those variables matter.
 
 ### Operational model
 
-*A decision-value view of waiting, not a hard threshold.*
+*A decision-value view of holding commitment open, not a hard threshold.*
 
-Let $V_{\mathrm{info}}(\tau)$ be the expected improvement in the later decision from information that may become available over a bounded delay $\tau$, and let $C_{\mathrm{delay}}(\tau)$ be the expected cost of that delay.
+Let $V_{\mathrm{info}}(\tau)$ be the expected improvement in the later decision from information, communication, or comparison that may become available over a bounded interval $\tau$. Let $V_{\mathrm{option}}(\tau)$ be the value of preserving still-viable alternatives during that interval, and let $C_{\mathrm{delay}}(\tau)$ be the expected cost of not committing yet.
 
 $$
-\boxed{V_{\mathrm{wait}}(\tau)=V_{\mathrm{info}}(\tau)-C_{\mathrm{delay}}(\tau)}
+\boxed{V_{\mathrm{hold}}(\tau)=V_{\mathrm{info}}(\tau)+V_{\mathrm{option}}(\tau)-C_{\mathrm{delay}}(\tau)}
 $$
 
-The expression ranks waiting against immediate commitment; it does not create a universal "wait" threshold. Hard deadlines, irreversible deterioration, and preservation boundaries remain separate constraints.
+The expression ranks a temporary hold against immediate irreversible commitment; it does not create a universal "wait" threshold. Hard deadlines, irreversible deterioration, and preservation boundaries remain separate constraints.
 
 #### Measurements
 
 | Symbol | Operational definition and units |
 |---|---|
-| $\tau$ | bounded delay or incubation interval [time] |
-| $V_{\mathrm{info}}(\tau)$ | expected decision improvement from additional information, comparison, or recovery during $\tau$ [declared value unit] |
-| $C_{\mathrm{delay}}(\tau)$ | expected loss from waiting $\tau$ [same value unit] |
-| $V_{\mathrm{wait}}$ | net modeled value of waiting [same value unit] |
+| $\tau$ | bounded hold/incubation interval [time] |
+| $V_{\mathrm{info}}(\tau)$ | expected decision improvement from additional evidence, communication, comparison, or recovered capacity during $\tau$ [declared value unit] |
+| $V_{\mathrm{option}}(\tau)$ | value of keeping still-viable alternatives reachable during $\tau$ [same value unit] |
+| $C_{\mathrm{delay}}(\tau)$ | expected loss from postponing irreversible commitment for $\tau$ [same value unit] |
+| $V_{\mathrm{hold}}$ | net modeled value of holding commitment open [same value unit] |
 
 #### How to use it
 
-1. Preserve the current model and branch state before pausing.
+1. Preserve the current model and branch state before reducing active processing.
 2. Record which low-probability alternatives remain unresolved rather than deleting them.
-3. Estimate what new evidence, capacity, or independent comparison could realistically appear during the delay.
+3. Estimate what new evidence, communication, capacity, or independent comparison could realistically appear during the hold.
 4. Estimate what delay can damage: deadline, viability margin, opportunity, or recovery time.
-5. Compare waiting with the best immediate bounded action; do not assume either is neutral.
+5. Compare holding with the best immediate bounded action; do not assume either is neutral.
 6. Resume from the preserved state, not from memory of the last emotionally or computationally salient branch.
 
-**Working example.** A system fault has one dominant explanation and two low-probability alternatives. Immediate repair is reversible, but irreversible data migration would destroy evidence that distinguishes the alternatives. A short diagnostic interval has low delay cost and high information value. Patience favors preserving the branch set and diagnosing before migration, without requiring the rare alternatives to cross an arbitrary probability threshold.
+**Working example.** A system fault has one dominant explanation and two low-probability alternatives. Immediate repair is reversible, but irreversible data migration would destroy evidence that distinguishes the alternatives. A short diagnostic interval with an external check has low delay cost and high information value. Patience favors preserving the branch set and diagnosing before migration, without requiring the rare alternatives to cross an arbitrary probability threshold.
 
-**Limit.** Expected information value is itself a model. Under true emergencies, delay costs can rise faster than the information value of waiting.
+**Limit.** Expected information and option value are themselves model-dependent. Under true emergencies, delay costs can rise faster than the information value of holding.
 
 **READ THE RESULT**
 
-Positive $V_{\mathrm{wait}}$ supports keeping the decision open for the modeled interval; negative values favor acting sooner under the same value premise. Neither result overrides hard constraints.
+Positive $V_{\mathrm{hold}}$ supports keeping irreversible commitment open for the modeled interval; negative values favor acting sooner under the same value premise. Neither result overrides hard constraints.
 
 **VALIDATE IT**
 
-After the pause or immediate action, compare what information actually arrived, whether the preserved branch set mattered, and whether the delay estimate was realistic. Update future tempo decisions from that evidence.
+After the hold or immediate action, compare what information actually arrived, whether the preserved branch set mattered, and whether the delay estimate was realistic. Update future tempo decisions from that evidence.
 
 ---
 
 <a id="c7"></a>
 
-# C7 · A Voice Through the Fog
+# C7 · Another Light Across the Water
+
+*Communication searches for coexistence without surrendering identity or choice*
+
+### Observation
+
+*Fog thins for a moment and another vessel appears on radar. Its course intersects the research vessel's route. There is not enough information to know whether the crossing is accidental, careless, constrained by the same current, or deliberately threatening.*
+
+*The crew increases separation. They keep the channel open.*
+
+A threat is a relation between a system and a possible consequence. It is not, by itself, a complete description of the other system's identity.
+
+That distinction matters because labels can close branches before the model has tested them. If the other vessel is treated as inherently hostile, communication, separation, coordination, repair, or negotiated coexistence can disappear from the reachable set before evidence shows that they are impossible.
+
+The opposite mistake is equally serious. Keeping communication possible does not require staying exposed to harm, trusting unverified claims, surrendering hard safety margins, or forcing either side to remain in contact.
+
+Communication is therefore an **option-preserving interaction** when it can exchange state, intent, constraints, proposals, or warnings while both sides retain meaningful choice and hard viability conditions.
+
+· ❦ ·
+
+Research on social dilemmas gives a grounded reason not to dismiss communication as decoration. A meta-analysis by Balliet found a substantial positive relationship between communication and cooperation across experimental social dilemmas [R19]. Ostrom, Walker, and Gardner showed experimentally that communication and self-organized commitments can support cooperation in common-pool settings without requiring that all order come from an external enforcer [R20].
+
+The bargaining literature supplies another useful neighboring model. Fearon showed that costly conflict can coexist with a range of settlements both sides would prefer, while information asymmetry and commitment problems can prevent the parties from locating or trusting that range [R21]. The analogy is limited but important: **absence of visible agreement is not the same as proof that no mutually preferable state exists.**
+
+Communication can reduce uncertainty, reveal hidden constraints, make substitutions visible, or expose that no acceptable intersection currently exists. It does not guarantee cooperation.
+
+Freedom of choice matters here. A communication process that works only by removing meaningful choice may produce compliance while destroying the very coexistence it claims to create. Psychological reactance research gives a human-specific parallel: perceived threats to freedom can increase resistance, while autonomy-supportive or choice-preserving language can reduce reactance in some communication settings [R22]. Compass does not generalize human psychology to every system, but it keeps the structural lesson: **choice is itself a state variable when coercion changes the interaction.**
+
+· ❦ ·
+
+Identity also needs a cleaner model.
+
+Vol. 1 defined identity through invariants and tolerances, not through an immutable surface behavior. That means a person, organization, or AI system can change strategy, language, route, or temporary stance without necessarily losing the identity or principles being preserved.
+
+This creates maneuvering room.
+
+Two complex analytical spaces can intersect even when neither can fully represent the other. Communication does not require one side to copy the other's model. It requires enough projection across the boundary to discover whether a joint path exists.
+
+A friend on one's side can be extraordinarily valuable because trust, shared history, independent observation, and willingness to preserve the other's options can reduce uncertainty and increase recovery capacity. But friendship is not a prerequisite for communication. Even an adversarial or dangerous system can be modeled without declaring its entire identity equivalent to the present threat relation.
+
+### Field note
+
+> *Evil appears only when there is no space for good.*
+
+In Compass, this sentence is used as an anti-premature-closure principle, not as a universal metaphysical definition.
+
+Operationally, **space for good** means at least one reachable or still-unresolved path in which the relevant parties can preserve their declared hard viability conditions and meaningful freedom of choice through cooperation, repair, de-escalation, negotiated change, or safe separation.
+
+If that space is still non-empty—or insufficiently mapped—the model should not collapse the other system into an intrinsic moral essence.
+
+If the modeled coexistence space is empty under the current horizon and constraints, the correct technical conclusion is narrower: **no admissible coexistence path is presently known.** Defensive action, containment, separation, or refusal of contact may be necessary. The conclusion remains about the current reachable relation, not a proof about permanent essence.
+
+**What to carry forward**
+
+- Treat threat as a relation and possible consequence, not a complete identity label.
+- Keep a communication path open when doing so is compatible with hard safety and autonomy constraints.
+- Communication may be direct, mediated, asynchronous, authenticated, one-way, or delayed; physical proximity is not required.
+- Safe separation is a valid coexistence outcome.
+- No party is required to communicate when contact itself violates safety, consent, law, or viability.
+- Preserve the right to refuse, exit, or defer communication.
+- Do not treat compliance under coercion as evidence of voluntary coexistence.
+- Verify claims and commitments; communication is evidence, not truth.
+- A flexible strategy can preserve identity when core invariants and principles remain inside their declared tolerances.
+
+### Operational model
+
+*A local coexistence-space model, not a moral law.*
+
+Let $\mathcal R_{AB}(H)$ be the jointly reachable futures of interacting systems $A$ and $B$ over horizon $H$. Let $\mathcal V_A$ and $\mathcal V_B$ be the subsets preserving each side's declared hard viability/identity conditions, and let $\mathcal A_A$ and $\mathcal A_B$ be the futures each side can voluntarily accept under its own legitimate decision process.
+
+Define the modeled coexistence space:
+
+$$
+\boxed{\mathcal C_{AB}(H)=\mathcal R_{AB}(H)\cap\mathcal V_A\cap\mathcal V_B\cap\mathcal A_A\cap\mathcal A_B}
+$$
+
+If $\mathcal C_{AB}(H)\neq\varnothing$, at least one modeled coexistence path exists under the stated assumptions. If $\mathcal C_{AB}(H)=\varnothing$, the current model contains no such path; that can reflect real incompatibility, incomplete information, commitment failure, coercion, an incorrect boundary, or an inadequate horizon.
+
+#### Measurements / model components
+
+| Symbol | Operational definition |
+|---|---|
+| $\mathcal R_{AB}(H)$ | joint futures reachable by the interaction over horizon $H$ |
+| $\mathcal V_A,\mathcal V_B$ | futures preserving each side's declared hard viability/identity conditions |
+| $\mathcal A_A,\mathcal A_B$ | futures voluntarily admissible to each side under its own legitimate choice process |
+| $\mathcal C_{AB}(H)$ | currently modeled coexistence space |
+
+#### How to use it
+
+1. State each side's hard constraints separately; do not invent symmetry where none exists.
+2. Separate safety constraints from preferences that can be traded, delayed, or substituted.
+3. Identify what is unknown about intent, capability, constraints, and commitment.
+4. Choose a communication mode that does not unnecessarily consume safety or freedom of choice.
+5. Treat messages as observations with provenance and deception risk.
+6. Update the joint reachable set when communication reveals a real constraint, substitution, or commitment mechanism.
+7. Include safe separation and no-contact arrangements among possible coexistence states.
+8. If the coexistence space appears empty, test whether the emptiness comes from the real system or from missing information, a too-short horizon, coercion, or a false assumption.
+
+**Working example.** Two teams need the same live service during a migration. Each initially treats exclusive control as necessary. Communication reveals that one team requires write access only during a 20-minute window while the other mainly requires uninterrupted read availability. A previously invisible coexistence schedule becomes reachable without either side surrendering its hard constraint.
+
+**Threat example.** A vessel on a collision course does not answer the first hail. The research vessel changes course and increases distance while continuing authenticated signaling. Communication remains possible, but safety does not depend on the other vessel cooperating. If the contact later responds, the coexistence set may expand. If it continues closing dangerously, containment/separation takes priority.
+
+**Limit.** A non-empty modeled coexistence set does not guarantee trust, truthful signaling, enforceable commitments, or equal power. A formally voluntary option can also be coercive in practice if refusal carries an illegitimate threat; the model must inspect the decision process, not only the final choice.
+
+**READ THE RESULT**
+
+The existence of $\mathcal C_{AB}$ means the current model contains at least one jointly admissible path. Its absence means the current model has found none. Neither conclusion is a complete moral classification of either party.
+
+**VALIDATE IT**
+
+Where safe and lawful, test one reversible communication or coordination step that should change the modeled intersection if the hypothesized coexistence path is real. Preserve protective distance and independent recovery so failed communication does not consume the safety margin.
+
+---
+
+<a id="c8"></a>
+
+# C8 · A Voice Through the Fog
 
 *External guidance can correct a model without replacing responsibility*
 
@@ -637,6 +758,8 @@ The same logic applies to AI-assisted work. Agreement among several agents is we
 
 External guidance should therefore enter through the evidence model, not through deference alone.
 
+Communication and external guidance overlap but are not identical. Communication occurs between interacting systems whose choices affect each other. Guidance can come from a third source whose role is observation, constraint, mediation, calibration, or responsibility.
+
 ### Field note
 
 > *A second voice is useful when it changes the evidence, not merely when it repeats the first voice more confidently.*
@@ -649,6 +772,7 @@ External guidance should therefore enter through the evidence model, not through
 - External aids should preserve provenance and the conditions under which they are reliable.
 - Ask for guidance when uncertainty, load, conflict, or responsibility exceeds what the active loop can resolve safely.
 - External guidance should return the process to the real system, not encourage a self-consistent imagined one.
+- A mediator may preserve communication without requiring direct exposure between parties.
 
 ### Operational model
 
@@ -686,9 +810,9 @@ Where practical, compare the guided conclusion against later realized outcomes o
 
 ---
 
-<a id="c8"></a>
+<a id="c9"></a>
 
-# C8 · The Return Route
+# C9 · The Return Route
 
 *Recovery is part of action, not an afterthought*
 
@@ -770,15 +894,15 @@ Exercise or simulate recovery from a failure domain that removes the primary pat
 
 ---
 
-<a id="c9"></a>
+<a id="c10"></a>
 
-# C9 · The Logbook After the Storm
+# C10 · The Logbook After the Storm
 
 *Exact external state makes exploration cumulative*
 
 ### Observation
 
-*The vessel returns after dark. The buoy is still flashing, but the position in the notebook is not the position printed on the morning chart. The crew can reconstruct what changed because each sounding, course correction, pause, outside report, and observation was recorded with time.*
+*The vessel returns after dark. The buoy is still flashing, but the position in the notebook is not the position printed on the morning chart. The crew can reconstruct what changed because each sounding, course correction, pause, message, outside report, and observation was recorded with time.*
 
 Without the logbook, tomorrow's crew would inherit conclusions without the chain of evidence that produced them.
 
@@ -786,7 +910,7 @@ A reusable reasoning system needs the same continuity.
 
 The external record should separate at least four layers:
 
-1. observation — what was measured, retrieved, or directly tested;
+1. observation — what was measured, retrieved, communicated, or directly tested;
 2. model — the relations currently used to interpret those observations;
 3. projection — what future states the model supports;
 4. decision — what action follows under the declared value premise and constraints.
@@ -799,7 +923,7 @@ Contradictions should also survive compression.
 
 If two grounded methods disagree, the disagreement should be localized: shared assumptions, different methods, different scopes, and what decision the disagreement can change.
 
-An assumption should have a revision condition. Evidence that can become stale should carry a time or version. A candidate hidden variable should retain the case that exposed it and the tests that promoted or rejected it. A parked low-probability branch should remain recoverable without remaining active in working memory.
+An assumption should have a revision condition. Evidence that can become stale should carry a time or version. A candidate hidden variable should retain the case that exposed it and the tests that promoted or rejected it. A parked low-probability branch should remain recoverable without remaining active in working memory. A communication attempt should preserve what was actually said, what was inferred from it, and whether the message was verified.
 
 This external state is useful to a person, a team, or an AI system. It is not a transcript of private reasoning. It is a compact, auditable model of what the exploration currently claims to know.
 
@@ -816,6 +940,7 @@ For a person, this is cognitive offloading with a reliability requirement: the e
 - Preserve contradictions until evidence resolves them.
 - Record why a variable was promoted or demoted.
 - Preserve parked branches and their last supported state.
+- Preserve communication records separately from interpretations of intent.
 - A summary that removes hard constraints, rare consequential branches, or recovery conditions is not a faithful compression.
 - Multiple agents sharing one record are not independent merely because they are separate processes.
 
@@ -843,7 +968,7 @@ When the observation falls outside the model's supported uncertainty range, crea
 
 1. Preserve the original prediction and its uncertainty before observing the outcome.
 2. Record the realized value and method.
-3. If the residual is material, inspect measurement, assumption, boundary, parameter, relation, and hidden-variable explanations.
+3. If the residual is material, inspect measurement, assumption, boundary, parameter, relation, communication, and hidden-variable explanations.
 4. Version the model change that follows.
 5. Preserve unresolved alternatives when the new evidence does not distinguish them.
 
@@ -861,19 +986,19 @@ Check whether the revised model improves later predictions or independent cases 
 
 ---
 
-<a id="c10"></a>
+<a id="c11"></a>
 
-# C10 · The Compass
+# C11 · The Compass
 
 *The reusable tool is the cycle, not the metaphor*
 
 ### Observation
 
-*The next morning another crew leaves the same harbor. They carry yesterday's logbook, but they are not required to follow yesterday's route. The buoy remains offshore. The current may have changed. One channel has already been explored. Another remains unlikely but open.*
+*The next morning another crew leaves the same harbor. They carry yesterday's logbook, but they are not required to follow yesterday's route. The buoy remains offshore. The current may have changed. One channel has already been explored. Another remains unlikely but open. The other vessel may now be a known neighbor, a distant contact, or gone entirely.*
 
 The purpose of Compass is to preserve orientation while the local model changes.
 
-It is not a single equation. It is a disciplined cycle that decides what to represent, what to leave unresolved, where to spend resolution, how quickly to narrow, when to ask for another source, and when to stop.
+It is not a single equation. It is a disciplined cycle that decides what to represent, what to leave unresolved, where to spend resolution, how quickly to narrow, when to communicate, when to ask for another source, and when to stop.
 
 The cycle inherits the earlier Observer model:
 
@@ -885,14 +1010,15 @@ The cycle inherits the earlier Observer model:
 - state the value premise before optimization;
 - evaluate intervention, reversibility, verification, and stopping conditions.
 
-Vol. 1.2 adds six explicit disciplines:
+Vol. 1.2 adds seven explicit disciplines:
 
 1. future-space projection instead of exhaustive enumeration;
 2. interestingness as structured future leverage rather than raw uncertainty;
 3. preservation evaluation including recovery-path independence;
 4. candidate-variable promotion from real applications without allowing storytelling to become theory;
 5. patience as control of commitment timing while branch state remains recoverable;
-6. external guidance as an evidence source distinct from authority and responsibility.
+6. communication as a search for safe, voluntary coexistence without requiring surrender of identity or choice;
+7. external guidance as an evidence source distinct from authority and responsibility.
 
 · ❦ ·
 
@@ -905,21 +1031,22 @@ A useful execution cycle is:
 5. register candidate hidden variables and preserve residuals that exposed them;
 6. project only the future dimensions relevant to the question;
 7. identify consequential uncertainty, disagreement, tail risk, or hidden-variable candidates;
-8. choose whether to continue the active branch, probe a lower-probability branch, pause in a preserved reference state, or request external guidance;
-9. choose the smallest evidence-producing next step likely to change the model or decision;
-10. run preservation / rescue checks before consequential intervention;
-11. execute one justified step rather than the whole imagined route;
-12. compare the realized state with the projected range;
-13. update the model, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;
-14. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, recovery is required, or the question must be reframed.
+8. choose whether to continue the active branch, probe a lower-probability branch, pause in a preserved reference state, communicate with an interacting system, or request external guidance;
+9. when interaction is involved, test for a safe coexistence path without sacrificing hard constraints or meaningful freedom of choice;
+10. choose the smallest evidence-producing next step likely to change the model or decision;
+11. run preservation / rescue checks before consequential intervention;
+12. execute one justified step rather than the whole imagined route;
+13. compare the realized state with the projected range;
+14. update the model, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;
+15. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, recovery is required, the coexistence question has been bounded for the current horizon, or the original question must be reframed.
 
 This cycle can be represented in a machine-readable state template, but the serialization is not itself part of the theory.
 
 ### Human use
 
-For a human observer, Compass externalizes state so that attention does not have to carry the entire dependency graph at once. Patience can reduce premature closure; external aids can prevent omissions; and the logbook preserves low-probability alternatives until evidence resolves them.
+For a human observer, Compass externalizes state so that attention does not have to carry the entire dependency graph at once. Patience can reduce premature closure; communication can expose constraints and alternatives that one mind cannot infer; external aids can prevent omissions; and the logbook preserves low-probability alternatives until evidence resolves them.
 
-The method should not be read as a prescription to remain calm before acting. Real emergencies can require rapid action. The practical requirement is narrower: preserve enough external state and hard constraints that intense focus does not silently delete the rest of the model.
+The method should not be read as a prescription to remain calm or communicative before acting. Real emergencies can require rapid action, distance, or no contact. The practical requirement is narrower: preserve enough external state and hard constraints that intense focus does not silently delete the rest of the model, and leave future communication possible when doing so does not consume the safety margin.
 
 ### AI use
 
@@ -934,17 +1061,20 @@ A Compass-compatible workflow should preserve:
 - projected ranges and unresolved frontier;
 - active and parked branches;
 - candidate-variable status;
+- communication state and unresolved counterpart constraints when interaction matters;
 - recovery state;
 - external guidance and its independence;
 - explicit stopping conditions.
 
-This allows different tools or agents to contribute without treating agreement as independent evidence automatically. A specialized agent can refine one branch while the global model remains intact. A lower-probability branch can be explored in isolation without overwriting the dominant one. A stalled loop can end in an explicit external-wait or insufficient-evidence state rather than continuing because compute remains available.
+This allows different tools or agents to contribute without treating agreement as independent evidence automatically. A specialized agent can refine one branch while the global model remains intact. A lower-probability branch can be explored in isolation without overwriting the dominant one. Communication with another system can be treated as an evidence-producing interaction rather than a demand for compliance. A stalled loop can end in an explicit external-wait or insufficient-evidence state rather than continuing because compute remains available.
 
 ### Multi-agent use
 
 A fleet of agents is not automatically more intelligent than one agent. The useful unit is the interaction architecture.
 
-Roles may include evidence retrieval, dependency mapping, simulation, adversarial assumption checking, preservation evaluation, and verification. Disagreement should point to a variable, assumption, or evidence gap that another step can resolve. Voting without independence can multiply one error.
+Roles may include evidence retrieval, dependency mapping, simulation, adversarial assumption checking, communication/negotiation modeling, preservation evaluation, and verification. Disagreement should point to a variable, assumption, or evidence gap that another step can resolve. Voting without independence can multiply one error.
+
+Agents should preserve each other's freedom to reject a proposal, flag uncertainty, or retain an alternative branch. Coordination that removes all dissenting state can look efficient while destroying model diversity.
 
 ### Field note
 
@@ -954,10 +1084,11 @@ Roles may include evidence retrieval, dependency mapping, simulation, adversaria
 
 - The question selects the local model; it is not a poetic direction variable.
 - The model should be no more detailed than the decision requires, but no less detailed than its hard dependencies require.
-- Every consequential loop needs new evidence, state change, bounded waiting, or a reason to branch.
+- Every consequential loop needs new evidence, state change, bounded waiting, communication, or a reason to branch.
 - Patience preserves options; it does not excuse endless deferral.
+- Communication preserves possibility when it remains safe and voluntary; it does not require trust or exposure.
 - External guidance can be non-human; responsibility and authority remain separate.
-- Human and AI systems both benefit from explicit external state when it preserves provenance, uncertainty, dependencies, branches, and stopping rules.
+- Human and AI systems both benefit from explicit external state when it preserves provenance, uncertainty, dependencies, branches, communication state, and stopping rules.
 - The technical model remains universal; the expedition only keeps the reasoning continuous enough to see it.
 
 ### Operational model
@@ -978,11 +1109,11 @@ A run should terminate explicitly as one of the following:
 - **terminal system state** — no modeled continuation exists under the selected definition;
 - **question reframed** — the original boundary, scale, or question was wrong.
 
-**Limit.** No procedure guarantees that all relevant variables are represented. Compass improves correction by making omissions, residuals, branch loss, and revision paths visible.
+**Limit.** No procedure guarantees that all relevant variables are represented. Compass improves correction by making omissions, residuals, branch loss, communication failure, and revision paths visible.
 
 **READ THE RESULT**
 
-A completed Compass run is not "the answer." It is a bounded claim plus an auditable account of what supports it, what remains unresolved, what alternatives remain parked, and what would cause revision.
+A completed Compass run is not "the answer." It is a bounded claim plus an auditable account of what supports it, what remains unresolved, what alternatives remain parked, what communication/coexistence paths remain open or closed, and what would cause revision.
 
 **VALIDATE IT**
 
@@ -1004,8 +1135,10 @@ The following extend rather than replace Vol. 1 definitions.
 | **Recovery-path independence** | The degree to which a recovery path remains available under the same failure that makes recovery necessary. |
 | **Preservation evaluation** | A model-relative test of whether selected invariants, viability conditions, dependencies, and recoverability remain within declared bounds through a change. |
 | **Unresolved frontier** | Evidence-backed reason to believe the modeled support may be incomplete, without inventing specific unobserved futures. |
-| **Patience** | A control policy that preserves state and alternatives while delaying irreversible narrowing when additional information or recovered capacity can matter more than the cost of delay. |
+| **Patience** | A control policy that preserves state and alternatives while delaying irreversible narrowing when additional information, communication, or recovered capacity can matter more than the cost of delay. |
 | **Reference state** | A procedural state in which the active branch is parked, evidence and alternatives remain externalized, and no optional branch is privileged merely because it was last active. |
+| **Communication path** | An interaction channel capable of exchanging state, intent, constraints, proposals, or warnings without requiring surrender of hard safety conditions or meaningful freedom of choice. |
+| **Coexistence space** | The currently modeled set of reachable futures that satisfy the interacting parties' declared hard viability/identity conditions and remain voluntarily admissible to each under its legitimate decision process. |
 | **External guidance** | Information or structure from outside the currently active reasoning loop used to test, constrain, or redirect the model. |
 | **Compass** | The name of the reusable exploration procedure in this volume; not a replacement for the universal technical terms above. |
 
@@ -1033,16 +1166,22 @@ The operational templates above have been checked against the following recurrin
 | Measurement changes the system | Include observer / instrument disturbance in the model when material. |
 | Association presented as causality | Use intervention language only when causal identification is justified; otherwise label sensitivity or association. |
 | Several agents agree | Check shared model, data, retrieval, and assumptions before treating agreement as independent evidence. |
-| Compression removes exception | Preserve hard constraints, contradictions, rare consequential branches, provenance, parked alternatives, and recovery state. |
-| Refinement repeats without new evidence | Stop, pause, seek guidance, or branch; repetition without state change or information value is not exploration. |
+| Compression removes exception | Preserve hard constraints, contradictions, rare consequential branches, provenance, parked alternatives, communication state, and recovery state. |
+| Refinement repeats without new evidence | Stop, pause, communicate, seek guidance, or branch; repetition without state change or information value is not exploration. |
 | Story suggests a hidden variable | Keep it a candidate until it has an operational definition and supporting evidence. |
 | Variable fits one case perfectly | Check independent cases or mechanism before reusable promotion. |
 | Promoted variable later becomes redundant | Demote it and preserve the model history. |
 | Evidence becomes stale | Reduce confidence or measure again when the stale evidence can change the decision. |
 | Low-probability branch | Do not delete it solely for low probability; preserve it when it remains possible and can change consequence or information value. |
-| High-load / stressed processing | Preserve external state and hard constraints before narrowing; when safe, pause or seek an independent aid rather than treating intense focus as increased certainty. |
+| High-load / stressed processing | Preserve external state and hard constraints before narrowing; when safe, pause, communicate, or seek an independent aid rather than treating intense focus as increased certainty. |
 | Pause with no preserved state | Not considered useful patience; the process must be able to resume from an external record rather than reconstructing from salience or memory. |
 | Delay threatens viability | Patience does not require waiting; include delay cost and act when waiting consumes the relevant margin. |
+| Threatening counterpart | Preserve safe communication only if contact does not consume hard safety/consent margins; containment, distance, or no-contact may be the correct present action. |
+| Communication interpreted as trust | Treat messages as evidence with provenance, incentives, and deception risk; communication does not imply trust. |
+| Communication becomes coercion | Preserve exit/refusal where legitimate; do not classify coerced compliance as voluntary coexistence. |
+| No direct communication safe | Use mediator, authenticated one-way signaling, delayed communication, or safe separation; direct contact is not required. |
+| Coexistence set appears empty | Test information gaps, horizon, commitment problems, coercion, and boundary assumptions before treating absence as permanent. |
+| Safe separation is possible | Count it as a coexistence path even when cooperation or closeness is not. |
 | External guidance shares the same source | Treat as correlated evidence, not independent confirmation. |
 | Guidance conflicts with authority | Keep epistemic reliability, authority, and responsibility separate in the decision record. |
 | Human responsibility with automated guidance | Preserve the responsible human/role explicitly where law, policy, or safety assigns responsibility; do not transfer it merely because a tool generated the recommendation. |
@@ -1068,6 +1207,10 @@ These are grounding parallels and notation sources, not claims that Compass is a
 - cognitive offloading: [R16]
 - external cognitive aids under emergency conditions: [R17]
 - metacognition and confidence calibration: [R18]
+- communication and cooperation in social dilemmas: [R19]
+- communication, commitments, and self-governance: [R20]
+- bargaining ranges, information, and commitment failure: [R21]
+- autonomy, choice, and reactance in communication: [R22]
 
 ## References
 
@@ -1109,21 +1252,29 @@ These are grounding parallels and notation sources, not claims that Compass is a
 
 **[R18] Fleming, Stephen M.** "Metacognition and Confidence: A Review and Synthesis." *Annual Review of Psychology* 75 (2024). DOI: 10.1146/annurev-psych-022423-032425. https://pubmed.ncbi.nlm.nih.gov/37722748/
 
+**[R19] Balliet, Daniel.** "Communication and Cooperation in Social Dilemmas: A Meta-Analytic Review." *Journal of Conflict Resolution* 54(1) (2010): 39–57. DOI: 10.1177/0022002709352443. https://doi.org/10.1177/0022002709352443
+
+**[R20] Ostrom, Elinor; Walker, James; Gardner, Roy.** "Covenants with and without a Sword: Self-Governance Is Possible." *American Political Science Review* 86(2) (1992): 404–417. DOI: 10.2307/1964229. https://doi.org/10.2307/1964229
+
+**[R21] Fearon, James D.** "Rationalist Explanations for War." *International Organization* 49(3) (1995): 379–414. DOI: 10.1017/S0020818300033324. https://doi.org/10.1017/S0020818300033324
+
+**[R22] Reynolds-Tylus, Tobias.** "Psychological Reactance and Persuasive Health Communication: A Review of the Literature." *Frontiers in Communication* 4 (2019): 56. DOI: 10.3389/fcomm.2019.00056. https://doi.org/10.3389/fcomm.2019.00056
+
 ---
 
 ## The extension in one passage
 
 The buoy is still there.
 
-At first it was a reference. Then it was noisy. Then it drifted. Then its drift helped expose a current. The current changed the route. The route approached a shoal. The shoal made additional soundings worthwhile. The crew sometimes idled rather than deleting uncertain routes. Fog made outside guidance useful. Weather made the return route relevant. The logbook made the next day's corrections possible.
+At first it was a reference. Then it was noisy. Then it drifted. Then its drift helped expose a current. The current changed the route. The route approached a shoal. The shoal made additional soundings worthwhile. The crew sometimes idled rather than deleting uncertain routes. Another vessel appeared and communication revealed that threat, intent, constraint, and identity were not the same variable. Fog made outside guidance useful. Weather made the return route relevant. The logbook made the next day's corrections possible.
 
 None of those story objects became technical definitions.
 
-The technical model remained a model of elements, states, relations, boundaries, viability, evidence, uncertainty, future projections, intervention, preservation, patience, guidance, and revision.
+The technical model remained a model of elements, states, relations, boundaries, viability, evidence, uncertainty, future projections, intervention, preservation, patience, communication, freedom of choice, guidance, and revision.
 
 That is the purpose of the story: not to rename the model, but to keep enough of the world continuous that hidden assumptions have somewhere to reveal themselves.
 
-And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, uncertainty, preserved alternatives, preservation conditions, guidance, and next justified step visible at the same time**.
+And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, uncertainty, preserved alternatives, coexistence possibilities, preservation conditions, guidance, and next justified step visible at the same time**.
 
 ---
 

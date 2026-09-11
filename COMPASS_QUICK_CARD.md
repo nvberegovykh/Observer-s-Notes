@@ -13,15 +13,17 @@ Use this only as the short execution surface. The full rationale, equations, edg
 7. **Register hidden variables** — every application-exposed variable gets a status; story alone never promotes one.
 8. **Project relevant futures** — supported ranges/regions + occupancy + confidence + unresolved frontier + consequential tails.
 9. **Find the consequential region** — leverage, boundary proximity, disagreement, tail risk, or decision-sensitive uncertainty.
-10. **Control tempo** — continue, probe a lower-probability branch, pause with state preserved, or seek external guidance.
-11. **Check patience value** — compare expected information/option value of waiting with cost of delay; do not use an arbitrary probability threshold to delete branches.
-12. **Review guidance** — scope, independence, calibration, authority, responsibility.
-13. **Choose one bounded step** — smallest evidence-producing action likely to change the model or decision.
-14. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.
-15. **Execute one justified step** — do not execute the whole imagined route.
-16. **Compare realization with projection** — record residuals and contradictions.
-17. **Update and compress** — retain hard constraints, rare branches, provenance, parked alternatives, recovery state, and variable history.
-18. **Stop explicitly** — named terminal state only.
+10. **Control tempo** — continue, probe a lower-probability branch, pause with state preserved, communicate, or seek external guidance.
+11. **Check patience value** — compare information + option value of holding against delay cost; do not use low probability alone to delete a branch.
+12. **If another system matters, test coexistence** — separate threat from identity; look for safe, voluntary cooperation, repair, de-escalation, or separation paths.
+13. **Preserve freedom of choice** — communication does not require trust, proximity, compliance, or continued contact; refusal and safe separation remain valid states.
+14. **Review guidance** — scope, independence, calibration, authority, responsibility.
+15. **Choose one bounded step** — smallest evidence-producing action likely to change the model or decision.
+16. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.
+17. **Execute one justified step** — do not execute the whole imagined route.
+18. **Compare realization with projection** — record residuals, contradictions, and communication outcomes separately from inferred intent.
+19. **Update and compress** — retain hard constraints, rare branches, provenance, parked alternatives, coexistence paths, recovery state, and variable history.
+20. **Stop explicitly** — named terminal state only.
 
 ## Hidden-variable promotion
 
@@ -40,9 +42,33 @@ Promote only when enough of these survive: operationality, observability/boundab
 - Patience is control of commitment timing, not inactivity.
 - Park branches externally before narrowing the active workspace.
 - Low probability alone is not a deletion rule.
+- Communication can be active exploration during a hold.
 - A pause is useful only if the model can resume from preserved state.
-- Delay is not neutral; compare its cost with expected information and option value.
+- Delay is not neutral; compare its cost with information and option value.
 - If delay consumes a hard margin, act rather than waiting for comfort.
+
+## Communication / coexistence
+
+Treat this as a search problem, not a demand for agreement.
+
+Ask:
+
+`what is reachable? | what must each side preserve? | what remains voluntary? | what is unknown? | what can be communicated safely?`
+
+A useful local test is:
+
+`coexistence = reachable joint futures ∩ A viability ∩ B viability ∩ A voluntary acceptance ∩ B voluntary acceptance`
+
+- Threat is a relation, not a complete identity description.
+- Keep communication possible when compatible with safety and consent.
+- Direct contact is optional; mediation, authenticated signaling, delay, or safe separation may be better.
+- Communication is evidence, not trust.
+- Safe separation counts as coexistence.
+- If no admissible path is found, record that as a current-model result, not proof of permanent essence.
+
+> **Field principle:** Evil appears only when there is no space for good.
+>
+> Operational reading: do not close the coexistence branch before safe, voluntary beneficial paths are shown absent or infeasible under the current model.
 
 ## External guidance
 
