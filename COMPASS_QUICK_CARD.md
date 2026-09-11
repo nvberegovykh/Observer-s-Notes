@@ -1,57 +1,55 @@
 # COMPASS Quick Card — Observer's Notes Vol. 1.2
 
-Use this only as the short execution surface. The full rationale, equations, edge cases, references, and variable-promotion rules are in `VOL_1.2_COMPASS.md`.
+Use this as the short execution surface. The full reasoning, examples, operational models, edge cases, and references are in `VOL_1.2_COMPASS.md`.
+
+The card uses universal technical terms. The ocean expedition belongs to the explanatory story, not to the procedure.
 
 ## One cycle
 
-1. **Set North** — exact question + required claim strength.
-2. **Draw chart** — system, boundary, scale, interval, horizon, assumptions, value premise.
-3. **Take soundings** — evidence ledger; observed != inferred != projected.
-4. **Mark reefs** — hard boundaries, reserves, irreversible hazards, rare catastrophic tails.
-5. **Mark harbors** — viable recovery states; verify recovery-path independence.
-6. **Trace currents** — dependencies, external conditions, common-cause failures.
-7. **Register variables** — every hidden variable gets a status; story alone never promotes one.
-8. **Project waters** — intervals/support + occupancy + confidence + frontier + provenance.
-9. **Choose consequential region** — leverage, boundary proximity, disagreement, tail risk, unresolved decision impact.
-10. **Choose one heading** — smallest evidence-producing step likely to change chart/decision.
-11. **Run preservation gate** — PRESERVE or RESCUE; include non-action when already failing.
-12. **Sail one leg** — do not execute the whole imagined route.
-13. **Sound again** — compare realization to projection; record residuals.
-14. **Update + compress** — retain reefs, contradictions, provenance, cargo, recovery, promoted variables.
-15. **Stop explicitly** — named terminal state only.
+1. **Define the question** — state the claim, uncertainty, or decision and the strength of answer required.
+2. **Localize the system** — state boundary, scale, observation interval, horizon, assumptions, and value premise where relevant.
+3. **Record evidence** — separate observed, constrained, modeled, inferred, assumed, and unresolved information; keep provenance and freshness.
+4. **Identify hard boundaries** — state viability limits, required reserves, irreversible consequences, and rare catastrophic branches.
+5. **Identify recovery conditions** — record viable recovery states and test whether recovery depends on the same failure path it is supposed to survive.
+6. **Map dependencies** — trace constitutive relations, external conditions, delays, substitutes, and common-cause failures.
+7. **Register candidate variables** — do not add a hidden variable to the reusable model merely because one application suggests it.
+8. **Project relevant futures** — report ranges or distributions at the resolution justified by evidence; keep uncertainty and unresolved frontier separate.
+9. **Select the consequential uncertainty** — prioritize leverage, boundary proximity, disagreement, tail risk, and decision-sensitive unknowns.
+10. **Choose one bounded next step** — observation, retrieval, simulation, test, or intervention that can materially change the model or decision.
+11. **Run the preservation check** — distinguish strict preservation from rescue / least-loss conditions; include non-action when the system is already failing.
+12. **Execute only the justified step** — do not execute a whole imagined sequence because its first assumptions looked plausible.
+13. **Measure again** — compare the realized state with the projected range and record residuals.
+14. **Update and simplify** — preserve hard constraints, contradictions, provenance, recovery state, rare consequential branches, and validated variables while removing irrelevant detail.
+15. **Stop explicitly** — finish in a named terminal state rather than an open reasoning loop.
 
-## Variable promotion
+## Candidate-variable promotion
 
-`event -> transition -> dependency -> residual -> candidate variable -> operational definition -> test -> decision effect -> recurrence -> promotion`
+A useful progression is:
 
-Statuses:
+**event → state change → missing or uncertain dependency → residual → candidate variable → operational definition → test → decision effect → recurrence → promotion**
 
-`CANDIDATE -> LOCAL -> RECURRENT/DOMAIN -> CORE`
+Suggested statuses:
 
-A variable may also become `DORMANT` or `REJECTED`, and previously promoted variables may be demoted.
+**candidate → local → recurrent/domain → core**
 
-Promote only when enough of these survive: operationality, observability/boundability, mechanism, residual reduction, decision relevance, alternate explanations, recurrence/independent mechanism, non-duplication, semantic stability, complexity justification.
+A variable may also become **dormant** or **rejected**, and a previously promoted variable may be demoted.
+
+Promotion should be justified by enough of the following to match the claim being made: operational definition, observability or defensible bounds, plausible mechanism, residual reduction, decision relevance, alternative explanations, recurrence or independent mechanism, non-duplication, semantic stability, and justified complexity cost.
 
 ## Terminal states
 
-`SUPPORTED`
-
-`DECISION_ROBUST`
-
-`PRESERVATION_BLOCK`
-
-`RESCUE_REQUIRED`
-
-`EXTERNAL_WAIT`
-
-`INSUFFICIENT_EVIDENCE`
-
-`MODEL_CONTRADICTION`
-
-`TERMINAL_SYSTEM_STATE`
-
-`QUESTION_REFRAMED`
+- **Supported** — the target claim is supported to the declared strength.
+- **Decision robust** — the action class remains stable under plausible refinements.
+- **Preservation blocked** — a hard margin is negative or unresolved.
+- **Rescue required** — strict preservation is no longer available; least-loss comparison is required.
+- **External wait** — an external dependency is the true blocker.
+- **Insufficient evidence** — no justified current step can resolve the key uncertainty.
+- **Model contradiction** — current assumptions cannot jointly explain the observations.
+- **Terminal system state** — the selected system has no modeled continuation under the stated definition.
+- **Question reframed** — the original question was drawn at the wrong boundary, scale, or level.
 
 ## Core invariant
 
-> The strength of the claim must not exceed the strength of the chart, the soundings, and the preserved ability to correct course.
+> The strength of the claim must not exceed the strength of the evidence, the model, and the preserved ability to correct it.
+
+In the expedition story, this is what the compass is for: not choosing the destination, but keeping orientation while the surroundings remain uncertain.
