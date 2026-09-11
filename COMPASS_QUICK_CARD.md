@@ -10,7 +10,7 @@ Use this only as the short execution surface. The full rationale, equations, edg
 4. **Record evidence** — observed != inferred != projected; keep provenance, uncertainty, freshness, and method independence.
 5. **Choose search mode** — scan a small readable container; navigate a large structured one.
 6. **Choose direction** — for a required effect/destination, search backward through mapped admissible paths before expanding outward.
-7. **Map hard conditions** — viability boundaries, reserves, irreversible consequences, containing-system effects.
+7. **Map hard conditions** — viability boundaries, present environmental support, reserves, irreversible consequences, containing-system effects.
 8. **Map recovery** — independent recovery paths, access, authority, irreplaceable state, recovery-time margin.
 9. **Trace dependencies** — lower-level requirements, external conditions, common-cause failure groups.
 10. **Register hidden variables** — every application-exposed variable gets a status; story alone never promotes one.
@@ -26,7 +26,7 @@ Use this only as the short execution surface. The full rationale, equations, edg
 20. **Run preservation/rescue check** — include non-action when strict preservation is unavailable.
 21. **Execute one justified step** — do not execute the whole imagined route.
 22. **Compare realization with projection and route** — record residuals, contradictions, and communication outcomes separately from inferred intent.
-23. **Update map + route memory + model** — retain provenance, failure cases, revision conditions, parked alternatives, coexistence paths, recovery state, and validated variables.
+23. **Update map + environment + route memory + model** — retain provenance, present capability changes, failure cases, revision conditions, parked alternatives, coexistence paths, recovery state, and validated variables.
 24. **Stop explicitly** — named terminal state only.
 
 ## Hidden-variable promotion
@@ -51,6 +51,16 @@ Promote only when enough of these survive: operationality, observability/boundab
 - Delegation is not ignorance when scope, provenance, and verification remain visible.
 - Preserve learned routes from modeling **and** experience with scope, confidence, failure cases, last validation, and revision conditions.
 - A previously successful road is a prior, not a law.
+
+## Present environment / generative capacity
+
+- Environment is part of the current state-space, not only a future concern.
+- Ask what viable activity is reachable **now** because the selected conditions exist.
+- Track material, energy, information, relational, and containing-system dependencies when they matter.
+- Do not preserve one subsystem by silently collapsing the conditions supporting the larger system.
+- Future optionality does not cancel present capability loss; report both.
+- Preserve/regenerate supporting conditions rather than freezing every current arrangement.
+- Outputs can become environmental inputs for later systems; inheritance needs provenance and revision, not automatic approval.
 
 ## Patience / branch preservation
 
@@ -116,3 +126,5 @@ A second source is useful when it changes the evidence or constraints, not merel
 ## Core invariant
 
 > The strength of the claim must not exceed the strength of the evidence, model, preserved alternatives, and ability to correct course.
+>
+> Preserve the conditions that make viable activity, correction, communication, and generation possible now—not only later.

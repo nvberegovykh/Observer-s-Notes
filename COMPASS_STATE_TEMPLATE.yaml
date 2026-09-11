@@ -120,6 +120,17 @@ dependencies:
   common_cause_groups: []
   containing_systems_with_material_externalities: []
 
+environment:
+  selected_environment: ""
+  current_support_conditions: []
+  material_energy_information_flows: []
+  present_capabilities_supported: []
+  generative_conditions: []
+  containing_system_externalities: []
+  outputs_becoming_environmental_inputs: []
+  degradation_signals: []
+  regeneration_paths: []
+
 preservation:
   mode: "PRESERVE|RESCUE|NOT_APPLICABLE"
   hard_conditions: []
@@ -290,6 +301,7 @@ candidate_steps:
   #   expected_information_or_decision_value: ""
   #   disturbance_or_cost: ""
   #   preservation_effect: ""
+  #   present_environment_effect: ""
   #   freedom_of_choice_effect: ""
   #   state_change_required_for_repeat: ""
   #   cutoff: ""
@@ -314,6 +326,8 @@ logbook:
   communications_attempted: []
   coexistence_paths_added_or_removed: []
   guidance_used: []
+  present_capabilities_added_or_lost: []
+  environmental_conditions_changed: []
   realized_outcome: ""
   decision_changed: null
   reason_for_stop_pause_or_repeat: ""
@@ -334,6 +348,11 @@ validation_checks:
   observation_model_projection_decision_layers_separated: false
   hard_constraints_preserved_in_compression: false
   rare_consequential_tails_preserved: false
+  present_environment_support_checked: false
+  present_capability_loss_reported_when_material: false
+  containing_environment_externalities_checked: false
+  generative_conditions_checked_when_relevant: false
+  future_optionality_not_used_to_hide_present_loss: false
   recovery_path_independence_checked: false
   common_cause_failures_checked: false
   hidden_variables_have_promotion_status: false

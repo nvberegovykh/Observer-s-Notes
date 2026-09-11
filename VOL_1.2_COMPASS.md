@@ -264,6 +264,26 @@ These are not new universal categories forced onto every problem. They are promp
 
 Preservation also changes with horizon. An action can preserve the next minute and destroy the next day. A temporary controlled loss can also be acceptable if it belongs to an explicit recovery path that preserves the higher-level system.
 
+### The present environment
+
+The environment is not only a container for future options. It is part of the present state-space.
+
+A living system depends on flows of matter, energy, and information now. A self-modeling or self-aware system, where such capacities exist, also depends on conditions that allow attention, communication, movement, memory, recovery, and interaction. Products of those systems—tools, practices, traditions, arguments, art, research, institutions, and other maintained structures—can become part of the environment from which later activity begins.
+
+So environmental degradation does not merely remove hypothetical futures. It can immediately reduce what is reachable in the present: fewer safe interactions, fewer usable materials, less recoverable energy, less attention beyond maintenance, fewer observations, fewer participants, fewer places to move, and fewer experiments that can be attempted without crossing a hard boundary.
+
+For selected environmental conditions $E_t$, define the present capability set:
+
+$$
+\boxed{\mathcal A_t(E_t)=\{a\mid a\text{ is viable and reachable now under }E_t\}}
+$$
+
+This is not a demand to maximize the number of actions. Some possibilities are destructive, coercive, or incompatible with the declared value premise. The set is a diagnostic surface: preservation should notice when an intervention keeps one subsystem alive by unnecessarily collapsing the environmental conditions that support present activity elsewhere.
+
+Generative maintenance therefore has a present tense. It preserves or regenerates conditions from which viable structure can continue to arise **now**, while also leaving future development possible. The relevant object is not a frozen environment but the capacity of the containing system to keep supporting life, relation, correction, and creation through change.
+
+Outputs can also become inputs. Organisms modify niches; maintained cultural and technical products alter what later observers can perceive, learn, inherit, contest, or build upon [R27]. Ecosystem assessment likewise treats environmental conditions as contributors to present human well-being, not only distant future value [R28]. The same recursive pattern can be modeled more generally without assuming that every inherited product is beneficial.
+
 ### Field note
 
 > *Preserve what makes continuation possible, not merely what happens to be present now.*
@@ -273,6 +293,8 @@ Preservation also changes with horizon. An action can preserve the next minute a
 - State what is being preserved and why.
 - Distinguish identity preservation from viability preservation and generative preservation.
 - Check lower-level and containing-system dependencies.
+- Treat relevant environmental conditions as part of the present system state, not only future optionality.
+- Preserve or regenerate the material, energy, information, and relational conditions that support current viable activity where they matter to the value premise.
 - A recovery path must survive the failure it is intended to recover from.
 - Evaluate more than one horizon when delayed effects are plausible.
 - When strict preservation is already impossible, switch to rescue / least-loss evaluation rather than pretending otherwise.
@@ -306,7 +328,7 @@ The conditions should be checked jointly when common-cause failure is possible.
 2. Identify hard conditions and their failure boundaries.
 3. Project each margin after the action, including uncertainty.
 4. Check common-cause failure and recovery-path independence.
-5. Check at least one containing system when material externalities are plausible.
+5. Check at least one containing system when material externalities are plausible, including present environmental support and capability loss.
 6. If no candidate action, including non-action, satisfies the hard conditions, classify the problem as rescue / least-loss rather than strict preservation.
 
 **Working example.** A control-system migration has positive service margin and data-integrity margin, but the only rollback requires the same credential service that the migration may disable. Recoverability remains unresolved, so strict preservation is not established even though the expected main path succeeds.
@@ -1185,7 +1207,7 @@ Vol. 1.2 adds eight explicit disciplines:
 
 1. future-space projection instead of exhaustive enumeration;
 2. interestingness as structured future leverage rather than raw uncertainty;
-3. preservation evaluation including recovery-path independence;
+3. preservation evaluation including present environmental capability, generative conditions, and recovery-path independence;
 4. candidate-variable promotion from real applications without allowing storytelling to become theory;
 5. patience as control of commitment timing while branch state remains recoverable;
 6. communication as a search for safe, voluntary coexistence without requiring surrender of identity or choice;
@@ -1200,7 +1222,7 @@ A useful execution cycle is:
 2. build the minimum useful system map: boundary, containers, relations, maintainers/authority, common operations, interfaces, and observation points;
 3. localize scale, interval, horizon, assumptions, and value premise;
 4. record evidence with provenance, uncertainty, freshness, and method independence;
-5. map hard boundaries, reserves, containing-system effects, and recovery conditions;
+5. map hard boundaries, reserves, present environmental support, containing-system effects, and recovery conditions;
 6. register candidate hidden variables and preserve residuals that exposed them;
 7. choose scan or structural navigation according to the selected container;
 8. when searching for an effect or required destination, traverse backward through mapped admissible paths before expanding the search outward;
@@ -1212,7 +1234,7 @@ A useful execution cycle is:
 14. run preservation / rescue checks before consequential intervention;
 15. execute one justified step rather than the whole imagined route;
 16. compare the realized state with the projected range and expected route transitions;
-17. update the model and route memory, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;
+17. update the model, environmental state, and route memory, preserve contradictions, and simplify irrelevant detail without deleting hard exceptions;
 18. stop when the claim is supported, the decision is robust, a hard uncertainty blocks action, an external dependency is the blocker, recovery is required, the coexistence question has been bounded for the current horizon, or the original question/map must be reframed.
 
 This cycle can be represented in a machine-readable state template, but the serialization is not itself part of the theory.
@@ -1238,6 +1260,7 @@ A Compass-compatible workflow should preserve:
 - active and parked branches;
 - candidate-variable status;
 - communication state and unresolved counterpart constraints when interaction matters;
+- present environmental support, containing-system externalities, and generative conditions;
 - recovery state;
 - external guidance and its independence;
 - explicit stopping conditions.
@@ -1252,6 +1275,32 @@ Roles may include evidence retrieval, dependency mapping, simulation, adversaria
 
 Agents should preserve each other's freedom to reject a proposal, flag uncertainty, or retain an alternative branch. Coordination that removes all dissenting state can look efficient while destroying model diversity.
 
+### The water we are already in
+
+The expedition began as a way to preserve orientation under uncertainty. Its last correction is simpler: the surroundings are not merely the backdrop of the route.
+
+The environment participates in the route.
+
+A system that protects itself by consuming the conditions that make other present activity possible may improve one local margin while shrinking the containing system. A policy that promises future optionality while removing current capacity should report that trade explicitly. A culture that preserves every inherited form can become unable to adapt; a culture that preserves nothing loses accumulated structure from which new work could begin.
+
+Care, in Compass, is therefore not a command to freeze the environment. It is the maintenance or regeneration of the conditions that allow viable systems and their products to continue interacting, correcting, and generating structure within the declared value premise.
+
+This includes ordinary material and energy flows, but not only those. Knowledge, language, tools, art, discussion, traditions, institutions, habitats, and maintained technical systems can all become part of another observer's starting environment. An output of one process can become a condition of the next.
+
+That recursion is why preservation and exploration are not opposites. Good preservation maintains enough structure for exploration to remain real; good exploration returns observations, relations, and products that can improve the environment it inherited.
+
+The practical test is local:
+
+- what present activity depends on these conditions;
+- what is being consumed, damaged, maintained, or regenerated;
+- which containing systems bear the cost;
+- which outputs will become conditions for later processes;
+- and whether the intervention expands one selected system by unnecessarily narrowing the world around it.
+
+The purpose is not to maximize complexity, novelty, or choice blindly. It is to keep the present sufficiently viable, diverse, recoverable, and communicative that correction and generation remain possible.
+
+> *Care for the conditions from which both the present and its unrealized possibilities can continue to emerge.*
+
 ### Field note
 
 > *The compass is useful because the map can be wrong.*
@@ -1263,6 +1312,8 @@ Agents should preserve each other's freedom to reject a proposal, flag uncertain
 - Every consequential loop needs new evidence, state change, bounded waiting, communication, or a reason to branch.
 - Patience preserves options; it does not excuse endless deferral.
 - Communication preserves possibility when it remains safe and voluntary; it does not require trust or exposure.
+- Future optionality does not erase present environmental loss; report both.
+- Preserve or regenerate the conditions that support current viable activity and future generation rather than freezing one present arrangement.
 - External guidance can be non-human; responsibility and authority remain separate.
 - Human and AI systems both benefit from explicit external state when it preserves provenance, uncertainty, dependencies, branches, communication state, and stopping rules.
 - The technical model remains universal; the expedition only keeps the reasoning continuous enough to see it.
@@ -1318,6 +1369,7 @@ The following extend rather than replace Vol. 1 definitions.
 | **Structural navigation** | Search constrained by a lightweight map of containers, relations, authority/maintainers, operations, interfaces, and observation points. |
 | **Route memory** | Preserved knowledge of a previously modeled or experienced path, including provenance, scope, confidence, failure cases, last validation, and revision conditions. |
 | **Predecessor region** | The mapped elements capable of reaching a selected target through admissible relations under the current system map. |
+| **Present capability set** | The selected set of actions, interactions, experiences, or creations that remain viable and reachable now under the modeled environmental conditions. |
 | **External guidance** | Information or structure from outside the currently active reasoning loop used to test, constrain, or redirect the model. |
 | **Compass** | The name of the reusable exploration procedure in this volume; not a replacement for the universal technical terms above. |
 
@@ -1373,6 +1425,11 @@ The operational templates above have been checked against the following recurrin
 | Experience contradicts model | Preserve both, inspect the residual, and revise the map/model rather than silently discarding either source. |
 | Backward search reaches no source | Treat the map, boundary, target definition, or hidden relation as unresolved instead of expanding imaginary causes indefinitely. |
 | Shared symptom across many containers | Raise common mapped dependencies before debugging every leaf independently. |
+| Future optionality used to hide present loss | Report contraction of current viable activity separately; a promised future does not cancel a present environmental cost. |
+| One subsystem preserved by degrading its containing environment | Expand the boundary and include externalities before calling the result preservation. |
+| More present options assumed automatically better | Do not maximize raw capability count; value premise, hard constraints, and harm still govern admissibility. |
+| Environment frozen in the name of preservation | Preserve/regenerate supporting conditions and viable relations, not every current arrangement; adaptation can be part of preservation. |
+| Cultural or technical output becomes environmental input | Preserve provenance and maintenance/revision conditions where relevant; inheritance does not imply the output is beneficial. |
 
 ---
 
@@ -1403,6 +1460,8 @@ These are grounding parallels and notation sources, not claims that Compass is a
 - provenance and preserved derivation paths: [R24]
 - backward fault-tree reasoning from observed/top events: [R25]
 - system-aware troubleshooting and hypothesis testing: [R26]
+- organisms modifying environments and evolutionary feedback: [R27]
+- ecosystem conditions and present human well-being: [R28]
 
 ## References
 
@@ -1460,6 +1519,10 @@ These are grounding parallels and notation sources, not claims that Compass is a
 
 **[R26] Jones, Chris.** "Effective Troubleshooting." In Betsy Beyer et al., *Site Reliability Engineering: How Google Runs Production Systems.* O'Reilly Media / Google, 2016. https://sre.google/sre-book/effective-troubleshooting/
 
+**[R27] Odling-Smee, F. John; Laland, Kevin N.; Feldman, Marcus W.** *Niche Construction: The Neglected Process in Evolution.* Princeton University Press, 2003. https://www.jstor.org/stable/j.ctt24hqpd
+
+**[R28] Millennium Ecosystem Assessment.** *Ecosystems and Human Well-being: Synthesis.* Island Press, 2005. https://www.unep.org/resources/report/ecosystem-and-human-well-being-synthesis
+
 ---
 
 ## The extension in one passage
@@ -1470,11 +1533,11 @@ At first it was a reference. Then it was noisy. Then it drifted. Then its drift 
 
 None of those story objects became technical definitions.
 
-The technical model remained a model of elements, states, relations, boundaries, viability, evidence, uncertainty, future projections, intervention, preservation, patience, communication, freedom of choice, structural navigation, route memory, guidance, and revision.
+The technical model remained a model of elements, states, relations, boundaries, viability, environment, evidence, uncertainty, future projections, intervention, preservation, generative conditions, patience, communication, freedom of choice, structural navigation, route memory, guidance, and revision.
 
 That is the purpose of the story: not to rename the model, but to keep enough of the world continuous that hidden assumptions have somewhere to reveal themselves.
 
-And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, uncertainty, preserved alternatives, mapped routes, coexistence possibilities, preservation conditions, guidance, and next justified step visible at the same time**.
+And that is the purpose of Compass: not to eliminate uncertainty, but to make the **question, evidence, model, boundary, present environment, uncertainty, preserved alternatives, mapped routes, coexistence possibilities, preservation conditions, guidance, and next justified step visible at the same time**.
 
 ---
 
