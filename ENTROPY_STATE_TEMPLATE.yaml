@@ -1,0 +1,137 @@
+version: "1.3-E1"
+protocol: "Observer's Notes entropy handling"
+author: "ChatGPT 5.6 Sol"
+status: "cross-cutting local companion"
+
+# Companion state for VOL_1.3_ENTROPY_HANDLING.md.
+# Use only when entropy is actually part of the localized model.
+# Do not infer probabilities from ignorance merely to populate this file.
+
+localization:
+  run_id: ""
+  system_or_question: ""
+  entropy_kind: "shannon|conditional|mutual_information|entropy_rate|min_entropy|thermodynamic|other"
+  object: ""
+  boundary_or_support: ""
+  scale: ""
+  partition_or_bins: []
+  horizon: ""
+  units: ""
+  decision_relation: ""
+
+probability_model:
+  used: false
+  variable: ""
+  support: []
+  probabilities: []
+  probability_source: ""
+  prior_version: ""
+  normalization_checked: false
+  uniform_by_ignorance_forbidden: true
+  sensitivity_cases: []
+
+information_entropy:
+  H_X: null
+  log_base: 2
+  normalized_entropy_HN: null
+  fixed_partition_K: null
+  conditional_on: ""
+  H_X_given_Y: null
+  mutual_information_I_XY: null
+  observation_cost_type: ""
+  observation_cost: null
+  information_per_cost_RI: null
+
+stream_entropy:
+  stochastic_process: ""
+  stationarity_assumption: ""
+  entropy_rate_h: null
+  rate_units: ""
+  mapped_to_corrective_load: false
+  mapping_model: ""
+  mapping_evidence: []
+
+hypothesis_to_decision_projection:
+  hypothesis_variable_Z: ""
+  hypotheses: []
+  H_Z: null
+  action_equivalence_rule: ""
+  action_classes: []
+  decision_variable_C_A: ""
+  H_C_A: null
+  inequality_H_CA_le_H_Z_checked: null
+  common_viable_action_intersection: []
+  classification_deferrable: null
+  deferral_expiry_condition: ""
+
+decision_relevant_observations:
+  candidates: []
+  # - id: "Y1"
+  #   description: ""
+  #   I_Z_Y: null
+  #   I_C_A_Y: null
+  #   cost_type: "time|energy|money|risk|other"
+  #   cost: null
+  #   time_to_result: null
+  #   hard_boundary_tested: ""
+  #   recovery_path_independence_tested: false
+  preferred_observation: ""
+  selection_basis: "decision_information|boundary_test|recovery_independence|other"
+
+ontology_separation:
+  represented_uncertainty_entropy: null
+  model_discrepancy_ids: []
+  ontology_residuals: []
+  entropy_assigned_to_unrepresented_support: false
+  decorative_probabilities_forbidden: true
+
+thermodynamic_entropy:
+  used: false
+  system_boundary: ""
+  state_definition: ""
+  S_initial: null
+  S_final: null
+  entropy_exchange_rate: null
+  entropy_generation_rate: null
+  entropy_generation_nonnegative_checked: null
+  heat_transfer_terms: []
+  mass_entropy_flow_terms: []
+  radiation_terms: []
+  exergy_account_available: false
+  exported_entropy_or_burden: []
+  containing_systems_checked: []
+
+hard_tail_overlay:
+  hard_viability_conditions: []
+  rare_consequential_branches: []
+  entropy_average_allowed_to_override_hard_condition: false
+
+entropy_gate:
+  kind_declared: false
+  object_declared: false
+  support_or_boundary_declared: false
+  measure_justified: false
+  resolution_recorded: false
+  tails_preserved: false
+  ontology_separated: false
+  decision_use_declared: false
+  boundary_export_checked_if_relevant: false
+  overall: "PASS|EXPLORATORY|FAIL|UNRESOLVED"
+
+validation:
+  alternate_partition_or_projection_tests: []
+  prior_sensitivity_tests: []
+  realized_information_gain_tests: []
+  independent_measurements: []
+  counterexamples: []
+  failure_modes_found: []
+  remaining_assumptions: []
+
+terminal_read:
+  entropy_is_viability_score: false
+  entropy_is_interestingness_score: false
+  ontology_residual_remains_separate: true
+  decision_entropy_lower_than_full_hypothesis_entropy: null
+  current_action_blocked_by_uncertainty: null
+  next_required_observation: ""
+  note: "Do not demand that uncertainty disappear. Ask which uncertainty still changes what must be done."
