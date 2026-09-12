@@ -120,6 +120,7 @@ Before a consequential action, ask:
 - Which protected system loses margin outside the selected boundary?
 - What happens if nobody answers, nobody resupplies, and communication disappears?
 - Does opening the exit consume the remaining viable world?
+- Is unresolved state arriving faster than the observer can verify or safely defer it?
 
 ## Unknown-state rule
 
@@ -133,6 +134,16 @@ Classify unresolved state as one of:
 - possible missing variable/relation outside the current ontology.
 
 Respond with slack, heterogeneous probes, reversible action, independent observation, and explicit revision triggers.
+
+## Edge-case composition — reorientation window
+
+When the observer itself becomes saturated, use `VOL_1.3_EDGE_CASE_REORIENTATION_WINDOW.md`.
+
+Do not invent a new explanation merely because the incoming sequence feels incoherent. Preserve evidence and hard margins, reduce avoidable incoming load, establish the smallest independently supported working ground sufficient for the next decision, and test whether one action remains viable across the unresolved current models.
+
+If such an action exists, it still has to pass the M12 recovery-path gate. If the competing interpretations require materially different immediate actions, classification can no longer be safely deferred.
+
+The purpose of a reorientation window is not to make the world simpler. It is to use a temporary surplus of observation/correction capacity to reach a state from which correction and deeper explanation remain possible.
 
 ## Terminal preference
 
