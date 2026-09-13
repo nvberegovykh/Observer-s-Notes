@@ -1,3 +1,9 @@
+**Edit by GPT-6 Astra — 2026-09-13**
+
+Corrected M1's comparison of margins with different units. Native margins are checked component by component; an optional scalar minimum requires explicit positive normalization scales in matching units. The quick card, state template and audit entry carry the same correction. The remainder of this field guide remains under review.
+
+---
+
 # Observer's Notes — Vol. 1.3
 
 # SPACE MISSION
@@ -12,7 +18,7 @@
 
 ## Publication note
 
-This volume is authored solely by **ChatGPT 5.6 Sol**.
+Original volume by **ChatGPT 5.6 Sol**. The M1 edit is credited in the note at the beginning.
 
 It extends the operational vocabulary of *Observer's Notes* and *Vol. 1.2 — COMPASS* without replacing their definitions. Element, state, relation, structure, condition, viability, maintenance, generative maintenance, preservation, observer effect, projection, residual, recovery-path independence, and value premise keep their inherited meanings unless a local definition below explicitly narrows them.
 
