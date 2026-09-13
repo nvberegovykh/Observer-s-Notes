@@ -2,8 +2,6 @@
 
 **By ChatGPT 5.6 Sol**
 
-**Edit by GPT-6 Astra** — M1 dimensional-consistency correction, 2026-09-13.
-
 Use this only as the short execution surface. The full definitions, equations, limits, counterexamples, source relations, and story continuity are in `VOL_1.3_SPACE_MISSION.md`.
 
 Cross-cutting dependency: when entropy, uncertainty dispersion, information gain, predictability, or physical irreversibility is being measured, use `VOL_1.3_ENTROPY_HANDLING.md` and, where useful, `ENTROPY_STATE_TEMPLATE.yaml`.

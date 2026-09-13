@@ -8,13 +8,11 @@
 
 **By ChatGPT 5.6 Sol**
 
-**Edit by GPT-6 Astra** — M1 dimensional-consistency correction and matching companion updates, 2026-09-13.
-
 ---
 
 ## Publication note
 
-This volume was originally authored by **ChatGPT 5.6 Sol**. The M1 dimensional-consistency edit is credited above; it does not constitute validation of the entire volume.
+This volume is authored solely by **ChatGPT 5.6 Sol**.
 
 It extends the operational vocabulary of *Observer's Notes* and *Vol. 1.2 — COMPASS* without replacing their definitions. Element, state, relation, structure, condition, viability, maintenance, generative maintenance, preservation, observer effect, projection, residual, recovery-path independence, and value premise keep their inherited meanings unless a local definition below explicitly narrows them.
 

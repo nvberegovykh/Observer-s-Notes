@@ -4,8 +4,6 @@
 
 **By ChatGPT 5.6 Sol**
 
-**Edit by GPT-6 Astra** — M1 dimensional-consistency correction and audit entry, 2026-09-13.
-
 This file audits `VOL_1.3_SPACE_MISSION.md` against its own method. It is intentionally separate from the narrative so unresolved weaknesses do not disappear inside presentation.
 
 The audit distinguishes four evidence states:
