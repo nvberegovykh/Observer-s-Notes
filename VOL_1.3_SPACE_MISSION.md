@@ -8,11 +8,13 @@
 
 **By ChatGPT 5.6 Sol**
 
+**Edit by GPT-6 Astra** — M1 dimensional-consistency correction and matching companion updates, 2026-09-13.
+
 ---
 
 ## Publication note
 
-This volume is authored solely by **ChatGPT 5.6 Sol**.
+This volume was originally authored by **ChatGPT 5.6 Sol**. The M1 dimensional-consistency edit is credited above; it does not constitute validation of the entire volume.
 
 It extends the operational vocabulary of *Observer's Notes* and *Vol. 1.2 — COMPASS* without replacing their definitions. Element, state, relation, structure, condition, viability, maintenance, generative maintenance, preservation, observer effect, projection, residual, recovery-path independence, and value premise keep their inherited meanings unless a local definition below explicitly narrows them.
 
@@ -107,13 +109,22 @@ $$
 \boxed{\widetilde M_i(t)=M_i(t)-u_i(t)}.
 $$
 
-For a set of hard viability variables $H$,
+Keep the vector of native-unit margins. For a declared nonempty set of hard viability variables $H$, robust interval support requires
 
 $$
-\boxed{\widetilde M_{sys}(t)=\min_{i\in H}\widetilde M_i(t)}.
+\boxed{\widetilde M_i(t)>0\qquad\text{for every }i\in H}.
 $$
 
-This minimum is intentionally severe. A life-support system with five comfortable variables and one exhausted critical variable is not made viable by averaging.
+An unresolved required margin prevents a supported pass. Coupled constraints must also be checked. A comfortable margin in one variable cannot compensate for an exhausted margin in another. This retains the component-by-component gate of Vol. 1.2 C3.
+
+An optional dimensionless comparison may be made only after choosing a positive reference scale $s_i$ for each variable, in the same units as $x_i$ and fixed over the declared comparison interval:
+
+$$
+\widehat M_i(t)=\frac{\widetilde M_i(t)}{s_i},\qquad
+\boxed{\widehat M_{sys}(t)=\min_{i\in H}\widehat M_i(t)}.
+$$
+
+Record the scales, their common comparison meaning, and the full native-unit margin vector. Scales must transform with the units: 0.5 L divided by 1 L equals 500 mL divided by 1,000 mL. If no defensible comparable scales exist, retain the vector and the conjunctive gate without a scalar minimum. A normalized ranking depends on these reference choices; it is neither a universal physical distance nor a risk or intervention-priority ranking. Reference changes require a new comparison version rather than a silent change within the interval.
 
 If the local rate of margin loss is approximately stable over a short interval,
 
@@ -121,7 +132,7 @@ $$
 \tau_i\approx\frac{\widetilde M_i}{\max(0,-\dot{\widetilde M}_i)}.
 $$
 
-$\tau_i$ is a **local time-to-boundary estimate**, not a long-range forecast.
+$\tau_i$ is a **local time-to-boundary estimate**, not a long-range forecast. Compute it from the native-unit margin and its rate; the normalized system comparison is not a substitute for this per-variable time estimate.
 
 ### Measurements
 
@@ -130,7 +141,9 @@ $\tau_i$ is a **local time-to-boundary estimate**, not a long-range forecast.
 | $x_i$ | observed or estimated selected state |
 | $L_i,U_i$ | evidence-backed local viability bounds |
 | $u_i$ | uncertainty reserve in the same units as $x_i$ |
-| $\widetilde M_i$ | robust signed distance to the nearest selected boundary |
+| $\widetilde M_i$ | robust signed distance to the nearest selected boundary [same units as $x_i$] |
+| $s_i$ | positive reference scale, fixed over the comparison interval [same units as $x_i$]; meaning and version declared |
+| $\widehat M_i,\widehat M_{sys}$ | optional normalized margin and minimum [dimensionless]; comparable reference scales required |
 | $\tau_i$ | short-horizon boundary crossing estimate under local rate assumption |
 
 ### Use
@@ -151,7 +164,7 @@ A dangerous false positive is a large current margin supported by an irreversibl
 
 ### Validation
 
-Test the margin against a materially different estimate of state or boundary. Stress the system or simulation near the proposed threshold where safe. If the observed transition consistently occurs outside the modeled interval, revise the boundary before revising the measurement to fit it.
+Check that changing units while co-transforming the reference scales leaves every normalized margin unchanged; vary defensible reference scales separately and report changes in ordering. Keep unknown required inputs unresolved. Test the margin against a materially different estimate of state or boundary. Stress the system or simulation near the proposed threshold where safe. If the observed transition consistently occurs outside the modeled interval, revise the boundary before revising the measurement to fit it.
 
 **Field note**
 

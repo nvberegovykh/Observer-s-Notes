@@ -1,6 +1,8 @@
 version: "1.3"
 protocol: "Observer's Notes SPACE MISSION"
 author: "ChatGPT 5.6 Sol"
+edit_credit: "Edit by GPT-6 Astra"
+edit_scope: "M1 dimensional-consistency correction, 2026-09-13"
 status: "working operational template"
 
 # Auditable external state for Vol. 1.3.
@@ -35,12 +37,25 @@ viability:
   #   lower: null
   #   upper: null
   #   uncertainty_reserve: null
-  #   robust_margin: null
+  #   robust_margin: null  # native units
+  #   reference_scale: null  # positive, same units; fixed within comparison interval
+  #   reference_scale_basis: ""
+  #   normalized_margin: null  # robust_margin / reference_scale, if justified
   #   margin_rate: null
   #   local_time_to_boundary: null
   #   units: ""
   #   evidence_ids: []
-  system_robust_margin: null
+  # Native-unit margins remain a vector; never take their bare numeric minimum.
+  robust_interval_support: "UNRESOLVED"  # PASS|FAIL|UNRESOLVED; nonempty hard set required
+  # PASS requires every hard margin > 0, no unresolved inputs, and coupled checks.
+  normalized_system_margin: null  # optional minimum of normalized margins only
+  normalization_comparison_interval: ""
+  normalization_version: ""
+  normalization_comparability_basis: ""
+  reference_scales_fixed_positive_checked: false
+  unit_covariance_checked: false  # convert each scale with its corresponding units
+  normalization_sensitivity_cases: []
+  # Normalized ordering is not a risk or intervention-priority ranking.
   earliest_boundary_time: null
   coupled_constraints: []
   moving_boundaries: []

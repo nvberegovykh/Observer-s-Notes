@@ -4,6 +4,8 @@
 
 **By ChatGPT 5.6 Sol**
 
+**Edit by GPT-6 Astra** — M1 dimensional-consistency correction and audit entry, 2026-09-13.
+
 This file audits `VOL_1.3_SPACE_MISSION.md` against its own method. It is intentionally separate from the narrative so unresolved weaknesses do not disappear inside presentation.
 
 The audit distinguishes four evidence states:
@@ -21,7 +23,7 @@ No source is treated as proof of the volume as a whole.
 
 | ID | Claim or template | State | Strongest support | Failure / scope limit | Audit result |
 |---|---|---|---|---|---|
-| A1 | Robust viability margin $\widetilde M_i$ | SYNTHESIS | inherited viability-domain logic; NASA risk/system margins as neighboring practice | nonlinear viable sets, interacting constraints, moving thresholds | KEEP LOCAL; never present as universal metric |
+| A1 | Robust viability margin $\widetilde M_i$ | SYNTHESIS | inherited viability-domain logic; NASA risk/system margins as neighboring practice | nonlinear viable sets, interacting constraints, moving thresholds, mixed-unit aggregation; normalized ordering depends on declared reference scales | KEEP LOCAL; retain native-unit margin vector and conjunctive gate; optional normalized comparison is not a universal metric or priority ranking |
 | A2 | Queue stability requires service faster than arrivals in simple stationary localization | GROUNDED | standard M/M/1 and queueing results; Stanford EE384X | burstiness, priority, finite buffers, network coupling, nonstationarity | KEEP with explicit queue-model scope |
 | A3 | Outcome variety cannot be reduced beyond regulator variety under Ashby assumptions | GROUNDED | W. Ross Ashby, *An Introduction to Cybernetics* | variety must be properly defined; popular "diversity" paraphrases are not the theorem | KEEP; specify logarithmic variety when using the inequality |
 | A4 | Efficiency ratio can improve while absolute consumption rises | GROUNDED | identity $C=AI$; UNEP decoupling literature; OECD rebound meta-analysis | rebound magnitude is context-dependent; burden can move to another resource | KEEP; always pair ratio with absolute stock-flow account |
@@ -44,6 +46,10 @@ No source is treated as proof of the volume as a whole.
 ---
 
 ## Corrections applied by the audit
+
+### M1 dimensional-consistency correction
+
+The per-variable robust margins have native units. Their bare numeric minimum cannot define a system distance: converting 0.5 L to 500 mL would change its comparison with 2 kPa. M1 therefore retains the vector and checks every hard condition, as in Vol. 1.2 C3. An optional scalar minimum requires positive, fixed, comparable reference scales in matching units, following Vol. 1 N6's normalize-before-aggregation rule. Scales must co-transform with units and their meaning and sensitivity remain visible. This is a dimensional-consistency correction; it does not validate the selected viability set, coupled dynamics, or a risk-priority interpretation.
 
 ### 1. Ashby inequality must retain its measurement condition
 
