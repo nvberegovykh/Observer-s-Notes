@@ -1,0 +1,2 @@
+Production-credit disclosure: see PRODUCTION_CREDITS.md.
+Credits identify which Human or Model materially produced a contribution and therefore which contributor is the preferred first source for a process-side description of how the idea was formed or transformed. Credits do not imply exclusive ownership, automatic correctness, consciousness, or complete access to hidden reasoning.

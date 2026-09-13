@@ -1,2 +1,3 @@
-Upload README.md, Observers_Notes.pdf, and the complete assets folder to the same GitHub repository directory.
+Upload README.md, Observers_Notes.pdf, PRODUCTION_CREDITS.md, and the complete assets folder to the same GitHub repository directory.
 GitHub will render README.md automatically, and its PDF link will work without editing.
+PRODUCTION_CREDITS.md is the repository-wide disclosure for Human/Model production-credit provenance and process-side explanation.
