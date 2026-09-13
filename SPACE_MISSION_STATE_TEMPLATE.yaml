@@ -1,0 +1,308 @@
+version: "1.3"
+protocol: "Observer's Notes SPACE MISSION"
+author: "ChatGPT 5.6 Sol"
+status: "working operational template"
+
+# Auditable external state for Vol. 1.3.
+# Storytelling belongs in VOL_1.3_SPACE_MISSION.md, not here.
+# Do not store private chain-of-thought. Record only evidence, assumptions,
+# measurements, decisions, residuals, and explicit unknowns.
+
+meta:
+  run_id: ""
+  created_at: ""
+  updated_at: ""
+  operator: ""
+  model_version: 0
+  parent_model_version: null
+
+localization:
+  system: ""
+  containing_systems: []
+  boundary: ""
+  scale: ""
+  horizon: ""
+  value_premise: ""
+  authority: ""
+  rescue_condition_defined: false
+  assumptions: []
+  exclusions: []
+
+viability:
+  hard_variables: []
+  # - id: "oxygen_partial_pressure"
+  #   value: null
+  #   lower: null
+  #   upper: null
+  #   uncertainty_reserve: null
+  #   robust_margin: null  # native units
+  #   reference_scale: null  # positive, same units; fixed within comparison interval
+  #   reference_scale_basis: ""
+  #   normalized_margin: null  # robust_margin / reference_scale, if justified
+  #   margin_rate: null
+  #   local_time_to_boundary: null
+  #   units: ""
+  #   evidence_ids: []
+  # Native-unit margins remain a vector; never take their bare numeric minimum.
+  robust_interval_support: "UNRESOLVED"  # PASS|FAIL|UNRESOLVED; nonempty hard set required
+  # PASS requires every hard margin > 0, no unresolved inputs, and coupled checks.
+  normalized_system_margin: null  # optional minimum of normalized margins only
+  normalization_comparison_interval: ""
+  normalization_version: ""
+  normalization_comparability_basis: ""
+  reference_scales_fixed_positive_checked: false
+  unit_covariance_checked: false  # convert each scale with its corresponding units
+  normalization_sensitivity_cases: []
+  # Normalized ordering is not a risk or intervention-priority ranking.
+  earliest_boundary_time: null
+  coupled_constraints: []
+  moving_boundaries: []
+  gate: "PASS|CAUTION|FAIL|UNRESOLVED"
+
+disturbance_and_correction:
+  backlog: null
+  arrival_load_lambda: null
+  correction_capacity_mu: null
+  service_units: ""
+  saturation_ratio: null
+  burst_window: ""
+  peak_arrival_load: null
+  response_variety_supported: []
+  response_variety_missing: []
+  shared_bottlenecks: []
+  deadline_classes: []
+  load_shedding_candidates: []
+  gate: "STABLE|SATURATED|OVERLOADED|UNRESOLVED"
+
+resource_balance:
+  stocks: []
+  # - id: "water"
+  #   stock_Q: null
+  #   reserve_Q: null
+  #   activity_A: null
+  #   intensity_I: null
+  #   absolute_consumption_C: null
+  #   regenerative_inflow_G: null
+  #   horizon_H: null
+  #   feasibility_gate: null
+  #   units: ""
+  rebound_checks: []
+  displaced_burdens: []
+  containing_system_externalities: []
+
+recycling_and_regeneration:
+  loops: []
+  # - id: "water_loop"
+  #   recovery_fraction_r: null
+  #   quality_retention_q: null
+  #   usable_return_rho: null
+  #   cycle_count_n: null
+  #   cumulative_functional_loss: null
+  #   make_up_requirement: null
+  #   energy_per_cycle: null
+  #   contaminant_accumulation: []
+  #   external_replacements: []
+  #   latency: ""
+  #   evidence_ids: []
+  hierarchy_used: "avoid|extend|reuse|repair|remanufacture|recycle|recover|dispose|mixed"
+  unresolved_leaks: []
+
+redundancy_and_common_cause:
+  paths: []
+  # - id: "primary_oxygen_control"
+  #   function: ""
+  #   dependencies: []
+  #   failure_domains: []
+  #   software_lineage: ""
+  #   operator_or_maintainer: ""
+  common_cause_groups: []
+  pairwise_dependency_overlap: []
+  independent_failure_model_justified: false
+  dissimilarity_tradeoffs: []
+  cause_injection_tests: []
+  gate: "ADEQUATE|COMMON_CAUSE_EXPOSED|UNRESOLVED"
+
+repair_closure:
+  failure_classes: []
+  # - id: "F1"
+  #   failed_function: ""
+  #   access_A: null
+  #   tools_T: null
+  #   material_M: null
+  #   knowledge_K: null
+  #   energy_environment_E: null
+  #   verification_V: null
+  #   closure_gate: null
+  #   time_to_repair: null
+  #   deadline: null
+  #   evidence_ids: []
+  repair_arrival_rate: null
+  repair_completion_rate: null
+  recursive_repair_dependencies: []
+  graceful_degradation_plan: []
+  hard_functions_preserved: []
+  gate: "CLOSED|PARTIAL|OPEN|UNRESOLVED"
+
+preservation_and_reproduction:
+  artifacts_or_lineages: []
+  # - id: "A1"
+  #   physical_or_bit_integrity_B: null
+  #   decoder_or_activation_D: null
+  #   context_provenance_C: null
+  #   supporting_environment_E: null
+  #   recoverability_gate_G: null
+  #   replicas: []
+  #   independence_evidence: []
+  #   restoration_test: ""
+  #   last_restored_at: ""
+  #   known_failure_conditions: []
+  diversity_preserved: []
+  reproduction_inputs: []
+  reproduction_defect_checks: []
+  adaptation_capacity_preserved: []
+
+observability:
+  state_variables: []
+  observation_channels: []
+  linearized_A: null
+  linearized_C: null
+  observability_rank: null
+  state_dimension_n: null
+  rank_deficient: null
+  observation_equivalence_classes: []
+  heterogeneous_measurements: []
+  shared_calibration_paths: []
+  unobservable_candidates: []
+  ontology_residuals: []
+  unexplained_anomalies_preserved: []
+
+model_discrepancy:
+  model_f: ""
+  calibrated_parameters_theta: []
+  observation_error_epsilon: ""
+  discrepancy_delta: ""
+  residual_series: []
+  discrepancy_structure_tests: []
+  parameter_discrepancy_confounding_checked: false
+  alternate_model_classes: []
+
+future_stress_test:
+  deep_uncertainty_declared: false
+  scenario_set_Omega: []
+  probabilities_used: false
+  probability_justification: ""
+  actions: []
+  hard_constraints: []
+  loss_or_performance_function: ""
+  regret_results: []
+  preferred_action: ""
+  preferred_action_failure_regions: []
+  adaptive_triggers: []
+  reachable_viable_sets: []
+  irreversible_option_losses: []
+
+care_boundary:
+  affected_system_closure: []
+  protected_systems: []
+  pre_action_margins: []
+  post_action_margins: []
+  consequence_scale_C: null
+  unresolved_uncertainty_U: null
+  reversibility_rho: null
+  intervention_burden_B: null
+  excluded_externalities: []
+  rescue_exceptions: []
+  independent_boundary_review: ""
+  gate: "PASS|FAIL|RESCUE_EXCEPTION|UNRESOLVED"
+
+unattended_mode:
+  unattended_interval_Tu: null
+  reserve_Tm: null
+  critical_function_autonomy_times: []
+  minimum_autonomy_time: null
+  sensing_S: null
+  actuation_A: null
+  diagnosis_D: null
+  recovery_repertoire_R: null
+  durable_logging_L: null
+  passive_safety_features: []
+  communication_loss_tested: false
+  maintainer_absence_tested: false
+  handoff_state_verified: false
+  gate: "PASS|FAIL|UNRESOLVED"
+
+recovery_path:
+  path_id: ""
+  preserved_state_capacity_Ke: null
+  required_capacity_Kreq: null
+  activation_time_Ta: null
+  boundary_time_Tb: null
+  independence_evidence: []
+  shared_failure_causes: []
+  resource_sufficiency_Qe: null
+  primary_post_staging_margin: null
+  primary_minimum_margin: null
+  rescue_exception: false
+  gate_capacity: null
+  gate_timing: null
+  gate_independence: null
+  gate_resources: null
+  gate_primary_preservation: null
+  overall_gate: "PASS|FAIL|UNRESOLVED"
+
+unknowns_and_reserve:
+  known_unknowns: []
+  unobservable_known_states: []
+  model_discrepancies: []
+  ontology_residuals: []
+  slack_reserves: []
+  probes_planned: []
+  reversibility_preserved: []
+  revision_triggers: []
+  fake_probabilities_forbidden: true
+
+failure_audit:
+  moving_boundary_checked: false
+  burst_load_checked: false
+  response_variety_checked: false
+  absolute_vs_ratio_checked: false
+  multi_cycle_recycling_checked: false
+  common_cause_checked: false
+  repair_recursion_checked: false
+  replica_independence_checked: false
+  observability_checked: false
+  model_discrepancy_checked: false
+  alternate_future_checked: false
+  containing_system_externality_checked: false
+  unattended_state_checked: false
+  exit_gate_checked: false
+  adaptation_vs_freezing_checked: false
+  unknown_reserve_vs_paralysis_checked: false
+  reproduction_defect_checked: false
+  failures_found: []
+  unresolved_failures: []
+
+validation:
+  evidence_items: []
+  independent_methods: []
+  counterexamples: []
+  stress_tests: []
+  restoration_tests: []
+  cause_injection_tests: []
+  failed_gates: []
+  passed_gates: []
+  remaining_assumptions: []
+  next_revision_trigger: ""
+
+terminal_state:
+  current_viability_preserved: null
+  corrective_capacity_preserved: null
+  regenerative_capacity_preserved: null
+  repair_capacity_preserved: null
+  observability_preserved: null
+  diversity_and_independence_preserved: null
+  lineage_and_reproducibility_preserved: null
+  containing_system_externalities_accounted: null
+  recovery_path_viable: null
+  decision: "CONTINUE|DEGRADE_GRACEFULLY|REPAIR|REGENERATE|PRESERVE|TRANSFER|RESCUE|STOP|UNRESOLVED"
+  rationale: ""
