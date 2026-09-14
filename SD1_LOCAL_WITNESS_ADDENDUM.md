@@ -4,15 +4,18 @@
 
 ## Why this addendum exists
 
-The initial SD1 draft requires boundary review, invariants, new relations, deviation propagation, tail preservation, observer adequacy, capacity, recovery and evidence promotion. Three materially different applications exposed one relation that deserves to be made explicit before the draft is promoted:
+The initial SD1 draft requires boundary review, invariants, new relations, deviation propagation, tail preservation, observer adequacy, capacity, recovery and evidence promotion. Four materially different applications exposed one relation that deserves to be explicit before the draft is promoted:
 
 - cardiovascular longitudinal research;
 - strong-gravity numerical-relativity research;
-- production release verification.
+- production release verification;
+- physical heavy-haul wind-component logistics.
 
-In all three, a large-scale result could look valid while the exact local observation or transformation that materially witnessed the result was ambiguous, failed, or simply never observed.
+In all four, a large-scale result could look valid while the exact local observation or transformation that materially witnessed the result was ambiguous, failed, unobserved, or hidden by a favorable aggregate.
 
 The missing object is not “more detail everywhere.” It is **addressable local witness structure**.
+
+A separate low-consequence test also showed that deep traceability must be an escalation state rather than a default for every reversible edit.
 
 ---
 
@@ -24,7 +27,7 @@ It is resolution-relative.
 
 It is not claimed to be the smallest thing that exists.
 
-A participant-exam record, one waveform mode at one extraction scope, one workflow job step, one sensor channel, or one structural connection can each be a local observable entity in different models.
+A participant-exam record, one waveform mode at one extraction scope, one workflow job step, one sensor channel, one structural connection, or one critical heavy-haul maneuver can each be a local observable entity in different models.
 
 The required property is addressability: the model knows what was observed, through which method, at which time or order, under which scale state, and with which provenance/uncertainty/QC boundary.
 
@@ -68,7 +71,8 @@ Examples:
 
 - a green production smoke does not verify an untested UI route;
 - a reproduced cohort statistic does not close an unresolved assay semantic mapping;
-- a one-history numerical-relativity closure does not become a multi-history result because its error is small.
+- a one-history numerical-relativity closure does not become a multi-history result because its error is small;
+- a road-network route does not become heavy-haul feasible when a local swept-path, bridge, clearance, pavement, permit, or ecological gate remains unresolved.
 
 Therefore:
 
@@ -84,11 +88,11 @@ This is a claim-scope rule, not a command to observe everything.
 
 A consequential scaled claim preserves an auditable path to the local observable entities and transformations that materially witness it.
 
-Where a local hard boundary, tail, exception, exclusion, missingness state, or unresolved semantic mapping can change the claim, that local state remains addressable after aggregation.
+Where a local hard boundary, tail, exception, exclusion, missingness state, unresolved semantic mapping, or local physical constraint can change the claim, that local state remains addressable after aggregation.
 
 ### SD-G13 · Upward impact closure
 
-A material revision to a local observation, semantic mapping, calibration, clock, exclusion rule, transform, or dependency can identify which larger claims become stale or invalid without requiring unrelated branches to be reinterpreted.
+A material revision to a local observation, semantic mapping, calibration, clock, exclusion rule, transform, geometry revision, or dependency can identify which larger claims become stale or invalid without requiring unrelated branches to be reinterpreted.
 
 ### SD-G14 · Observed-surface closure
 
@@ -96,7 +100,41 @@ The language and authority of the scaled result do not extend beyond the explici
 
 ---
 
-## 5 · What this does not require
+## 5 · Proportional burden
+
+The application tests reject “trace everything” as the default.
+
+For a reversible low-consequence change, sufficient witness structure may be only:
+
+1. scope diff;
+2. one direct check of the changed surface;
+3. release/version identity;
+4. bounded result language;
+5. ordinary rollback.
+
+Escalate toward the full hierarchical trace only when the transition materially changes one or more of:
+
+- authority or permission;
+- persistent state;
+- irreversibility;
+- scientific, clinical, legal, structural, or safety claim strength;
+- shared dependency topology;
+- security boundary;
+- population / domain / site represented;
+- hard viability boundary;
+- recovery difficulty or blast radius;
+- observer compression or aggregation;
+- local tail / exception / physical constraint capable of defeating the aggregate.
+
+So the minimum surviving rule is:
+
+> **Preserve enough local witness and scope information to prevent a consequential aggregate or scaled claim from outrunning what was actually observed.**
+
+Deep traceability is an escalation state, not a ritual.
+
+---
+
+## 6 · What this does not require
 
 This addendum does **not** require:
 
@@ -123,7 +161,7 @@ Each level carries references and transform semantics sufficient to descend when
 
 ---
 
-## 6 · Application evidence
+## 7 · Application evidence
 
 ### Cardiovascular
 
@@ -137,17 +175,21 @@ The current `ExtraWaveforms.h5` implementation failure localizes to source-conta
 
 The Research.LIBER production smoke verifies exact release identity and an enumerated set of API/data invariants. Its success does not prove every untested UI interaction or route. The aggregate operational result therefore needs an observed-surface boundary.
 
-These three cases are different enough that the relation is no longer tied to one scientific domain.
+### Physical heavy-haul engineering
+
+The modular-wind spatial stack distinguishes `network-feasible` from `heavy-haul-feasible`. A favorable route or site score can coexist with one unpassable bridge, negative swept-path clearance, unresolved permit restriction, pavement/culvert limit, or protected-habitat gate. The local physical boundary must therefore remain addressable outside compensating averages.
+
+These four cases are materially different enough that the relation is no longer tied to one scientific or software domain.
 
 ---
 
-## 7 · Failure search
+## 8 · Failure search
 
 ### LW-F1 · Trace bureaucracy
 
 Every harmless exploratory value is forced through a heavyweight provenance graph.
 
-**Correction:** require full witness closure only in proportion to claim/consequence. Exploratory summaries may remain explicitly non-authoritative.
+**Correction:** use the proportional burden rule. Exploratory/reversible low-consequence changes can use a lightweight direct witness.
 
 ### LW-F2 · False completeness
 
@@ -179,16 +221,24 @@ The trace is correct, but prose still says “the platform is verified” or “
 
 **Correction:** observed-surface closure applies to result language and authority, not only data structures.
 
+### LW-F7 · Favorable aggregate hides one hard local boundary
+
+A weighted score, mean result, global fit, or route ranking improves while one local hard constraint crosses its admissible boundary.
+
+**Correction:** hard local conditions remain non-compensating where the domain requires it and stay separately addressable through the aggregate.
+
 ---
 
-## 8 · Audit state
+## 9 · Audit state
 
 **KEEP AS AN ADDENDUM TO THE DRAFT; DO NOT YET MERGE AS CORE.**
 
-The relation has survived two scientific domains and one operational domain, and it caught distinct failure modes in each. That is enough to justify explicit testing inside SD1.
+The relation has survived two scientific domains, one operational domain and one physical engineering domain, and it caught distinct failure modes in each. The low-consequence test also showed how to avoid ceremony inflation.
 
-It is not yet enough to claim a universal law of scale.
+This is enough to justify folding a simplified version of SD-G12—SD-G14 into the main SD1 draft during its next revision.
 
-Before folding SD-G12—SD-G14 into the main scaling document, check at least one physical/engineering scaling case where local hard conditions and aggregate performance can diverge—for example infrastructure load, structural redundancy/common cause, or resource regeneration. Remove or narrow any gate that does not change the decision, evidence quality, or recoverability.
+It is still not enough to claim a universal law of scale. The main draft should inherit only the minimum relation that changed decisions:
+
+> **At consequential scale transitions, keep the aggregate claim connected to the local observations and transforms that can make it wrong, and do not let unobserved state inherit the aggregate pass.**
 
 > **Field note:** *See far without making the nearby disappear.*
