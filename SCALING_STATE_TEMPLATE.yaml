@@ -69,7 +69,7 @@ independence_and_common_cause:
   common_cause_groups: []
   independence_claim_supported: false
 
- deviation_model:
+deviation_model:
   input_deviation_measure: ""
   output_deviation_measure: ""
   expected_pattern: "independent_random|common_mode|directional_bias|state_dependent|feedback_amplified|selection_observation|adaptive_strategic|mixed|unknown"
