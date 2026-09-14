@@ -1,0 +1,164 @@
+version: "1.3-SD1"
+protocol: "Observer's Notes scaling discipline"
+status: "candidate cross-cutting companion"
+
+# Auditable state for a scale transition.
+# This does not replace COMPASS_STATE_TEMPLATE.yaml; use it when a change in
+# count, time, authority, capability, resolution, connectivity, population,
+# organizational extent, or another scale dimension can alter the model.
+# Record external state only; this is not a request for private chain-of-thought.
+
+meta:
+  transition_id: ""
+  created_at: ""
+  updated_at: ""
+  operator: ""
+  parent_model_version: ""
+  proposed_model_version: ""
+
+source_state:
+  system: ""
+  boundary: ""
+  validated_scale_state: ""
+  evidence_ids: []
+  assumptions: []
+  terminal_state: ""
+  recoverable_snapshot: ""
+
+scale_transition:
+  dimension: "count|density|spatial|temporal|organizational|capability|authority|resolution|connectivity|population|other"
+  source_value_or_scope: ""
+  target_value_or_scope: ""
+  purpose: ""
+  reversibility: "reversible|partially_reversible|irreversible|unknown"
+  consequence_class: "low|moderate|high|critical|unknown"
+
+model_diff:
+  boundary_added: []
+  boundary_removed: []
+  elements_added: []
+  interactions_added: []
+  interactions_removed: []
+  shared_dependencies_added: []
+  feedback_loops_added: []
+  resource_competition_added: []
+  authority_added: []
+  affected_systems_added: []
+  observation_changes: []
+  horizon_changes: []
+  population_or_domain_changes: []
+  semantics_changed: []
+
+invariants:
+  claimed: []
+  # - id: "I1"
+  #   statement: ""
+  #   evidence: []
+  #   falsifier: ""
+  allowed_non_invariants: []
+  semantic_crosswalks: []
+
+independence_and_common_cause:
+  replicas_or_subsystems: []
+  shared_data: []
+  shared_model_or_code: []
+  shared_clock_or_calibration: []
+  shared_material_or_supply: []
+  shared_power_network_or_compute: []
+  shared_maintainers_or_authority: []
+  common_cause_groups: []
+  independence_claim_supported: false
+
+ deviation_model:
+  input_deviation_measure: ""
+  output_deviation_measure: ""
+  expected_pattern: "independent_random|common_mode|directional_bias|state_dependent|feedback_amplified|selection_observation|adaptive_strategic|mixed|unknown"
+  amplification_metric: ""
+  validated_input_range: ""
+  validated_output_envelope: ""
+  tail_conditions: []
+  aggregation_rule: ""
+  cases_hidden_by_aggregation: []
+  stop_thresholds: []
+
+observer:
+  observation_map: ""
+  sampling_rate_or_coverage: ""
+  provenance_preserved: false
+  ordering_or_clock_preserved: false
+  independent_channels: []
+  arrival_load: ""
+  verification_capacity: ""
+  epistemic_backlog_limit: ""
+  observer_bottleneck_risk: "low|moderate|high|unknown"
+
+capacity_and_environment:
+  queues: []
+  resource_margins: []
+  maintenance_capacity: []
+  repair_capacity: []
+  communication_capacity: []
+  containing_systems: []
+  externalities: []
+  environment_feedbacks: []
+  regeneration_or_replacement_limits: []
+
+preservation_and_recovery:
+  hard_conditions: []
+  irreplaceable_state: []
+  rollback_path: ""
+  rollback_independent_from_initiating_path: false
+  rescue_path: ""
+  recovery_deadline: ""
+  rollback_tested: false
+  restoration_to_prior_model_verified: false
+
+stage:
+  source_stage: ""
+  target_stage: ""
+  new_uncertainty_tested_here: ""
+  evidence_required_to_advance: []
+  stop_conditions: []
+  rollback_conditions: []
+  max_exposure_or_scope: ""
+  stage_is_informative_not_ornamental: false
+
+result:
+  observed_residuals: []
+  unexpected_new_relations: []
+  tail_events: []
+  invariant_violations: []
+  observer_degradation: []
+  containing_system_effects: []
+  rollback_required: false
+  claim_strength_after_stage: "exploratory|local_reproduction|bounded_transfer|representative_transfer|domain_reuse|unsupported"
+  terminal_state: "PASS_WITHIN_VALIDATED_ENVELOPE|PASS_WITH_NEW_LOCAL_VARIABLE|HOLD_FOR_MORE_OBSERVATION|REJECT_TRANSFER|ROLL_BACK|RESCUE_REQUIRED|QUESTION_REFRAMED|NOT_RUN"
+  reason: ""
+
+validation_checks:
+  scale_dimension_named: false
+  source_state_frozen: false
+  boundary_rechecked: false
+  model_diff_recorded: false
+  invariants_explicit: false
+  semantic_crosswalks_present_when_needed: false
+  common_causes_mapped: false
+  independence_not_assumed_from_replication: false
+  deviation_propagation_bounded_or_explicitly_unknown: false
+  rare_consequential_tails_preserved: false
+  observer_capacity_checked: false
+  aggregate_metrics_do_not_hide_hard_local_boundaries: false
+  capacity_and_saturation_checked: false
+  containing_system_effects_checked: false
+  recovery_path_independence_checked: false
+  rollback_or_rescue_condition_predeclared: false
+  authority_scope_not_silently_expanded: false
+  stage_tests_a_new_scale_uncertainty: false
+  claim_strength_not_increased_beyond_tested_transfer: false
+  next_scale_not_pre_authorized_by_current_pass: false
+
+next_transition:
+  authorized: false
+  condition: ""
+  target_scale_state: ""
+  required_new_evidence: []
